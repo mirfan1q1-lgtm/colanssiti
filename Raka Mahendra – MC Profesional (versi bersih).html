@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raka Mahendra – MC Profesional untuk Pernikahan dan Acara Perusahaan</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fb;--sf:#fff;--fg:#0f172a;--mute:#566176;--line:#e2e6ee;--acc:#3446c8;--on:#fff;--sh:0 1px 2px rgba(15,23,42,.06),0 16px 40px rgba(15,23,42,.1);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--sf:#131a2e;--fg:#eef2fb;--mute:#9aa7c0;--line:#253050;--acc:#8fa3ff;--on:#0b1020;--sh:0 16px 40px rgba(0,0,0,.45);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1020;--sf:#131a2e;--fg:#eef2fb;--mute:#9aa7c0;--line:#253050;--acc:#8fa3ff;--on:#0b1020;--sh:0 16px 40px rgba(0,0,0,.45);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.02rem/1.65 "Hanken Grotesk",system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;margin:0;letter-spacing:-.015em}
+.w{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.s{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:70px;padding-top:env(safe-area-inset-top,0px);box-sizing:content-box}
+.logo{font:500 1.35rem Newsreader,Georgia,serif}
+nav{display:flex;gap:28px;align-items:center;font-weight:600;font-size:.94rem}
+nav a:not(.btn){position:relative;color:var(--mute);transition:color .2s}
+nav a:not(.btn):hover{color:var(--fg)}
+nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+nav a:not(.btn):hover::after{transform:scaleX(1)}
+#th{background:none;border:1px solid var(--line);color:var(--fg);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:.95rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:8px;background:var(--acc);color:var(--on);font:700 .96rem "Hanken Grotesk",system-ui,sans-serif;border:1px solid var(--acc);cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px color-mix(in srgb,var(--acc) 32%,transparent)}
+.btn.o{background:none;color:var(--fg);border-color:var(--line)}.btn.o:hover{border-color:var(--fg);box-shadow:none}
+.btn.sm{padding:9px 18px;font-size:.9rem}
+.hero{position:relative;overflow:hidden;isolation:isolate;min-height:100svh;display:flex;align-items:center;padding:120px 0 70px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);background:var(--acc);opacity:.17;z-index:-1;animation:bd 20s ease-in-out infinite alternate}
+.blob.a{width:480px;height:480px;left:-120px;top:5%}.blob.b{width:380px;height:380px;right:5%;bottom:-100px;animation-delay:-9s;opacity:.12}
+@keyframes bd{to{translate:90px -60px;scale:1.2}}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,90px);align-items:center}
+.kick{display:inline-flex;align-items:center;gap:10px;color:var(--mute);font-weight:600;font-size:.94rem;margin:0 0 20px}
+.kick i{width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 50%,transparent);animation:pu 2s infinite}
+@keyframes pu{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(2.6rem,5.6vw,4.9rem);line-height:1.04}
+.lead{max-width:48ch;color:var(--mute);font-size:1.14rem;margin:22px 0 32px}
+.acts{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:clamp(20px,4vw,48px);margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.facts b{display:block;font:500 2.3rem/1 Newsreader,Georgia,serif;font-variant-numeric:tabular-nums}
+.facts span{color:var(--mute);font-size:.9rem}
+.frame{position:relative}
+.pic{position:relative;overflow:hidden;border-radius:14px;box-shadow:var(--sh);aspect-ratio:4/5;background:var(--sf)}
+.bgi{position:absolute;left:0;right:0;top:-12%;bottom:-12%;background-size:cover;background-position:center;will-change:transform;transition:scale .7s ease}
+.float{position:absolute;left:-26px;bottom:34px;background:var(--sf);border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:var(--sh);display:flex;gap:12px;align-items:center;font-size:.9rem;animation:fl 6s ease-in-out infinite alternate}
+.float i{width:10px;height:10px;border-radius:50%;background:var(--acc);flex:none}
+.float b{display:block;font-size:.95rem}.float span{color:var(--mute)}
+@keyframes fl{to{translate:0 -8px}}
+section{padding:clamp(70px,10vw,130px) 0}
+.eyebrow{color:var(--acc);font-weight:700;font-size:.92rem;margin:0 0 12px}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;max-width:20ch}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.sh p{max-width:42ch;color:var(--mute);margin:0}
+.row{display:grid;grid-template-columns:1fr 1.6fr auto;gap:24px;align-items:baseline;padding:28px 0;border-top:1px solid var(--line);transition:padding .3s}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row:hover{padding-left:12px}
+.row h3{font-size:1.7rem}.row p{margin:0;color:var(--mute)}.row b{font-weight:700;white-space:nowrap}
+.alt{background:var(--sf);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:19px;height:1px;background:var(--line)}
+.steps>div{position:relative}
+.steps .n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sf);border:1px solid var(--acc);color:var(--acc);font-weight:700;margin-bottom:18px;position:relative;transition:.3s}
+.steps>div:hover .n{background:var(--acc);color:var(--on)}
+.steps h3{font-size:1.35rem;margin-bottom:6px}.steps p{margin:0;color:var(--mute);font-size:.96rem}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:230px;gap:16px}
+.t{position:relative;overflow:hidden;border-radius:12px;margin:0;background:var(--sf)}
+.t.tall{grid-row:span 2}.t.wide{grid-column:span 2}
+.t:hover .bgi{scale:1.06}
+.t figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);color:#0f172a;padding:6px 12px;border-radius:99px;font-weight:600;font-size:.84rem}
+.band{position:relative;overflow:hidden;isolation:isolate;color:#fff;text-align:center;padding:clamp(100px,15vw,200px) 0}
+.band .bgi{z-index:-2}.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(9,14,32,.66),rgba(9,14,32,.78))}
+.band q{display:block;font:italic 500 clamp(1.7rem,3.8vw,3.1rem)/1.25 Newsreader,Georgia,serif;max-width:26ch;margin:0 auto 22px;quotes:"“" "”"}
+.band span{font-weight:600;opacity:.85}
+.tm{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px)}
+.tm figure{margin:0;padding-top:22px;border-top:2px solid var(--acc)}
+.tm blockquote{margin:0 0 16px;font:500 1.3rem/1.4 Newsreader,Georgia,serif}
+.tm figcaption{color:var(--mute);font-size:.92rem}.tm figcaption b{display:block;color:var(--fg)}
+.ct{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.ct .pic{aspect-ratio:4/3;margin-top:34px}
+.ci{margin:26px 0 0;display:grid;gap:6px;color:var(--mute)}.ci b{color:var(--fg)}
+form{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,36px);box-shadow:var(--sh);display:grid;gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:.9rem}
+input,select,textarea{font:inherit;font-weight:400;color:var(--fg);background:var(--sf);border:1px solid var(--line);border-radius:8px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 22%,transparent)}
+#ok{margin:0;color:var(--acc);font-weight:600;min-height:1.4em}
+footer{padding:32px 0 44px;border-top:1px solid var(--line);color:var(--mute);font-size:.92rem}
+footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.js .rv{opacity:0;translate:0 20px;transition:opacity .8s ease,translate .8s ease;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;translate:0}
+@media(max-width:900px){.hg,.ct{grid-template-columns:1fr}.frame{max-width:460px}.float{left:12px}.row{grid-template-columns:1fr;gap:6px}.steps{grid-template-columns:1fr 1fr}.steps::before{display:none}.tm{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:190px}.t.wide{grid-column:span 2}nav a:not(.btn){display:none}.two{grid-template-columns:1fr}.facts{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;translate:0}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="w"><a class="logo" href="#top">Raka Mahendra</a><nav><a href="index.html" style="color:var(--acc);font-weight:700">✦ Hub Sekarsiti</a><a href="#layanan">Layanan</a><a href="#proses">Proses</a><a href="#galeri">Galeri</a><a href="#sekarsiti">Kolaborasi</a><a href="#testimoni">Testimoni</a><a class="btn sm" href="#kontak">Cek ketersediaan</a><button id="th" aria-label="Ganti tema terang atau gelap">◐</button></nav></div></header>
+<main id="top">
+<section class="hero">
+  <div class="blob a" aria-hidden="true"></div><div class="blob b" aria-hidden="true"></div>
+  <div class="w hg">
+    <div>
+      <p class="kick rv"><i></i>MC profesional untuk pernikahan dan acara perusahaan</p>
+      <h1 class="rv" style="--d:.08s">Acara yang berjalan rapi, suasana yang terasa hangat.</h1>
+      <p class="lead rv" style="--d:.16s">Saya memandu acara dari rundown sampai penutup, supaya tuan rumah bisa menikmati harinya dan tamu merasa disambut.</p>
+      <div class="acts rv" style="--d:.24s"><a class="btn" href="#kontak">Cek ketersediaan</a><a class="btn o" href="#galeri">Lihat galeri</a></div>
+      <div class="facts rv" style="--d:.32s" id="st"><div><b data-to="320">0</b><span>acara dipandu</span></div><div><b data-to="8">0</b><span>tahun pengalaman</span></div><div><b data-to="3">0</b><span>bahasa pengantar</span></div></div>
+    </div>
+    <div class="frame rv" style="--d:.2s">
+      <div class="pic" role="img" aria-label="Ilustrasi MC di atas panggung"><div class="bgi" data-s=".08" data-sc="0"></div></div>
+      <div class="float"><i></i><div><b>Tersedia Desember 2026</b><span>Balasan dalam 1 hari kerja</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="layanan" class="alt">
+  <div class="w">
+    <div class="sh rv"><div><p class="eyebrow">Layanan</p><h2>Satu MC untuk setiap jenis acara</h2></div><p>Harga di bawah hanya contoh dan bisa disesuaikan dengan durasi serta lokasi.</p></div>
+    <div class="row rv"><h3>Pernikahan dan lamaran</h3><p>Dari akad sampai resepsi, dipandu tenang agar keluarga fokus menikmati hari mereka.</p><b>Mulai Rp 3.500.000</b></div>
+    <div class="row rv"><h3>Acara perusahaan</h3><p>Gala dinner, peluncuran produk, dan townhall dengan bahasa yang tepat untuk audiens korporat.</p><b>Mulai Rp 4.000.000</b></div>
+    <div class="row rv"><h3>Wisuda dan sekolah</h3><p>Pemanggilan nama yang jelas, alur khidmat, dan foto bersama yang tertata.</p><b>Mulai Rp 2.500.000</b></div>
+    <div class="row rv"><h3>Gathering dan komunitas</h3><p>Ice breaking dan games yang mengajak semua orang ikut, bukan hanya menonton.</p><b>Mulai Rp 1.800.000</b></div>
+  </div>
+</section>
+
+<section id="proses">
+  <div class="w">
+    <div class="sh rv"><div><p class="eyebrow">Proses kerja</p><h2>Dari obrolan pertama sampai penutup acara</h2></div></div>
+    <div class="steps">
+      <div class="rv"><div class="n">1</div><h3>Konsultasi</h3><p>Obrolan 15 menit lewat WhatsApp untuk memahami acara dan suasana yang kamu mau.</p></div>
+      <div class="rv" style="--d:.1s"><div class="n">2</div><h3>Rundown</h3><p>Saya susun draf alur acara dan naskah, lalu kita rapikan bersama.</p></div>
+      <div class="rv" style="--d:.2s"><div class="n">3</div><h3>Gladi</h3><p>Briefing singkat dengan panitia dan vendor agar semua tahu aba-abanya.</p></div>
+      <div class="rv" style="--d:.3s"><div class="n">4</div><h3>Hari acara</h3><p>Saya hadir dua jam lebih awal untuk cek suara, panggung, dan alur.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="galeri" class="alt">
+  <div class="w">
+    <div class="sh rv"><div><p class="eyebrow">Galeri</p><h2>Suasana dari berbagai acara</h2></div><p>Gambar di sini ilustrasi. Ganti dengan foto aslimu sendiri.</p></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section class="band" aria-label="Prinsip kerja">
+  <div class="bgi" data-s=".16" data-sc="1"></div>
+  <div class="w rv"><q>Tugas MC bukan mencuri perhatian, tetapi menjaga acara tetap berjalan dan semua tamu merasa disambut.</q><span>Raka Mahendra</span></div>
+</section>
+
+<section id="testimoni">
+  <div class="w">
+    <div class="sh rv"><div><p class="eyebrow">Testimoni</p><h2>Kata mereka yang pernah bekerja sama</h2></div><p>Contoh testimoni, ganti dengan ulasan klien aslimu.</p></div>
+    <div class="tm">
+      <figure class="rv"><blockquote>“Acara kami molor di satu sesi, tapi Raka menutupnya dengan mulus. Tamu tidak sadar ada masalah.”</blockquote><figcaption><b>Maya Putri</b>Event manager, peluncuran produk</figcaption></figure>
+      <figure class="rv" style="--d:.1s"><blockquote>“Keluarga besar dari dua daerah, dua bahasa. Semua tertawa dan merasa dilibatkan.”</blockquote><figcaption><b>Dewi dan Arga</b>Pengantin</figcaption></figure>
+      <figure class="rv" style="--d:.2s"><blockquote>“Ratusan nama dibacakan tanpa salah satu pun. Panitia sangat terbantu.”</blockquote><figcaption><b>Hendra Wijaya</b>Ketua panitia wisuda</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Kolaborasi Sekarsiti Wedding Studio -->
+<section id="sekarsiti" style="padding: 90px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--sf) 90%, var(--acc) 10%);">
+  <div class="w" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center;">
+    <div>
+      <p class="eyebrow" style="color: var(--acc); font-weight: 700;">✦ Kolaborasi Rekomendasi Resmi</p>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; margin: 8px 0 16px;">Sekarsiti Wedding Studio</h2>
+      <p style="font-style: italic; color: var(--mute); font-size: 1.1rem; margin-bottom: 18px;">Atelier Undangan Pernikahan</p>
+      <p style="color: var(--mute); line-height: 1.7; font-size: 0.95rem; margin-bottom: 22px;">
+        Sebuah acara yang terencana apik berawal dari undangan yang menyentuh hati. Bersama <strong>Sekarsiti Wedding Studio</strong>, hadirkan undangan digital berkelas, minimalis, dan personal untuk mengawali kehangatan momen spesial Anda.
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a class="btn" href="https://ssiti.tech" target="_blank" rel="noopener">Kunjungi Website Sekarsiti (ssiti.tech) 🤍</a>
+        <a class="btn o" href="index.html">Info Hub Kolaborasi</a>
+      </div>
+    </div>
+    <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--sh); background: var(--sf);">
+      <div style="height: 260px; overflow: hidden; position: relative;">
+        <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=700&q=80" alt="Sekarsiti Wedding Studio" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem;">
+        <div>
+          <b>Undangan Digital Elegan</b>
+          <div style="font-size: 0.8rem; color: var(--mute);">RSVP Online, Galeri, & Musik Personal</div>
+        </div>
+        <a href="index.html" style="color: var(--acc); font-weight: 600;">Lihat Hub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="alt">
+  <div class="w ct">
+    <div class="rv">
+      <p class="eyebrow">Kontak</p><h2>Mari bicarakan acaramu</h2>
+      <p style="color:var(--mute);max-width:38ch;margin:18px 0 0">Ceritakan jenis acara, tanggal, dan suasana yang kamu inginkan. Saya balas maksimal satu hari kerja.</p>
+      <div class="ci"><span><b>WhatsApp</b> 0812 3456 7890</span><span><b>Email</b> halo@rakamahendra.id</span><span><b>Instagram</b> @rakamahendra</span></div>
+      <div class="pic" role="img" aria-label="Ilustrasi mikrofon"><div class="bgi" data-s=".07" data-sc="2"></div></div>
+    </div>
+    <form id="fm" class="rv" style="--d:.1s">
+      <div class="two"><label>Nama<input id="fn" required autocomplete="name"></label><label>Jenis acara<select id="ft"><option>pernikahan</option><option>acara perusahaan</option><option>wisuda</option><option>gathering</option></select></label></div>
+      <div class="two"><label>Tanggal acara<input id="fd" type="date"></label><label>Perkiraan tamu<input id="fg" inputmode="numeric" placeholder="Contoh: 250"></label></div>
+      <label>Cerita singkat<textarea id="fx" rows="4" placeholder="Lokasi, durasi, dan hal yang penting buatmu"></textarea></label>
+      <button class="btn">Kirim lewat WhatsApp</button><p id="ok" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="w"><span>© 2026 Raka Mahendra</span><a href="#top">Kembali ke atas</a></div></footer>
+
+<script>
+(()=>{
+document.documentElement.classList.add('js');
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root=document.documentElement;
+$('#th').onclick=()=>{const c=root.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');root.dataset.theme=c==='dark'?'light':'dark'};
+
+/* Generator gambar SVG dengan warna lembut. Ganti dengan foto asli bila sudah ada. */
+const SAT=.6,R=s=>()=>(s=(s*16807)%2147483647)/2147483647;
+const C=(h,s,l,a=1)=>`hsl(${h} ${s*SAT}% ${l}% / ${a})`;
+const S=(w,h,id,a,b,l1,l2)=>`<defs><linearGradient id="g${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C(a,75,l1)}"/><stop offset="1" stop-color="${C(b,65,l2)}"/></linearGradient><radialGradient id="r${id}"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="${w}" height="${h}" fill="url(#g${id})"/>`;
+const crowd=(w,h,r,hue,hands)=>{let s='';for(let row=0;row<3;row++){const y=h*(.84+row*.07),rd=h*(.03+row*.012),f=C(hue,45,5+row*3);for(let x=-rd;x<w+rd;x+=rd*(1.5+r()*.8)){const yy=y+r()*rd*.6;if(hands&&r()<.3){const hx=x+(r()-.5)*rd,top=yy-rd*(3+r()*3);s+=`<path d="M${x} ${yy}L${hx} ${top}" stroke="${f}" stroke-width="${rd*.4}" stroke-linecap="round"/><circle cx="${hx}" cy="${top}" r="${rd*.32}" fill="${f}"/>`}s+=`<circle cx="${x}" cy="${yy}" r="${rd}" fill="${f}"/><ellipse cx="${x}" cy="${yy+rd*2.1}" rx="${rd*1.5}" ry="${rd*1.6}" fill="${f}"/>`}}return s};
+const SC={
+ stage:(w,h,r,a,b,id,mc=.5)=>{let s='';[.15,.38,.62,.85].forEach((p,i)=>{const x=w*p,d=(i%2?1:-1)*w*.1;s+=`<polygon points="${x-6},0 ${x+6},0 ${x+d+w*.07},${h*.82} ${x+d-w*.07},${h*.82}" fill="${C(a+20,100,82,.14)}"/>`});
+  s+=`<ellipse cx="${w*(mc||.5)}" cy="${h*.8}" rx="${w*.34}" ry="${h*.05}" fill="${C(a,90,70,.4)}"/>`;
+  for(let i=0;i<16;i++){const c=C(a+r()*70,90,70);s+=`<circle cx="${r()*w|0}" cy="${r()*h*.6|0}" r="${h*(.02+r()*.05)|0}" fill="${c}" fill-opacity="${.1+r()*.2}" stroke="${c}" stroke-opacity=".4"/>`}
+  if(mc){const x=w*mc,m=C(b,40,5);s+=`<rect x="${x-h*.05}" y="${h*.5}" width="${h*.1}" height="${h*.3}" rx="${h*.04}" fill="${m}"/><circle cx="${x}" cy="${h*.46}" r="${h*.04}" fill="${m}"/><path d="M${x+h*.04} ${h*.56}L${x+h*.1} ${h*.44}" stroke="${m}" stroke-width="${h*.014}" stroke-linecap="round"/><circle cx="${x+h*.105}" cy="${h*.435}" r="${h*.018}" fill="${m}"/>`}return s},
+ crowd:(w,h,r,a,b,id)=>SC.stage(w,h,r,a,b,id,0)+crowd(w,h,r,b,1),
+ arch:(w,h,r,a,b,id)=>{const cx=w/2,rr=w*.24,t=h*.42,m=C(b,40,8);let s=`<circle cx="${cx}" cy="${t}" r="${h*.4}" fill="url(#r${id})" opacity=".6"/><rect y="${h*.86}" width="${w}" height="${h*.14}" fill="${C(b,35,14)}"/><path d="M${cx-rr} ${h*.86}V${t}A${rr} ${rr} 0 0 1 ${cx+rr} ${t}V${h*.86}" fill="none" stroke="${C(b,30,18)}" stroke-width="${w*.012}"/>`;
+  const pts=[];for(let i=0;i<=24;i++){const an=Math.PI*i/24;pts.push([cx-rr*Math.cos(an),t-rr*Math.sin(an)])}for(let y=t;y<h*.86;y+=h*.03)pts.push([cx-rr,y],[cx+rr,y]);
+  pts.forEach(([x,y])=>{const c=[C(48,95,62),C(280,70,80),'#fff',C(28,90,70)][r()*4|0];s+=`<circle cx="${x+(r()-.5)*14}" cy="${y+(r()-.5)*14}" r="${w*(.008+r()*.012)}" fill="${c}"/>`});
+  const gx=cx-w*.06,bx=cx+w*.06;
+  return s+`<circle cx="${gx}" cy="${h*.6}" r="${h*.03}" fill="${m}"/><rect x="${gx-h*.028}" y="${h*.635}" width="${h*.056}" height="${h*.225}" rx="${h*.02}" fill="${m}"/><circle cx="${bx}" cy="${h*.6}" r="${h*.03}" fill="${m}"/><path d="M${bx-h*.02} ${h*.635}L${bx+h*.02} ${h*.635}L${bx+h*.09} ${h*.86}L${bx-h*.09} ${h*.86}Z" fill="${m}"/>`},
+ grad:(w,h,r,a,b,id)=>{let s=`<circle cx="${w*.7}" cy="${h*.28}" r="${h*.3}" fill="url(#r${id})"/>`;for(let i=0;i<9;i++){const x=w*(.1+r()*.8),y=h*(.1+r()*.45),k=h*(.04+r()*.03),c=C(b,40,8);s+=`<g transform="translate(${x} ${y}) rotate(${r()*80-40})"><polygon points="${-k*1.6},0 0,${-k*.8} ${k*1.6},0 0,${k*.8}" fill="${c}"/><rect x="${-k*.7}" y="0" width="${k*1.4}" height="${k*.7}" fill="${c}"/><path d="M${k*1.2} 0V${k*1.3}" stroke="${C(48,95,60)}" stroke-width="${k*.12}"/></g>`}return s+crowd(w,h,r,b,1)},
+ city:(w,h,r,a,b,id)=>{let s=`<defs><pattern id="w${id}" width="30" height="44" patternUnits="userSpaceOnUse"><rect x="9" y="12" width="9" height="14" fill="${C(48,95,65)}"/></pattern></defs><circle cx="${w*.8}" cy="${h*.2}" r="${h*.26}" fill="url(#r${id})" opacity=".3"/><circle cx="${w*.8}" cy="${h*.2}" r="${h*.06}" fill="${C(48,90,92)}"/>`;for(let x=-10;x<w;){const bw=w*(.05+r()*.07),bh=h*(.22+r()*.45);s+=`<rect x="${x}" y="${h-bh}" width="${bw}" height="${bh}" fill="${C(b,45,7+r()*6)}"/><rect x="${x}" y="${h-bh}" width="${bw}" height="${bh}" fill="url(#w${id})" opacity="${.2+r()*.6}"/>`;x+=bw+3}return s},
+ mic:(w,h,r,a,b,id)=>{let s='';for(let i=0;i<34;i++){const c=C(a+r()*80,90,70),rd=h*(.03+r()*.1);s+=`<circle cx="${r()*w|0}" cy="${r()*h|0}" r="${rd|0}" fill="${c}" fill-opacity="${.08+r()*.22}" stroke="${c}" stroke-opacity=".35"/>`}const x=w*.62,m=C(b,30,6);s+=`<rect x="${x-h*.07}" y="${h*.12}" width="${h*.14}" height="${h*.3}" rx="${h*.07}" fill="${m}"/>`;for(let i=0;i<7;i++)s+=`<path d="M${x-h*.07} ${h*.16+i*h*.036}H${x+h*.07}" stroke="${C(a,50,40)}" stroke-width="2"/>`;return s+`<path d="M${x-h*.1} ${h*.34}Q${x-h*.1} ${h*.52} ${x} ${h*.52}T${x+h*.1} ${h*.34}M${x} ${h*.52}V${h*.95}" fill="none" stroke="${m}" stroke-width="${h*.014}" stroke-linecap="round"/>`}
+};
+const IM=(t,w,h,a,b,seed,l1=30,l2=10,x)=>'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}">${S(w,h,seed,a,b,l1,l2)}${SC[t](w,h,R(seed*7919+13),a,b,seed,x)}</svg>`);
+const put=(el,u)=>el.style.backgroundImage=`url("${u}")`;
+
+/* Gambar tetap: hero, kutipan, kontak dengan foto nyata */
+const fixedPhotos=[
+  'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80'
+];
+$$('[data-sc]').forEach(e=>{const u=fixedPhotos[+e.dataset.sc];put(e,u)});
+
+/* Galeri foto dokumentasi acara */
+const pics=[
+  ['Gala dinner','https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80','tall'],
+  ['Akad dan resepsi','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',''],
+  ['Peluncuran produk','https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80',''],
+  ['Konser kampus','https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80','wide'],
+  ['Wisuda','https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80',''],
+  ['Tes suara','https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',''],
+  ['Resepsi taman','https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80','']
+];
+const gal=$('#gal');
+gal.innerHTML=pics.map((p,i)=>`<figure class="t ${p[2]} rv" style="--d:${(i%3)*.08}s"><div class="bgi" data-s=".06" role="img" aria-label="Dokumentasi ${p[0]}" style="background-image:url('${p[1]}')"></div><figcaption>${p[0]}</figcaption></figure>`).join('');
+
+/* Muncul halus saat di-scroll */
+const io=new IntersectionObserver(en=>en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+$$('.rv').forEach(e=>io.observe(e));
+
+/* Penghitung angka */
+new IntersectionObserver((en,o)=>{if(!en[0].isIntersecting)return;o.disconnect();
+ $$('#st b').forEach(b=>{const to=+b.dataset.to;if(rm){b.textContent=to;return}const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1400);b.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)})},{threshold:.6}).observe($('#st'));
+
+/* Form ke WhatsApp (ganti nomor) */
+$('#fm').onsubmit=e=>{e.preventDefault();
+ const m=`Halo Kak Raka, saya ${$('#fn').value}. Saya butuh MC untuk acara ${$('#ft').value}${$('#fd').value?' pada '+$('#fd').value:''}${$('#fg').value?' dengan sekitar '+$('#fg').value+' tamu':''}. ${$('#fx').value}`;
+ $('#ok').textContent='Membuka WhatsApp…';
+ window.open('https://wa.me/6281234567890?text='+encodeURIComponent(m),'_blank','noopener')};
+
+/* Parallax halus pada gambar dan header */
+const bgs=$$('.bgi'),hd=$('#hd');let tk=false;
+function upd(){tk=false;hd.classList.toggle('s',scrollY>20);if(rm)return;
+ bgs.forEach(b=>{const r=b.parentElement.getBoundingClientRect();if(r.bottom<-100||r.top>innerHeight+100)return;b.style.transform=`translate3d(0,${(-(r.top+r.height/2-innerHeight/2)*b.dataset.s).toFixed(1)}px,0)`})}
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});
+addEventListener('resize',upd);upd();
+})();
+</script>
+<!-- Floating Template Hub Switcher Pill -->
+<div style="position:fixed; bottom:20px; left:20px; z-index:90;">
+  <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; background:rgba(255,255,255,0.95); color:var(--fg); border:1px solid var(--acc); backdrop-filter:blur(10px); border-radius:99px; font-size:0.85rem; font-weight:700; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,0.15); transition:transform .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+    <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--acc); box-shadow:0 0 8px var(--acc);"></span>
+    ← Hub Template Sekarsiti
+  </a>
+</div>
+</body>
+</html>

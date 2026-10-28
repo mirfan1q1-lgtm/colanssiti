@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Sekarsiti Wedding Studio — Hub Kolaborasi & Showcase Template Vendor</title>
+    <meta name="description" content="Pusat Kolaborasi Sekarsiti Wedding Studio: Solusi pembuatan landing page profesional tanpa biaya jasa untuk Wedding Organizer, MC, Fotografer, dan Vendor Pernikahan.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        atelier: {
+                            50: '#FDFBF7',
+                            100: '#F9F5EE',
+                            200: '#F0E8D9',
+                            300: '#E4D5BC',
+                            400: '#CDB996',
+                            500: '#B89F75',
+                            600: '#9B7E55',
+                            700: '#7B603D',
+                            800: '#5A4328',
+                            900: '#3A2916',
+                        },
+                        stone: {
+                            850: '#211D1A',
+                            900: '#1A1715',
+                            950: '#12100E',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(228, 213, 188, 0.5);
+        }
+        .glass-dark {
+            background: rgba(26, 23, 21, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(184, 159, 117, 0.2);
+        }
+        .hero-pattern {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#E4D5BC 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-atelier-50 text-stone-850 font-sans antialiased selection:bg-atelier-200 selection:text-atelier-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-atelier-900 text-atelier-200 text-xs py-2 px-4 text-center font-medium border-b border-atelier-800">
+        <span>🤍 Program Kemitraan Terbuka 2026: Pembuatan Landing Page Eksklusif Tanpa Biaya Jasa untuk Vendor Pernikahan</span>
+        <a href="#skema" class="underline hover:text-white ml-2 transition">Pelajari Skema Kerjasama →</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-atelier-200/60 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-full bg-atelier-100 border border-atelier-300 flex items-center justify-center text-atelier-700 shadow-xs">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-atelier-600"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-atelier-900 block leading-tight">Sekarsiti</span>
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-atelier-600 font-semibold block">Atelier Undangan Pernikahan</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-stone-700">
+                    <a href="#tentang" class="hover:text-atelier-700 transition">Tentang Sekarsiti</a>
+                    <a href="#skema" class="hover:text-atelier-700 transition">Skema Kolaborasi</a>
+                    <a href="#templates" class="text-atelier-700 font-bold flex items-center gap-1.5 hover:text-atelier-800 transition">
+                        <span>Showcase Template</span>
+                        <span class="px-2 py-0.5 rounded-full text-[10px] bg-atelier-200 text-atelier-800">6 Desain</span>
+                    </a>
+                    <a href="#keuntungan" class="hover:text-atelier-700 transition">Manfaat Mitra</a>
+                    <a href="#faq" class="hover:text-atelier-700 transition">FAQ</a>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://ssiti.tech" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-full bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold tracking-wide transition shadow-sm hover:shadow-md flex items-center gap-2">
+                        <i data-lucide="globe" class="w-4 h-4 text-atelier-300"></i>
+                        <span>Web Utama: ssiti.tech 🤍</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2 text-stone-700">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-atelier-200 px-6 py-5 space-y-3">
+            <a href="#tentang" class="mobile-nav-link block text-sm font-medium text-stone-700 hover:text-atelier-700 py-1">Tentang Sekarsiti</a>
+            <a href="#skema" class="mobile-nav-link block text-sm font-medium text-stone-700 hover:text-atelier-700 py-1">Skema Kolaborasi</a>
+            <a href="#templates" class="mobile-nav-link block text-sm font-medium text-atelier-700 font-bold py-1">Showcase Template (6 Desain)</a>
+            <a href="#keuntungan" class="mobile-nav-link block text-sm font-medium text-stone-700 hover:text-atelier-700 py-1">Manfaat Mitra</a>
+            <a href="#faq" class="mobile-nav-link block text-sm font-medium text-stone-700 hover:text-atelier-700 py-1">FAQ Kemitraan</a>
+            <a href="https://ssiti.tech" target="_blank" rel="noopener" class="mobile-nav-link block text-center bg-atelier-800 text-white py-2.5 rounded-xl text-xs font-semibold mt-3">
+                Kunjungi ssiti.tech 🤍
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-16 pb-24 border-b border-atelier-200/80 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <!-- Eyebrow Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-atelier-100 border border-atelier-300 text-atelier-700 text-xs font-semibold tracking-wide uppercase shadow-xs">
+                    <span class="w-2 h-2 rounded-full bg-atelier-500 animate-pulse"></span>
+                    <span>Kolaborasi Sinergis Ekosistem Pernikahan</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-4xl sm:text-6xl font-serif font-bold text-stone-900 tracking-tight leading-tight">
+                    Hadirkan Landing Page Profesional untuk Bisnis Anda, <br>
+                    <span class="italic text-atelier-700 font-normal">Tanpa Biaya Jasa Pembuatan.</span>
+                </h1>
+
+                <!-- Subtitle / Value Prop -->
+                <p class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                    <strong>Sekarsiti Wedding Studio</strong> (Atelier Undangan Pernikahan) mengajak rekan-rekan <strong>Wedding Organizer, MC, Fotografer, dan Vendor Pernikahan</strong> untuk bermitra. Kami buatkan landing page profil bisnis yang elegan & siap pakai — ditukar dengan ruang promosi rekomendasi undangan pernikahan.
+                </p>
+
+                <!-- Action CTAs -->
+                <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#templates" class="w-full sm:w-auto px-8 py-4 rounded-full bg-atelier-800 hover:bg-atelier-900 text-white font-semibold text-sm tracking-wide transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2.5">
+                        <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                        <span>Jelajahi Showcase Template</span>
+                    </a>
+                    <a href="#skema" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-atelier-100 border border-atelier-300 text-atelier-800 font-semibold text-sm tracking-wide transition shadow-xs flex items-center justify-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-atelier-600"></i>
+                        <span>Bagaimana Cara Kerjanya?</span>
+                    </a>
+                </div>
+
+                <!-- Trust Metrics Bar -->
+                <div class="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                    <div class="bg-white p-4 rounded-2xl border border-atelier-200/80 shadow-xs">
+                        <div class="font-serif text-2xl font-bold text-atelier-800">Rp 0,-</div>
+                        <div class="text-xs text-stone-500">Biaya Jasa Pembuatan Website</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border border-atelier-200/80 shadow-xs">
+                        <div class="font-serif text-2xl font-bold text-atelier-800">Vercel</div>
+                        <div class="text-xs text-stone-500">Hosting Super Cepat & Ringan</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border border-atelier-200/80 shadow-xs">
+                        <div class="font-serif text-2xl font-bold text-atelier-800">100% Mobile</div>
+                        <div class="text-xs text-stone-500">Responsif di Seluruh Smartphone</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border border-atelier-200/80 shadow-xs">
+                        <div class="font-serif text-2xl font-bold text-atelier-800">Direct WA</div>
+                        <div class="text-xs text-stone-500">Calon Klien Chat Langsung ke Mitra</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Showcase Template Vendor (Interactive Switcher) -->
+    <section id="templates" class="py-24 bg-white border-b border-atelier-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-atelier-600 font-semibold text-xs tracking-widest uppercase">Katalog Desain Terkurasi</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">
+                        Pilih & Jelajahi Template Vendor Kami
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base mt-2 max-w-xl">
+                        Setiap template dirancang khusus sesuai karakter profesi Anda: fotografer, MC, wedding organizer, hingga vendor pendukung lainnya.
+                    </p>
+                </div>
+
+                <!-- Template Filter Tabs -->
+                <div class="flex items-center gap-2 bg-atelier-100 p-1.5 rounded-full border border-atelier-200 overflow-x-auto">
+                    <button onclick="filterTemplates('all')" class="tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-atelier-900 shadow-xs transition" data-filter="all">Semua Template</button>
+                    <button onclick="filterTemplates('foto')" class="tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-atelier-900 transition" data-filter="foto">Fotografer</button>
+                    <button onclick="filterTemplates('wo')" class="tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-atelier-900 transition" data-filter="wo">Wedding Organizer</button>
+                    <button onclick="filterTemplates('mc')" class="tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-atelier-900 transition" data-filter="mc">Master of Ceremony</button>
+                    <button onclick="filterTemplates('dekor')" class="tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-atelier-900 transition" data-filter="dekor">Dekorasi</button>
+                </div>
+            </div>
+
+            <!-- Template Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch" id="templatesGrid">
+
+                <!-- Template 1: Dimas Arkana (Fotografer) -->
+                <div class="tmpl-card group bg-atelier-50 rounded-3xl border border-atelier-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="foto">
+                    <div>
+                        <!-- Header Preview -->
+                        <div class="relative h-64 bg-stone-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Dimas Arkana Fotografer Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-85">
+                            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-red-600/90 text-white shadow-sm">Fotografi & Video</span>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-black/60 backdrop-blur-md text-stone-300">Dark Editorial Style</span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold text-white">Dimas Arkana</h3>
+                                <p class="text-xs text-stone-300">Portofolio Jasa Fotografer & Dokumentasi Emosional</p>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Gaya visual gelap berkelas dengan simulasi jendela bidik kamera (aperture, ISO, shutter speed), filter galeri foto multi-kategori, lightbox foto interaktif, dan form WhatsApp instan.
+                            </p>
+
+                            <div class="space-y-2 border-t border-atelier-200/60 pt-4 text-xs text-stone-700">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Galeri foto responsif + Lightbox preview resolusi tinggi</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Simulasi teknis kamera analog & digital yang interaktif</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Dilengkapi iklan kurasi Sekarsiti Wedding Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="Dimas%20Arkana%20%E2%80%93%20Portofolio%20Jasa%20Fotografer.html" class="flex-1 py-3 text-center rounded-xl bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <span>Buka Template Penuh</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openPreviewModal('Dimas%20Arkana%20%E2%80%93%20Portofolio%20Jasa%20Fotografer.html', 'Dimas Arkana — Jasa Fotografer')" class="px-4 py-3 rounded-xl border border-atelier-300 hover:bg-white text-atelier-800 text-xs font-semibold transition flex items-center gap-1.5" title="Pratinjau Cepat">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Preview</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Template 2: Larana Wedding Organizer -->
+                <div class="tmpl-card group bg-atelier-50 rounded-3xl border border-atelier-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="wo">
+                    <div>
+                        <!-- Header Preview -->
+                        <div class="relative h-64 bg-sky-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Larana Wedding Organizer Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-sky-600 text-white shadow-sm">Wedding Organizer (WO)</span>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/80 backdrop-blur-md text-sky-900">Soft Watercolor Pastel</span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold text-white">Larana Wedding Organizer</h3>
+                                <p class="text-xs text-sky-100">Perencanaan Komprehensif Hari Bahagia</p>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Nuansa dusty blue & pastel elegan, dilengkapi dengan interactive service tabs, kalkulator simulasi anggaran pernikahan dengan slider tamu, katalog paket, galeri foto, dan formulir konsultasi.
+                            </p>
+
+                            <div class="space-y-2 border-t border-atelier-200/60 pt-4 text-xs text-stone-700">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Kalkulator estimasi biaya otomatis & transparan</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Struktur layanan lengkap (Pra-Nikah, Hari-H, Jaringan Vendor)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Bagian rekomendasi eksklusif Sekarsiti Wedding Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="larana_wedding_organizer_landing_page.html" class="flex-1 py-3 text-center rounded-xl bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <span>Buka Template Penuh</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openPreviewModal('larana_wedding_organizer_landing_page.html', 'Larana Wedding Organizer')" class="px-4 py-3 rounded-xl border border-atelier-300 hover:bg-white text-atelier-800 text-xs font-semibold transition flex items-center gap-1.5" title="Pratinjau Cepat">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Preview</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Template 3: Julian Pratama (Wedding MC - Classic Navy) -->
+                <div class="tmpl-card group bg-atelier-50 rounded-3xl border border-atelier-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="mc">
+                    <div>
+                        <!-- Header Preview -->
+                        <div class="relative h-64 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" alt="Julian Pratama MC Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-85 object-top">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-amber-600 text-white shadow-sm">Master of Ceremony</span>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-slate-800/80 backdrop-blur-md text-amber-200">Luxury Navy & Gold</span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold text-white">Julian Pratama</h3>
+                                <p class="text-xs text-slate-300">Wedding MC Kharismatik & Hangat</p>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Pendekatan pembawa acara elegan dengan audio sampler pemutar suara langsung, video showcase dokumentasi acara, breakdown paket resepsi, dan sistem form terstruktur WhatsApp.
+                            </p>
+
+                            <div class="space-y-2 border-t border-atelier-200/60 pt-4 text-xs text-stone-700">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Fitur Audio Voice Sampler interaktif</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Katalog paket MC Akad, Resepsi, hingga Bilingual</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Kolaborasi resmi Official Partner Sekarsiti Wedding Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="portofolio_wedding_mc.html" class="flex-1 py-3 text-center rounded-xl bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <span>Buka Template Penuh</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openPreviewModal('portofolio_wedding_mc.html', 'Julian Pratama — Wedding MC')" class="px-4 py-3 rounded-xl border border-atelier-300 hover:bg-white text-atelier-800 text-xs font-semibold transition flex items-center gap-1.5" title="Pratinjau Cepat">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Preview</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Template 4: Raka Mahendra (MC Profesional - Stage & Corporate) -->
+                <div class="tmpl-card group bg-atelier-50 rounded-3xl border border-atelier-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="mc">
+                    <div>
+                        <!-- Header Preview -->
+                        <div class="relative h-64 bg-blue-950 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80" alt="Raka Mahendra MC Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-950/40 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-amber-400 text-blue-950 font-bold shadow-sm">MC Panggung & Wedding</span>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-blue-900/80 backdrop-blur-md text-amber-300">Modern Pop Energetic</span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold text-white">Raka Mahendra</h3>
+                                <p class="text-xs text-blue-200">Suara yang Membuat Acara Terasa Hidup</p>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Gaya dinamis dan penuh energi dengan galeri polaroid dokumentasi panggung nyata, rundown timeline switcher per jenis event, demo nada bicara teleprompter, dan tombol tepuk tangan interaktif.
+                            </p>
+
+                            <div class="space-y-2 border-t border-atelier-200/60 pt-4 text-xs text-stone-700">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Galeri polaroid miring dengan interaksi 3D dinamis</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Pilihan rundown terstruktur (Pernikahan, Gathering, Wisuda)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Kolaborasi promosi terpadu Sekarsiti Wedding Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="Raka%20Mahendra%20%E2%80%93%20Portofolio%20MC%20Profesional.html" class="flex-1 py-3 text-center rounded-xl bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <span>Buka Template Penuh</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openPreviewModal('Raka%20Mahendra%20%E2%80%93%20Portofolio%20MC%20Profesional.html', 'Raka Mahendra — MC Profesional')" class="px-4 py-3 rounded-xl border border-atelier-300 hover:bg-white text-atelier-800 text-xs font-semibold transition flex items-center gap-1.5" title="Pratinjau Cepat">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Preview</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Template 5: Raka Mahendra (MC Profesional - Versi Bersih & Minimalis) -->
+                <div class="tmpl-card group bg-atelier-50 rounded-3xl border border-atelier-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="mc">
+                    <div>
+                        <!-- Header Preview -->
+                        <div class="relative h-64 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Raka Mahendra Versi Bersih Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-85">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-indigo-700 text-white shadow-sm">MC Korporat & Pernikahan</span>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/80 backdrop-blur-md text-stone-900">Clean Editorial Style</span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold text-white">Raka Mahendra (Versi Bersih)</h3>
+                                <p class="text-xs text-stone-300">Layout Tipografi Elegan & Struktur Ringan</p>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Gaya visual bersih dengan font Newsreader klasik, animasi parallax halus, grid galeri dokumentasi foto panggung, alur proses 4 tahap, dan form kontak terhubung WhatsApp.
+                            </p>
+
+                            <div class="space-y-2 border-t border-atelier-200/60 pt-4 text-xs text-stone-700">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Tipografi editorial Newsreader & Hanken Grotesk</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Galeri foto dokumentasi acara beresolusi tinggi</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Bagian promosi terintegrasi Sekarsiti Wedding Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="Raka%20Mahendra%20%E2%80%93%20MC%20Profesional%20(versi%20bersih).html" class="flex-1 py-3 text-center rounded-xl bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <span>Buka Template Penuh</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openPreviewModal('Raka%20Mahendra%20%E2%80%93%20MC%20Profesional%20(versi%20bersih).html', 'Raka Mahendra — Versi Bersih')" class="px-4 py-3 rounded-xl border border-atelier-300 hover:bg-white text-atelier-800 text-xs font-semibold transition flex items-center gap-1.5" title="Pratinjau Cepat">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Preview</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Template 6: Aruna Dekor (Dekorasi Pernikahan) -->
+                <div class="tmpl-card group bg-atelier-50 rounded-3xl border border-atelier-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="dekor">
+                    <div>
+                        <!-- Header Preview -->
+                        <div class="relative h-64 bg-purple-950 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Aruna Dekor Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-85">
+                            <div class="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-950/40 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-4 left-4 flex gap-2">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-amber-600 text-white shadow-sm">Dekorasi & Florist</span>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-semibold bg-purple-900/80 backdrop-blur-md text-amber-200">Bodoni Lavender & Gold</span>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold text-white">Aruna Dekor</h3>
+                                <p class="text-xs text-purple-200">Dekorasi Pelaminan, Bunga & Pencahayaan</p>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Sentuhan estetika mewah dengan slider perbandingan Sebelum & Sesudah dekorasi ballroom, animasi kelopak bunga jatuh di hero, katalog paket dekor, dan ulasan pasangan bahagia.
+                            </p>
+
+                            <div class="space-y-2 border-t border-atelier-200/60 pt-4 text-xs text-stone-700">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Fitur interaktif Slider Sebelum & Sesudah dekorasi</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Katalog paket (Intimate, Klasik, Grand Ballroom)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-atelier-600"></i>
+                                    <span>Rekomendasi resmi terhubung ke ssiti.tech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="p-6 pt-0 flex gap-3">
+                        <a href="landing-dekor-wedding.html" class="flex-1 py-3 text-center rounded-xl bg-atelier-800 hover:bg-atelier-900 text-white text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <span>Buka Template Penuh</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openPreviewModal('landing-dekor-wedding.html', 'Aruna Dekor — Dekorasi Pernikahan')" class="px-4 py-3 rounded-xl border border-atelier-300 hover:bg-white text-atelier-800 text-xs font-semibold transition flex items-center gap-1.5" title="Pratinjau Cepat">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Preview</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Coming Soon Vendors Callout -->
+            <div class="mt-12 bg-atelier-100/70 border border-atelier-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-atelier-200 text-atelier-700 flex items-center justify-center shrink-0">
+                        <i data-lucide="brush" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-stone-900">Apakah Anda MUA, Vendor Dekorasi, atau Katering?</h4>
+                        <p class="text-xs sm:text-sm text-stone-600">Kami sedang merancang template khusus untuk Make-Up Artist dan Florist/Dekorator pernikahan. Diskusikan konsep Anda bersama kami sekarang!</p>
+                    </div>
+                </div>
+                <a href="https://ssiti.tech" target="_blank" rel="noopener" class="whitespace-nowrap px-6 py-3 rounded-full bg-white border border-atelier-300 hover:bg-atelier-200 text-atelier-800 text-xs font-bold transition shadow-xs flex items-center gap-2">
+                    <i data-lucide="globe" class="w-4 h-4 text-atelier-600"></i>
+                    <span>Kunjungi ssiti.tech 🤍</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Skema Kolaborasi & Cara Kerja -->
+    <section id="skema" class="py-24 bg-atelier-50 border-b border-atelier-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-atelier-600 font-semibold text-xs tracking-widest uppercase">Transparan & Saling Menguntungkan</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">
+                    Skema Kolaborasi Sekarsiti Wedding Studio
+                </h2>
+                <div class="w-16 h-0.5 bg-atelier-400 mx-auto my-4"></div>
+                <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                    Kami percaya bahwa kemitraan jangka panjang dibangun di atas kejelasan, keterbukaan, dan pertukaran nilai yang adil tanpa janji-janji berlebihan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- What Sekarsiti Gives -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-atelier-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-atelier-200/80 text-atelier-800 flex items-center justify-center mb-6">
+                            <i data-lucide="laptop" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-stone-900 mb-2">Yang Diberikan Sekarsiti:</h3>
+                        <p class="text-xs text-atelier-600 font-semibold uppercase tracking-wider mb-6">Jasa Pembuatan Landing Page Tanpa Biaya</p>
+
+                        <ul class="space-y-4 text-xs sm:text-sm text-stone-700">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span><strong>Desain Landing Page Eksklusif:</strong> Dirancang rapi, modern, dan disesuaikan dengan warna dan identitas bisnis Anda.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span><strong>Katalog Paket & Layanan:</strong> Tampilan harga dan paket transparan yang memudahkan calon pengantin memesan.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span><strong>Galeri Portofolio & Testimoni:</strong> Wadah menampilkan foto karya terbaik dan ulasan klien sebelumnya.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span><strong>Tombol WhatsApp Leads:</strong> Calon klien langsung terhubung ke nomor WhatsApp resmi mitra dengan pesan otomatis terstruktur.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span><strong>Deployment Cepat di Vercel:</strong> Website online berkecepatan tinggi, aman, dan tanpa biaya hosting bulanan.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-atelier-200 text-[11px] text-stone-500">
+                        *Nilai komersial jasa pembuatan landing page profesional ini setara Rp 3.000.000 — Rp 5.000.000,-
+                    </div>
+                </div>
+
+                <!-- What Partner Gives in Return -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-atelier-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-atelier-800 text-atelier-200 flex items-center justify-center mb-6">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-stone-900 mb-2">Yang Diberikan Mitra (Timbal Balik):</h3>
+                        <p class="text-xs text-atelier-600 font-semibold uppercase tracking-wider mb-6">Ruang Promosi Undangan Digital Sekarsiti</p>
+
+                        <ul class="space-y-4 text-xs sm:text-sm text-stone-700">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-atelier-700 shrink-0 mt-0.5"></i>
+                                <span><strong>Pencantuman Bagian Rekomendasi:</strong> Satu bagian khusus di landing page Anda yang merekomendasikan Sekarsiti sebagai vendor undangan digital pernikahan.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-atelier-700 shrink-0 mt-0.5"></i>
+                                <span><strong>Desain yang Tetap Selaras:</strong> Banner dan elemen promosi Sekarsiti didesain harmonis dengan tema website Anda (tidak mencolok atau terkesan spam).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-atelier-700 shrink-0 mt-0.5"></i>
+                                <span><strong>Bukan Gratis Tanpa Syarat:</strong> Ini adalah pertukaran nilai mutual yang saling memperkuat ekosistem vendor pernikahan.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-atelier-700 shrink-0 mt-0.5"></i>
+                                <span><strong>Tanpa Janji Fiktif:</strong> Tidak ada komisi rumit, sistem bagi hasil tersembunyi, atau target penjualan yang memberatkan.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-atelier-200 text-[11px] text-stone-500">
+                        *Mitra dan Sekarsiti saling memperluas jangkauan ke calon pengantin berkualitas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Langkah Mudah Bergabung -->
+            <div class="mt-16">
+                <div class="text-center mb-10">
+                    <h3 class="font-serif text-2xl font-bold text-stone-900">4 Langkah Mudah Bergabung Menjadi Mitra</h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-atelier-200 shadow-xs relative">
+                        <div class="text-4xl font-serif font-bold text-atelier-300 mb-2">01</div>
+                        <h4 class="font-bold text-stone-900 text-sm mb-1">Hubungi Sekarsiti</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Sapa tim Sekarsiti via WhatsApp secara santai. Sampaikan jenis usaha pernikahan yang Anda jalankan.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-atelier-200 shadow-xs relative">
+                        <div class="text-4xl font-serif font-bold text-atelier-300 mb-2">02</div>
+                        <h4 class="font-bold text-stone-900 text-sm mb-1">Kirim Materi Profil</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Kirimkan nama bisnis, deskripsi layanan, daftar paket/harga, 5-10 foto portofolio terbaik, dan kontak WA.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-atelier-200 shadow-xs relative">
+                        <div class="text-4xl font-serif font-bold text-atelier-300 mb-2">03</div>
+                        <h4 class="font-bold text-stone-900 text-sm mb-1">Penyusunan Landing Page</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Tim Sekarsiti menyusun template landing page responsif lengkap dengan elemen promosi Sekarsiti.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-atelier-200 shadow-xs relative">
+                        <div class="text-4xl font-serif font-bold text-atelier-300 mb-2">04</div>
+                        <h4 class="font-bold text-stone-900 text-sm mb-1">Review & Tayang di Vercel</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Setelah Anda puas dengan tampilannya, website langsung dipublikasikan dan siap dipasang di bio Instagram/TikTok Anda!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Tentang Sekarsiti Wedding Studio -->
+    <section id="tentang" class="py-24 bg-white border-b border-atelier-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-atelier-600 font-semibold text-xs tracking-widest uppercase">Mengenal Brand Kami</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
+                        Sekarsiti Wedding Studio <br>
+                        <span class="italic text-atelier-700 font-normal">Atelier Undangan Pernikahan</span>
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                        Kami adalah atelier yang berfokus menciptakan <strong>undangan digital pernikahan premium</strong>. Karakter brand kami elegan, hangat, minimalis, dan sangat personal. Kami percaya bahwa undangan adalah cerminan martabat dan ketulusan hari sakral kedua mempelai.
+                    </p>
+                    <div class="space-y-3 pt-2 text-xs sm:text-sm text-stone-700">
+                        <div class="flex items-center gap-3">
+                            <span class="text-atelier-700 font-bold">🤍</span>
+                            <span><strong>Karakter Brand:</strong> Elegan, premium, hangat, tidak berisik, dan personal.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-atelier-700 font-bold">🤍</span>
+                            <span><strong>Gaya Komunikasi:</strong> Sopan, ramah, natural, dan tidak agresif kepada calon pengantin.</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-atelier-700 font-bold">🤍</span>
+                            <span><strong>Fitur Undangan:</strong> Tipografi mewah, musik personal, galeri cerita, konfirmasi kehadiran (RSVP), petunjuk lokasi Google Maps, dan amplop digital.</span>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <a href="https://ssiti.tech" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-atelier-100 hover:bg-atelier-200 text-atelier-800 text-xs font-semibold tracking-wide transition border border-atelier-300 inline-flex items-center gap-2">
+                            <i data-lucide="globe" class="w-4 h-4 text-atelier-700"></i>
+                            <span>Kunjungi Website Resmi (ssiti.tech) 🤍</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative max-w-md mx-auto">
+                        <div class="absolute -inset-4 bg-atelier-100 rounded-3xl transform -rotate-2"></div>
+                        <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-atelier-200 space-y-4">
+                            <div class="relative h-80 rounded-2xl overflow-hidden bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=800&q=80" alt="Koleksi Undangan Sekarsiti Wedding Studio" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4 text-white p-3 bg-stone-900/80 backdrop-blur-md rounded-xl text-xs">
+                                    <div class="font-serif font-bold text-base">Atelier Undangan Pernikahan</div>
+                                    <p class="text-stone-300 text-[11px] mt-0.5">Mewujudkan kesan pertama hari bahagia yang penuh kehangatan.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 text-xs text-center">
+                                <div class="p-3 bg-atelier-50 rounded-xl border border-atelier-200">
+                                    <div class="font-serif font-bold text-base text-atelier-800">Minimalis</div>
+                                    <div class="text-[11px] text-stone-500">Tata letak bersih & anggun</div>
+                                </div>
+                                <div class="p-3 bg-atelier-50 rounded-xl border border-atelier-200">
+                                    <div class="font-serif font-bold text-base text-atelier-800">Personal</div>
+                                    <div class="text-[11px] text-stone-500">Sentuhan cerita cinta sejati</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Keuntungan bagi Mitra -->
+    <section id="keuntungan" class="py-24 bg-atelier-50 border-b border-atelier-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-atelier-600 font-semibold text-xs tracking-widest uppercase">Keunggulan Praktis</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">
+                    Mengapa Bergabung dengan Kolaborasi Ini?
+                </h2>
+                <div class="w-16 h-0.5 bg-atelier-400 mx-auto my-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-atelier-200 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-atelier-100 text-atelier-700 flex items-center justify-center mb-6">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-3">Tingkatkan Kredibilitas Usaha</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Calon pengantin lebih percaya pada vendor yang memiliki website resmi dengan portofolio rapi dibanding hanya akun medsos tanpa katalog terstruktur.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-atelier-100 text-[11px] text-atelier-700 font-semibold">
+                        ✓ Tautan profesional di bio Instagram & TikTok
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-atelier-200 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-atelier-100 text-atelier-700 flex items-center justify-center mb-6">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-3">Hemat Waktu Penjelasan</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Tidak perlu lagi mengirimkan PDF berukuran besar berkali-kali. Cukup bagikan tautan website Anda untuk memperlihatkan paket, harga, dan dokumentasi kerja.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-atelier-100 text-[11px] text-atelier-700 font-semibold">
+                        ✓ Calon klien membaca informasi secara mandiri
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-atelier-200 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-atelier-100 text-atelier-700 flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-3">Jaringan Referal Sinergis</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Bermitra dengan Sekarsiti membuka peluang saling merekomendasikan vendor antar sesama mitra pernikahan dalam satu jejaring profesional.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-atelier-100 text-[11px] text-atelier-700 font-semibold">
+                        ✓ Komunitas vendor pernikahan saling mendukung
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ Transparan -->
+    <section id="faq" class="py-24 bg-white border-b border-atelier-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-atelier-600 font-semibold text-xs tracking-widest uppercase">Pertanyaan Seputar Kemitraan</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">
+                    Hal yang Sering Ditanyakan (FAQ)
+                </h2>
+                <div class="w-16 h-0.5 bg-atelier-400 mx-auto my-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-atelier-200 rounded-2xl overflow-hidden bg-atelier-50/50">
+                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center font-serif text-lg font-bold text-stone-900 hover:text-atelier-700 transition">
+                        <span>Apakah benar-benar tanpa biaya jasa pembuatan?</span>
+                        <i data-lucide="chevron-down" id="faqIcon-1" class="w-5 h-5 text-atelier-600 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-1" class="hidden px-6 pb-6 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-atelier-200/60 pt-4">
+                        Benar. Sekarsiti tidak memungut biaya jasa desain dan koding pembuatan website. Sebagai gantinya, Anda menyetujui penempatan bagian promosi atau rekomendasi Sekarsiti Wedding Studio di landing page tersebut. Ini adalah bentuk kerja sama barter nilai (value exchange).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-atelier-200 rounded-2xl overflow-hidden bg-atelier-50/50">
+                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center font-serif text-lg font-bold text-stone-900 hover:text-atelier-700 transition">
+                        <span>Bagaimana dengan nama domain (alamat website)?</span>
+                        <i data-lucide="chevron-down" id="faqIcon-2" class="w-5 h-5 text-atelier-600 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-2" class="hidden px-6 pb-6 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-atelier-200/60 pt-4">
+                        Secara default, landing page Anda akan di-hosting di platform Vercel dengan URL gratis (misal: <code>nama-bisnis.vercel.app</code>) yang aman, cepat, dan sudah ber-SSL. Jika Anda ingin menggunakan domain kustom sendiri (seperti <code>namabisnis.com</code> atau <code>namabisnis.id</code>), Anda cukup membeli domain tersebut ke registrar resmi dan tim kami akan membantu menghubungkannya secara transparan.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-atelier-200 rounded-2xl overflow-hidden bg-atelier-50/50">
+                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center font-serif text-lg font-bold text-stone-900 hover:text-atelier-700 transition">
+                        <span>Apakah website memiliki dashboard admin atau CMS?</span>
+                        <i data-lucide="chevron-down" id="faqIcon-3" class="w-5 h-5 text-atelier-600 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-3" class="hidden px-6 pb-6 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-atelier-200/60 pt-4">
+                        Tidak. Landing page dibuat sebagai website statis (HTML, CSS, JS murni) agar ultra-ringan, tidak rentan diretas, dan bebas biaya pemeliharaan server database yang mahal. Apabila di masa mendatang ada perubahan paket atau nomor kontak, Anda cukup mengabari kami untuk pembaruan berkala.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-atelier-200 rounded-2xl overflow-hidden bg-atelier-50/50">
+                    <button onclick="toggleFaq(4)" class="w-full p-6 text-left flex justify-between items-center font-serif text-lg font-bold text-stone-900 hover:text-atelier-700 transition">
+                        <span>Apakah saya harus membayar komisi setiap ada klien yang masuk?</span>
+                        <i data-lucide="chevron-down" id="faqIcon-4" class="w-5 h-5 text-atelier-600 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-4" class="hidden px-6 pb-6 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-atelier-200/60 pt-4">
+                        Sama sekali tidak. Seluruh klien yang menghubungi Anda melalui tombol WhatsApp di landing page adalah 100% milik bisnis Anda tanpa potongan komisi apa pun kepada Sekarsiti.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Final Call To Action -->
+    <section class="py-20 bg-atelier-900 text-atelier-100 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+            <span class="text-atelier-400 font-semibold text-xs tracking-widest uppercase">Mulailah Hari Ini</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight">
+                Siap Membawa Bisnis Pernikahan Anda <br>
+                <span class="italic font-normal text-atelier-300">ke Level Berikutnya?</span>
+            </h2>
+            <p class="text-atelier-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                Mari berbincang santai. Hubungi Sekarsiti via WhatsApp dan dapatkan landing page eksklusif untuk bisnis Anda.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://ssiti.tech" target="_blank" rel="noopener" class="px-8 py-4 rounded-full bg-white hover:bg-atelier-100 text-atelier-950 font-bold text-sm tracking-wide transition shadow-xl flex items-center gap-2">
+                    <i data-lucide="globe" class="w-5 h-5 text-atelier-800"></i>
+                    <span>Kunjungi Website Utama: ssiti.tech 🤍</span>
+                </a>
+            </div>
+            <div class="text-[11px] text-atelier-400 pt-2">
+                Atelier Undangan Pernikahan Eksklusif • Jelajahi Katalog & Layanan di ssiti.tech
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-850 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-atelier-900 border border-atelier-700 flex items-center justify-center text-atelier-300">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-bold text-white block">Sekarsiti Wedding Studio</span>
+                        <span class="text-[10px] text-stone-500 uppercase tracking-widest">Atelier Undangan Pernikahan</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-stone-400 text-xs">
+                    <a href="https://ssiti.tech" target="_blank" rel="noopener" class="text-atelier-400 hover:text-white font-semibold transition">Website Utama (ssiti.tech)</a>
+                    <a href="#tentang" class="hover:text-white transition">Tentang Kami</a>
+                    <a href="#skema" class="hover:text-white transition">Skema Kolaborasi</a>
+                    <a href="#templates" class="hover:text-white transition">Showcase Template</a>
+                    <a href="#faq" class="hover:text-white transition">FAQ</a>
+                </div>
+
+                <div class="text-stone-500 text-center md:text-right">
+                    © 2026 Sekarsiti Wedding Studio. Kolaborasi Vendor Pernikahan Indonesia.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Live Preview Modal with Device Switcher -->
+    <div id="previewModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex-col transition-opacity duration-300">
+        <!-- Top Modal Toolbar -->
+        <div class="bg-stone-900 border-b border-stone-800 px-4 py-3 flex items-center justify-between text-white shrink-0">
+            <div class="flex items-center gap-3">
+                <span id="modalTemplateTitle" class="font-serif font-bold text-base sm:text-lg">Pratinjau Template</span>
+                <span class="text-xs text-stone-400 hidden sm:inline">• Sekarsiti Wedding Studio Hub</span>
+            </div>
+
+            <!-- Device Size Switcher -->
+            <div class="flex items-center gap-1 bg-stone-800 p-1 rounded-lg border border-stone-700">
+                <button onclick="setPreviewSize('desktop')" id="devBtn-desktop" class="p-1.5 rounded text-xs text-white bg-stone-700 transition" title="Tampilan Desktop">
+                    <i data-lucide="monitor" class="w-4 h-4"></i>
+                </button>
+                <button onclick="setPreviewSize('tablet')" id="devBtn-tablet" class="p-1.5 rounded text-xs text-stone-400 hover:text-white transition" title="Tampilan Tablet">
+                    <i data-lucide="tablet" class="w-4 h-4"></i>
+                </button>
+                <button onclick="setPreviewSize('mobile')" id="devBtn-mobile" class="p-1.5 rounded text-xs text-stone-400 hover:text-white transition" title="Tampilan Smartphone">
+                    <i data-lucide="smartphone" class="w-4 h-4"></i>
+                </button>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="flex items-center gap-2">
+                <a id="modalExternalLink" href="#" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-atelier-700 hover:bg-atelier-600 text-white text-xs font-semibold flex items-center gap-1 transition">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    <span class="hidden sm:inline">Buka Tab Penuh</span>
+                </a>
+                <button onclick="closePreviewModal()" class="p-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white transition" title="Tutup">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal Iframe Area -->
+        <div class="flex-1 bg-stone-950 p-2 sm:p-4 flex items-center justify-center overflow-hidden">
+            <div id="iframeContainer" class="w-full h-full bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 flex flex-col">
+                <iframe id="previewIframe" src="" class="w-full h-full border-0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Template Filter
+        function filterTemplates(category) {
+            const cards = document.querySelectorAll('.tmpl-card');
+            const buttons = document.querySelectorAll('.tmpl-filter-btn');
+            
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.className = "tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-atelier-900 shadow-xs transition";
+                } else {
+                    btn.className = "tmpl-filter-btn px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-atelier-900 transition";
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Toggle
+        function toggleFaq(num) {
+            const answer = document.getElementById(`faqAnswer-${num}`);
+            const icon = document.getElementById(`faqIcon-${num}`);
+            const isHidden = answer.classList.contains('hidden');
+            
+            if (isHidden) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Live Preview Modal
+        const previewModal = document.getElementById('previewModal');
+        const previewIframe = document.getElementById('previewIframe');
+        const modalTemplateTitle = document.getElementById('modalTemplateTitle');
+        const modalExternalLink = document.getElementById('modalExternalLink');
+        const iframeContainer = document.getElementById('iframeContainer');
+
+        function openPreviewModal(url, title) {
+            previewIframe.src = url;
+            modalTemplateTitle.textContent = title;
+            modalExternalLink.href = url;
+            setPreviewSize('desktop');
+            previewModal.classList.remove('hidden');
+            previewModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closePreviewModal() {
+            previewModal.classList.add('hidden');
+            previewModal.classList.remove('flex');
+            previewIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        function setPreviewSize(device) {
+            const btns = ['desktop', 'tablet', 'mobile'];
+            btns.forEach(d => {
+                const b = document.getElementById(`devBtn-${d}`);
+                if (d === device) {
+                    b.className = "p-1.5 rounded text-xs text-white bg-stone-700 transition";
+                } else {
+                    b.className = "p-1.5 rounded text-xs text-stone-400 hover:text-white transition";
+                }
+            });
+
+            if (device === 'mobile') {
+                iframeContainer.style.maxWidth = '390px';
+                iframeContainer.style.height = '844px';
+                iframeContainer.style.borderRadius = '32px';
+                iframeContainer.style.border = '10px solid #292524';
+            } else if (device === 'tablet') {
+                iframeContainer.style.maxWidth = '768px';
+                iframeContainer.style.height = '100%';
+                iframeContainer.style.borderRadius = '16px';
+                iframeContainer.style.border = '6px solid #292524';
+            } else {
+                iframeContainer.style.maxWidth = '100%';
+                iframeContainer.style.height = '100%';
+                iframeContainer.style.borderRadius = '12px';
+                iframeContainer.style.border = 'none';
+            }
+            lucide.createIcons();
+        }
+
+        // Close modal on Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !previewModal.classList.contains('hidden')) {
+                closePreviewModal();
+            }
+        });
+    </script>
+</body>
+</html>

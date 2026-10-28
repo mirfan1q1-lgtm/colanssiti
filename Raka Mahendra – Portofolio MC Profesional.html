@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raka Mahendra – MC Profesional</title>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1370;--bg2:#101c9a;--fg:#f5f7ff;--mute:#c3caff;--acc:#ffd23f;--pop:#ffd23f;--on:#0a1370;--line:rgba(245,247,255,.25);--ov:linear-gradient(rgba(10,19,112,.72),rgba(10,19,112,.88));--ovh:linear-gradient(90deg,rgba(10,19,112,.9),rgba(10,19,112,.1) 80%);--bm:screen;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef0ff;--bg2:#dde2ff;--fg:#0a1370;--mute:#3f4bb0;--acc:#2431d6;--line:rgba(10,19,112,.25);--ov:linear-gradient(rgba(238,240,255,.8),rgba(238,240,255,.92));--ovh:linear-gradient(90deg,rgba(238,240,255,.92),rgba(238,240,255,.12) 80%);--bm:multiply;color-scheme:light}}
+:root[data-theme="light"]{--bg:#eef0ff;--bg2:#dde2ff;--fg:#0a1370;--mute:#3f4bb0;--acc:#2431d6;--line:rgba(10,19,112,.25);--ov:linear-gradient(rgba(238,240,255,.8),rgba(238,240,255,.92));--ovh:linear-gradient(90deg,rgba(238,240,255,.92),rgba(238,240,255,.12) 80%);--bm:multiply;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0a1370;--bg2:#101c9a;--fg:#f5f7ff;--mute:#c3caff;--acc:#ffd23f;--line:rgba(245,247,255,.25);--ov:linear-gradient(rgba(10,19,112,.72),rgba(10,19,112,.88));--ovh:linear-gradient(90deg,rgba(10,19,112,.9),rgba(10,19,112,.1) 80%);--bm:screen;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.6 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+h1,h2{font-family:"Bowlby One",Impact,sans-serif;font-weight:400;margin:0}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 14px) clamp(16px,4vw,48px) 14px;transition:background .3s}
+header.s{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px)}
+.logo{font:400 1.2rem "Bowlby One",Impact,sans-serif}
+nav{display:flex;gap:clamp(14px,3vw,32px);align-items:center;font-weight:800;font-size:.92rem}
+nav a:hover{color:var(--acc)}
+#th{background:none;border:2px solid var(--line);color:var(--fg);width:36px;height:36px;border-radius:50%;font-size:1rem;cursor:pointer}
+.sec{position:relative;overflow:hidden;isolation:isolate;padding:clamp(80px,12vw,150px) clamp(16px,5vw,64px)}
+.bgimg{position:absolute;left:0;right:0;top:-18%;bottom:-18%;background-size:cover;background-position:center;z-index:-3;will-change:transform}
+.sec::after{content:"";position:absolute;inset:0;z-index:-2;background:var(--ov)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:120px;padding-bottom:180px}
+.hero::after{background:var(--ovh)}
+.hero .bgimg{animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{to{scale:1.08}}
+.beams{position:absolute;inset:0;pointer-events:none;z-index:-1;transform:translate3d(0,calc(var(--y,0)*.25px),0)}
+.beams i{position:absolute;top:-12%;height:130%;width:28vw;transform-origin:50% 0;background:linear-gradient(to bottom,rgba(255,210,63,.6),rgba(255,210,63,0) 80%);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);mix-blend-mode:var(--bm);opacity:.5;animation:sw 10s ease-in-out infinite alternate}
+.beams i:nth-child(1){left:0;--r:-14deg;animation-duration:12s}.beams i:nth-child(2){left:36%;--r:5deg;animation-delay:-4s}.beams i:nth-child(3){left:68%;--r:15deg;animation-duration:14s;animation-delay:-7s}
+@keyframes sw{from{transform:rotate(calc(var(--r) - 9deg))}to{transform:rotate(calc(var(--r) + 9deg))}}
+.crowd{position:absolute;left:0;right:0;bottom:0;height:46%;background-size:cover;background-position:center bottom;z-index:1;pointer-events:none}
+.badge{position:absolute;right:clamp(12px,6vw,90px);top:17%;width:clamp(120px,17vw,200px);z-index:2;animation:spin 18s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+.hc{position:relative;z-index:2;max-width:1000px;transform:translate3d(0,calc(var(--y,0)*.12px),0)}
+.stk{display:inline-flex;align-items:center;gap:10px;margin:0 0 24px;padding:8px 16px;background:var(--pop);color:var(--on);font-weight:800;font-size:.9rem;rotate:-3deg;box-shadow:4px 4px 0 var(--fg)}
+.stk i{width:9px;height:9px;border-radius:50%;background:var(--on);animation:pl 1.2s steps(2) infinite}
+@keyframes pl{50%{opacity:.15}}
+h1{font-size:clamp(3.4rem,12.5vw,10.5rem);line-height:.9;letter-spacing:-.025em;text-shadow:6px 6px 0 rgba(0,0,0,.25)}
+.tg{font:400 clamp(1.3rem,3vw,2.3rem)/1.15 "Bowlby One",Impact,sans-serif;margin:26px 0 14px;max-width:20ch;color:var(--acc)}
+.sub{max-width:46ch;color:var(--mute);margin:0 0 32px;font-size:1.08rem}
+.btn{display:inline-block;padding:14px 26px;border:2px solid var(--fg);background:var(--pop);color:var(--on);font:800 1rem "Plus Jakarta Sans",system-ui,sans-serif;cursor:pointer;box-shadow:4px 4px 0 var(--fg);transition:translate .15s,box-shadow .15s}
+.btn:hover{translate:2px 2px;box-shadow:2px 2px 0 var(--fg)}
+.btn.ghost{background:none;color:var(--fg);margin-left:12px}
+#wf{position:absolute;left:0;right:0;bottom:0;width:100%;height:130px;pointer-events:none;z-index:2}
+.mq{position:relative;z-index:5;background:var(--pop);color:var(--on);overflow:hidden;padding:14px 0;rotate:-1.3deg;scale:1.04;margin-top:-26px;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 30s linear infinite;font:400 1.5rem "Bowlby One",Impact,sans-serif}
+.mq span::after{content:"";display:inline-block;width:10px;height:10px;background:var(--on);rotate:45deg;margin-left:44px}
+@keyframes mq{to{translate:-50%}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr)}
+.stats div{padding:6px clamp(14px,3vw,40px);border-left:3px solid var(--pop)}
+.stats b{display:block;font:400 clamp(3.2rem,9.5vw,8rem)/1 "Bowlby One",Impact,sans-serif;color:var(--acc);font-variant-numeric:tabular-nums}
+.stats span{font-weight:600}
+.hd{margin-bottom:44px}.hd p{max-width:44ch;color:var(--mute);margin:14px 0 0}
+h2{font-size:clamp(2.1rem,5.2vw,4.2rem);line-height:1}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.4vw,34px);padding-block:20px}
+.po{position:relative;margin:0;background:#fff;padding:10px 10px 12px;border-radius:3px;color:#0a1370;box-shadow:0 18px 40px rgba(0,0,0,.35);rotate:var(--r);translate:calc(var(--gx,0)*var(--d)*26px) calc(var(--gy,0)*var(--d)*16px);transition:rotate .35s,scale .35s}
+.po:nth-child(even){margin-top:34px}
+.po:hover{rotate:0deg;scale:1.07;z-index:3}
+.po .im{aspect-ratio:4/5;background-size:cover;background-position:center}
+.po figcaption{font:800 .95rem "Plus Jakarta Sans",system-ui,sans-serif;padding:10px 4px 0}
+.ros{display:grid;grid-template-columns:minmax(200px,320px) 1fr;gap:clamp(24px,6vw,90px)}
+.tabs{display:grid;gap:6px;align-content:start}
+.tabs button{all:unset;box-sizing:border-box;cursor:pointer;padding:16px 18px;border:2px solid var(--line);font:800 1.05rem "Plus Jakarta Sans",system-ui,sans-serif;transition:.2s;background:color-mix(in srgb,var(--bg) 55%,transparent)}
+.tabs button:hover{border-color:var(--pop)}.tabs button.on{background:var(--pop);color:var(--on);border-color:var(--fg);box-shadow:4px 4px 0 var(--fg)}
+.tabs button:focus-visible{outline:3px solid var(--fg)}
+#tl{list-style:none;margin:0;padding:0 0 0 34px;position:relative}
+#tl::before{content:"";position:absolute;left:8px;top:8px;bottom:14px;width:3px;background:var(--pop);transform-origin:top;transform:scaleY(0)}
+#tl.go::before{animation:dr .9s ease-out forwards}
+@keyframes dr{to{transform:scaleY(1)}}
+#tl li{position:relative;display:grid;grid-template-columns:78px 1fr;gap:12px;padding:0 0 30px;opacity:0;animation:ri .5s forwards;animation-delay:calc(var(--i)*.14s + .1s)}
+@keyframes ri{from{opacity:0;translate:-18px}to{opacity:1}}
+#tl li::before{content:"";position:absolute;left:-34px;top:5px;width:19px;height:19px;background:var(--pop);border:3px solid var(--fg);border-radius:50%}
+#tl time{font-weight:800;color:var(--acc);font-variant-numeric:tabular-nums}
+#tl b{font:400 1.4rem "Bowlby One",Impact,sans-serif}
+#tl p{margin:2px 0 0;color:var(--mute)}
+.tn{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tn button{background:none;border:2px solid var(--fg);color:var(--fg);padding:9px 20px;border-radius:99px;font:800 .95rem "Plus Jakarta Sans",system-ui,sans-serif;cursor:pointer;transition:.2s}
+.tn button:hover,.tn button.on{background:var(--pop);border-color:var(--pop);color:var(--on)}
+.tp{position:relative;min-height:300px;border:2px solid var(--fg);padding:clamp(26px,4.5vw,64px) clamp(22px,4.5vw,64px) clamp(26px,4.5vw,64px) clamp(46px,6vw,92px);background:color-mix(in srgb,var(--bg) 62%,transparent);backdrop-filter:blur(6px);box-shadow:8px 8px 0 var(--pop)}
+.tp::before{content:"";position:absolute;left:clamp(14px,2.4vw,34px);top:clamp(34px,5vw,74px);border:10px solid transparent;border-left:16px solid var(--pop)}
+#tx{font:400 clamp(1.4rem,3.4vw,2.6rem)/1.3 "Bowlby One",Impact,sans-serif;max-width:30ch}
+#tx::after{content:"";display:inline-block;width:4px;height:1em;background:var(--pop);margin-left:5px;vertical-align:-.12em;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.eq{position:absolute;right:22px;top:20px;display:flex;gap:3px;align-items:flex-end;height:26px}
+.eq i{width:4px;height:4px;background:var(--pop)}
+.tp.talk .eq i{animation:eq .5s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:.1s!important}.eq i:nth-child(3){animation-delay:.25s!important}.eq i:nth-child(4){animation-delay:.05s!important}.eq i:nth-child(5){animation-delay:.18s!important}
+@keyframes eq{to{height:26px}}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+form{display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:800;font-size:.9rem}
+input,select,textarea{font:inherit;font-weight:600;color:var(--fg);background:color-mix(in srgb,var(--bg) 72%,transparent);border:2px solid var(--fg);padding:12px 14px;backdrop-filter:blur(6px)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pop);box-shadow:4px 4px 0 var(--pop)}
+footer{padding:30px clamp(16px,5vw,64px) 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--bg2);font-weight:600}
+.clap{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:40;border:2px solid var(--fg);background:var(--pop);color:var(--on);border-radius:99px;padding:10px 18px;font:800 .95rem "Plus Jakarta Sans",system-ui,sans-serif;cursor:pointer;box-shadow:3px 3px 0 var(--fg);transition:scale .12s}
+.clap:active{scale:.9}
+#cf{position:fixed;inset:0;width:100%;height:100%;z-index:90;pointer-events:none}
+#in{position:fixed;inset:0;z-index:100;background:var(--pop);color:var(--on);display:grid;place-items:center;transition:transform .9s cubic-bezier(.8,0,.2,1)}
+#in.out{transform:translateY(-100%)}
+#it{font:400 clamp(2.2rem,8vw,6rem)/1.05 "Bowlby One",Impact,sans-serif;margin:0;padding:0 24px;max-width:13ch;min-height:3.2em}
+#it::after{content:"";display:inline-block;width:.07em;height:.9em;background:var(--on);margin-left:.1em;animation:bl .6s steps(2) infinite}
+@media(max-width:860px){.ros,.ct{grid-template-columns:1fr}.tabs{grid-template-columns:1fr 1fr}nav a{display:none}.btn.ghost{margin:12px 0 0}.badge{opacity:.5;top:12%}.stats{grid-template-columns:1fr}.stats div{padding:12px 16px;margin-bottom:14px}#tl li{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}#in{display:none}#tl li{opacity:1}#tl::before{transform:none}}
+</style>
+</head>
+<body>
+<div id="in"><p id="it" aria-label="Tes, tes… satu, dua, tiga."></p></div>
+<canvas id="cf" aria-hidden="true"></canvas>
+<header id="hd"><a class="logo" href="#hero">Raka Mahendra</a><nav><a href="index.html" style="color:var(--pop)">✦ Hub Sekarsiti</a><a href="#galeri">Galeri</a><a href="#alur">Alur acara</a><a href="#gaya">Gaya</a><a href="#sekarsiti">Kolaborasi</a><a href="#booking">Booking</a><button id="th" aria-label="Ganti tema terang atau gelap">◐</button></nav></header>
+<main>
+<section class="sec hero" id="hero">
+  <div class="bgimg" id="bgH" data-s=".3" aria-hidden="true"></div>
+  <div class="beams" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="crowd" id="cr" aria-hidden="true"></div>
+  <svg class="badge" viewBox="0 0 200 200" aria-hidden="true"><path id="cp" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" fill="none"/><circle cx="100" cy="100" r="46" fill="#ffd23f"/><g fill="none" stroke="#0a1370" stroke-width="5" stroke-linecap="round"><rect x="90" y="76" width="20" height="30" rx="10"/><path d="M82 98Q82 118 100 118T118 98M100 118V128"/></g><text font-size="14" font-weight="800" fill="currentColor"><textPath href="#cp" textLength="440" lengthAdjust="spacing">MC profesional ✦ siap tampil ✦ MC profesional ✦ siap tampil ✦</textPath></text></svg>
+  <div class="hc">
+    <p class="stk"><i></i>Slot Desember 2026 masih terbuka</p>
+    <h1>Raka Mahendra</h1>
+    <p class="tg">Suara yang membuat acara terasa hidup.</p>
+    <p class="sub">MC untuk pernikahan, acara perusahaan, wisuda, dan gathering. Rapi di rundown, hangat ke tamu, dan tahu kapan harus diam.</p>
+    <a class="btn" href="#booking">Cek tanggal</a><a class="btn ghost" href="#galeri">Lihat momen</a>
+  </div>
+  <canvas id="wf" aria-hidden="true"></canvas>
+</section>
+<div class="mq" aria-hidden="true"><div><span>Pernikahan</span><span>Gala dinner</span><span>Peluncuran produk</span><span>Wisuda</span><span>Gathering</span><span>Konser kampus</span><span>Pernikahan</span><span>Gala dinner</span><span>Peluncuran produk</span><span>Wisuda</span><span>Gathering</span><span>Konser kampus</span></div></div>
+
+<section class="sec" id="pengalaman">
+  <div class="bgimg" id="bgS" data-s=".14" aria-hidden="true"></div>
+  <div class="stats" id="st"><div><b data-to="320">0</b><span>acara sudah saya pandu</span></div><div><b data-to="8">0</b><span>tahun di atas panggung</span></div><div><b data-to="3">0</b><span>bahasa pengantar: Indonesia, Inggris, Jawa</span></div></div>
+</section>
+
+<section class="sec" id="galeri" style="background:var(--bg2)">
+  <div class="hd"><h2>Momen di panggung</h2><p>Gerakkan kursor dan foto-foto ikut bergeser. Gambar di sini ilustrasi, ganti dengan foto aslimu.</p></div>
+  <div class="gal" id="gal"></div>
+</section>
+
+<section class="sec" id="alur">
+  <div class="bgimg" id="bgA" data-s=".12" aria-hidden="true"></div>
+  <div class="hd"><h2>Alur acara yang saya jaga</h2><p>Pilih jenis acara untuk melihat contoh rundown yang biasa saya pegang.</p></div>
+  <div class="ros"><div class="tabs" id="tabs"></div><ol id="tl"></ol></div>
+</section>
+
+<section class="sec" id="gaya">
+  <div class="bgimg" id="bgT" data-s=".14" aria-hidden="true"></div>
+  <div class="hd"><h2>Dengarkan gaya saya</h2><p>Kalimat pembuka yang sama, tiga nada berbeda. Pilih yang paling cocok dengan acaramu.</p></div>
+  <div class="tn" id="tn"><button class="on">Hangat</button><button>Formal</button><button>Jenaka</button></div>
+  <div class="tp" id="tp"><div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div id="tx"></div></div>
+</section>
+
+<!-- Kolaborasi Sekarsiti Wedding Studio -->
+<section class="sec" id="sekarsiti" style="background: linear-gradient(135deg, #0d1a8c 0%, #060c4a 100%); border-block: 3px solid var(--pop);">
+  <div class="ct" style="align-items: center;">
+    <div>
+      <p class="stk" style="background: #fff; color: #0a1370; font-weight: 800; border-radius: 99px;"><i></i>✦ REKOMENDASI RESMI MITRA</p>
+      <h2 style="color: #fff; font-size: clamp(2rem, 4.5vw, 3.6rem); margin: 8px 0 16px;">SEKARSITI WEDDING STUDIO</h2>
+      <p style="font-size: 1.15rem; font-weight: 800; color: var(--pop); margin-bottom: 20px;">Atelier Undangan Pernikahan Digital</p>
+      <p style="color: var(--mute); font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+        Acara yang megah berpadu dengan undangan digital yang memikat hati. Sebagai MC profesional, Raka Mahendra merekomendasikan <strong>Sekarsiti Wedding Studio</strong> untuk calon pengantin yang menginginkan undangan pernikahan berkelas, interaktif, dan berkesan mendalam bagi seluruh tamu undangan.
+      </p>
+      <div style="display: grid; gap: 12px; margin-bottom: 28px; font-weight: 600;">
+        <div style="display: flex; align-items: center; gap: 10px; color: var(--fg);"><span style="color: var(--pop); font-size: 1.3rem;">★</span> Desain responsif mobile dengan tipografi eksklusif & visual elegan</div>
+        <div style="display: flex; align-items: center; gap: 10px; color: var(--fg);"><span style="color: var(--pop); font-size: 1.3rem;">★</span> Fitur RSVP real-time, ucapan doa, integrasi peta, & amplop digital</div>
+        <div style="display: flex; align-items: center; gap: 10px; color: var(--fg);"><span style="color: var(--pop); font-size: 1.3rem;">★</span> Konsultasi ramah dan personal bersama atelier Sekarsiti 🤍</div>
+      </div>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a class="btn" href="https://ssiti.tech" target="_blank" rel="noopener">Kunjungi Website Sekarsiti (ssiti.tech) 🤍</a>
+        <a class="btn ghost" href="index.html">Lihat Hub Kolaborasi</a>
+      </div>
+    </div>
+    <div style="position: relative;">
+      <div style="background: rgba(255,255,255,0.06); border: 2px solid var(--fg); padding: 18px; box-shadow: 10px 10px 0 var(--pop); border-radius: 4px;">
+        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" alt="Sekarsiti Wedding Studio Undangan Pernikahan" style="width: 100%; height: 320px; object-fit: cover; display: block; border: 2px solid rgba(255,255,255,0.2);">
+        <div style="padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font: 400 1.2rem 'Bowlby One', Impact, sans-serif; color: var(--pop);">UNDANGAN DIGITAL</div>
+            <div style="font-size: 0.85rem; color: var(--mute);">Elegan, Personal, & Penuh Makna</div>
+          </div>
+          <a href="index.html" class="btn" style="padding: 8px 16px; font-size: 0.85rem;">Info Mitra →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="booking">
+  <div class="bgimg" id="bgB" data-s=".12" aria-hidden="true"></div>
+  <div class="ct">
+    <div><h2>Tanggalmu masih kosong?</h2><p style="color:var(--mute);max-width:36ch;margin-top:20px">Isi form, pesanmu langsung terbuka di WhatsApp. Saya balas maksimal satu hari kerja.</p></div>
+    <form id="fm">
+      <label>Nama<input id="fn" required autocomplete="name"></label>
+      <label>Jenis acara<select id="ft"><option>pernikahan</option><option>acara perusahaan</option><option>wisuda</option><option>gathering</option></select></label>
+      <label>Tanggal<input id="fd" type="date"></label>
+      <label>Lokasi dan cerita singkat<textarea id="fx" rows="4"></textarea></label>
+      <button class="btn" id="fb">Kirim lewat WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer><span>© 2026 Raka Mahendra</span><a href="#hero">Kembali ke atas</a></footer>
+<button class="clap" id="cl" aria-label="Beri tepuk tangan, 0 tepuk tangan sejauh ini">👏 <span>0</span></button>
+
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root=document.documentElement;
+$('#th').onclick=()=>{const c=root.dataset.theme||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');root.dataset.theme=c==='dark'?'light':'dark'};
+
+/* Intro: cek mikrofon */
+const intro=$('#in'),it=$('#it');
+if(rm){intro.remove()}else{const s='Tes, tes… satu, dua, tiga.';let i=0;const v=setInterval(()=>{it.textContent=s.slice(0,++i);if(i>=s.length){clearInterval(v);setTimeout(()=>{intro.classList.add('out');setTimeout(()=>intro.remove(),1000)},550)}},45)}
+
+/* Generator gambar (SVG). Semua gambar di halaman dibuat dari sini. */
+const R=s=>()=>(s=(s*16807)%2147483647)/2147483647;
+const C=(h,s,l,a=1)=>`hsl(${h} ${s}% ${l}% / ${a})`;
+const S=(w,h,id,a,b,l1,l2)=>`<defs><linearGradient id="g${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C(a,75,l1)}"/><stop offset="1" stop-color="${C(b,65,l2)}"/></linearGradient><radialGradient id="r${id}"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="${w}" height="${h}" fill="url(#g${id})"/>`;
+const crowd=(w,h,r,hue,hands)=>{let s='';for(let row=0;row<3;row++){const y=h*(.84+row*.07),rd=h*(.03+row*.012),f=C(hue,45,5+row*3);for(let x=-rd;x<w+rd;x+=rd*(1.5+r()*.8)){const yy=y+r()*rd*.6;if(hands&&r()<.3){const hx=x+(r()-.5)*rd,top=yy-rd*(3+r()*3);s+=`<path d="M${x} ${yy}L${hx} ${top}" stroke="${f}" stroke-width="${rd*.4}" stroke-linecap="round"/><circle cx="${hx}" cy="${top}" r="${rd*.32}" fill="${f}"/>`}s+=`<circle cx="${x}" cy="${yy}" r="${rd}" fill="${f}"/><ellipse cx="${x}" cy="${yy+rd*2.1}" rx="${rd*1.5}" ry="${rd*1.6}" fill="${f}"/>`}}return s};
+const SC={
+ stage:(w,h,r,a,b,id,mc=.5)=>{let s='';[.15,.38,.62,.85].forEach((p,i)=>{const x=w*p,d=(i%2?1:-1)*w*.1;s+=`<polygon points="${x-6},0 ${x+6},0 ${x+d+w*.07},${h*.82} ${x+d-w*.07},${h*.82}" fill="${C(a+20,100,82,.14)}"/>`});
+  s+=`<ellipse cx="${w*(mc||.5)}" cy="${h*.8}" rx="${w*.34}" ry="${h*.05}" fill="${C(a,90,70,.4)}"/>`;
+  for(let i=0;i<16;i++){const c=C(a+r()*70,90,70);s+=`<circle cx="${r()*w|0}" cy="${r()*h*.6|0}" r="${h*(.02+r()*.05)|0}" fill="${c}" fill-opacity="${.1+r()*.2}" stroke="${c}" stroke-opacity=".4"/>`}
+  if(mc){const x=w*mc,m=C(b,40,5);s+=`<rect x="${x-h*.05}" y="${h*.5}" width="${h*.1}" height="${h*.3}" rx="${h*.04}" fill="${m}"/><circle cx="${x}" cy="${h*.46}" r="${h*.04}" fill="${m}"/><path d="M${x+h*.04} ${h*.56}L${x+h*.1} ${h*.44}" stroke="${m}" stroke-width="${h*.014}" stroke-linecap="round"/><circle cx="${x+h*.105}" cy="${h*.435}" r="${h*.018}" fill="${m}"/>`}return s},
+ crowd:(w,h,r,a,b,id)=>SC.stage(w,h,r,a,b,id,0)+crowd(w,h,r,b,1),
+ arch:(w,h,r,a,b,id)=>{const cx=w/2,rr=w*.24,t=h*.42,m=C(b,40,8);let s=`<circle cx="${cx}" cy="${t}" r="${h*.4}" fill="url(#r${id})" opacity=".6"/><rect y="${h*.86}" width="${w}" height="${h*.14}" fill="${C(b,35,14)}"/><path d="M${cx-rr} ${h*.86}V${t}A${rr} ${rr} 0 0 1 ${cx+rr} ${t}V${h*.86}" fill="none" stroke="${C(b,30,18)}" stroke-width="${w*.012}"/>`;
+  const pts=[];for(let i=0;i<=24;i++){const an=Math.PI*i/24;pts.push([cx-rr*Math.cos(an),t-rr*Math.sin(an)])}for(let y=t;y<h*.86;y+=h*.03)pts.push([cx-rr,y],[cx+rr,y]);
+  pts.forEach(([x,y])=>{const c=[C(48,95,62),C(280,70,80),'#fff',C(28,90,70)][r()*4|0];s+=`<circle cx="${x+(r()-.5)*14}" cy="${y+(r()-.5)*14}" r="${w*(.008+r()*.012)}" fill="${c}"/>`});
+  const gx=cx-w*.06,bx=cx+w*.06;
+  return s+`<circle cx="${gx}" cy="${h*.6}" r="${h*.03}" fill="${m}"/><rect x="${gx-h*.028}" y="${h*.635}" width="${h*.056}" height="${h*.225}" rx="${h*.02}" fill="${m}"/><circle cx="${bx}" cy="${h*.6}" r="${h*.03}" fill="${m}"/><path d="M${bx-h*.02} ${h*.635}L${bx+h*.02} ${h*.635}L${bx+h*.09} ${h*.86}L${bx-h*.09} ${h*.86}Z" fill="${m}"/>`},
+ grad:(w,h,r,a,b,id)=>{let s=`<circle cx="${w*.7}" cy="${h*.28}" r="${h*.3}" fill="url(#r${id})"/>`;for(let i=0;i<9;i++){const x=w*(.1+r()*.8),y=h*(.1+r()*.45),k=h*(.04+r()*.03),c=C(b,40,8);s+=`<g transform="translate(${x} ${y}) rotate(${r()*80-40})"><polygon points="${-k*1.6},0 0,${-k*.8} ${k*1.6},0 0,${k*.8}" fill="${c}"/><rect x="${-k*.7}" y="0" width="${k*1.4}" height="${k*.7}" fill="${c}"/><path d="M${k*1.2} 0V${k*1.3}" stroke="${C(48,95,60)}" stroke-width="${k*.12}"/></g>`}return s+crowd(w,h,r,b,1)},
+ city:(w,h,r,a,b,id)=>{let s=`<defs><pattern id="w${id}" width="30" height="44" patternUnits="userSpaceOnUse"><rect x="9" y="12" width="9" height="14" fill="${C(48,95,65)}"/></pattern></defs><circle cx="${w*.8}" cy="${h*.2}" r="${h*.26}" fill="url(#r${id})" opacity=".3"/><circle cx="${w*.8}" cy="${h*.2}" r="${h*.06}" fill="${C(48,90,92)}"/>`;for(let x=-10;x<w;){const bw=w*(.05+r()*.07),bh=h*(.22+r()*.45);s+=`<rect x="${x}" y="${h-bh}" width="${bw}" height="${bh}" fill="${C(b,45,7+r()*6)}"/><rect x="${x}" y="${h-bh}" width="${bw}" height="${bh}" fill="url(#w${id})" opacity="${.2+r()*.6}"/>`;x+=bw+3}return s},
+ mic:(w,h,r,a,b,id)=>{let s='';for(let i=0;i<34;i++){const c=C(a+r()*80,90,70),rd=h*(.03+r()*.1);s+=`<circle cx="${r()*w|0}" cy="${r()*h|0}" r="${rd|0}" fill="${c}" fill-opacity="${.08+r()*.22}" stroke="${c}" stroke-opacity=".35"/>`}const x=w*.72,m=C(b,30,6);s+=`<rect x="${x-h*.07}" y="${h*.12}" width="${h*.14}" height="${h*.3}" rx="${h*.07}" fill="${m}"/>`;for(let i=0;i<7;i++)s+=`<path d="M${x-h*.07} ${h*.16+i*h*.036}H${x+h*.07}" stroke="${C(a,50,40)}" stroke-width="2"/>`;return s+`<path d="M${x-h*.1} ${h*.34}Q${x-h*.1} ${h*.52} ${x} ${h*.52}T${x+h*.1} ${h*.34}M${x} ${h*.52}V${h*.95}" fill="none" stroke="${m}" stroke-width="${h*.014}" stroke-linecap="round"/>`},
+ conf:(w,h,r)=>{let s='';const cs=[C(48,100,62),C(200,95,65),'#fff',C(270,85,78),C(28,95,66)];for(let i=0;i<90;i++){const x=r()*w|0,y=r()*h|0,k=h*(.012+r()*.02);s+=`<rect x="${x}" y="${y}" width="${k}" height="${k*2.2|0}" fill="${cs[i%5]}" opacity="${.45+r()*.5}" transform="rotate(${r()*180|0} ${x} ${y})"/>`}return s}
+};
+const IM=(t,w,h,a,b,seed,l1=30,l2=10,x)=>'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}">${S(w,h,seed,a,b,l1,l2)}${SC[t](w,h,R(seed*7919+13),a,b,seed,x)}</svg>`);
+const put=(el,u)=>el.style.backgroundImage=`url("${u}")`;
+put($('#bgH'),'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1600&q=80');
+put($('#cr'),'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80');
+put($('#bgS'),'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80');
+put($('#bgA'),'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80');
+put($('#bgT'),'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1600&q=80');
+put($('#bgB'),'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80');
+
+/* Galeri polaroid dengan foto dokumentasi panggung */
+const pics=[
+  ['Gala dinner','https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80',-4],
+  ['Akad dan resepsi','https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80',3],
+  ['Wisuda','https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80',-2],
+  ['Peluncuran produk','https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=600&q=80',5],
+  ['Konser kampus','https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80',3],
+  ['Gathering tim','https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80',-5],
+  ['Tes suara','https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80',2],
+  ['Resepsi taman','https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80',-3]
+];
+const gal=$('#gal');
+gal.innerHTML=pics.map((p,i)=>`<figure class="po" style="--r:${p[2]}deg;--d:${[.6,1,.4,.8][i%4]}"><div class="im" role="img" aria-label="Momen ${p[0]}" style="background-image:url('${p[1]}')"></div><figcaption>${p[0]}</figcaption></figure>`).join('');
+
+/* Rundown per jenis acara */
+const ros={
+ 'Pernikahan':[['18.30','Penyambutan tamu','Menghangatkan suasana sebelum acara dimulai.'],['19.00','Prosesi masuk','Mengiringi pengantin dengan narasi singkat.'],['19.20','Sambutan keluarga','Menjaga durasi agar tetap rapi.'],['19.45','Makan malam dan hiburan','Mengisi jeda dengan interaksi ringan.'],['21.00','Penutup dan foto bersama','Menutup dengan ucapan terima kasih.']],
+ 'Acara perusahaan':[['09.00','Registrasi dan pembukaan','Membuka acara tepat waktu.'],['09.20','Sambutan direksi','Menjembatani pesan penting ke audiens.'],['10.00','Sesi utama atau peluncuran','Menjaga energi ruangan tetap naik.'],['11.30','Games dan networking','Mencairkan suasana antar tim.'],['12.30','Penutup dan makan siang','Merangkum acara dan memberi arahan.']],
+ 'Wisuda':[['08.00','Prosesi masuk','Menyambut wisudawan dan keluarga.'],['08.40','Pembukaan dan doa','Menjaga suasana tetap khidmat.'],['09.15','Pemanggilan nama','Membaca nama dengan jelas dan percaya diri.'],['10.30','Sambutan dan pesan','Memberi jeda yang pas untuk tepuk tangan.'],['11.30','Foto bersama','Mengatur barisan dengan cepat dan ramah.']],
+ 'Gathering':[['14.00','Pembukaan santai','Memecah canggung di menit pertama.'],['14.20','Ice breaking','Mengajak semua orang ikut, bukan hanya menonton.'],['15.00','Games tim','Menjaga permainan tetap seru dan adil.'],['16.30','Penghargaan dan doorprize','Membuat setiap nama terasa dihargai.'],['17.30','Penutup','Mengakhiri acara selagi suasana masih hangat.']]
+};
+const tabs=$('#tabs'),tl=$('#tl');
+Object.keys(ros).forEach((k,i)=>{const b=document.createElement('button');b.textContent=k;b.setAttribute('aria-pressed',i===0);if(i===0)b.className='on';b.onclick=()=>{$$('button',tabs).forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});draw(k)};tabs.append(b)});
+function draw(k){tl.innerHTML=ros[k].map((r,i)=>`<li style="--i:${i}"><time>${r[0]}</time><div><b>${r[1]}</b><p>${r[2]}</p></div></li>`).join('');tl.classList.remove('go');void tl.offsetWidth;tl.classList.add('go')}
+draw('Pernikahan');
+
+/* Nada MC: teks diketik seperti teleprompter */
+const tones={
+ Hangat:'Selamat malam semuanya! Terima kasih sudah datang. Silakan duduk yang nyaman, malam ini kita rayakan bersama.',
+ Formal:'Selamat malam, para hadirin yang kami hormati. Dengan memanjatkan puji syukur, marilah kita buka acara malam ini.',
+ Jenaka:'Selamat malam! Kalau ada yang masih sibuk membalas chat kantor, tenang, malam ini boleh pura-pura sinyalnya hilang.'
+};
+const tp=$('#tp'),tx=$('#tx');let iv;
+function say(k){clearInterval(iv);const s=tones[k];tx.setAttribute('aria-label',s);if(rm){tx.textContent=s;return}
+ tx.textContent='';tp.classList.add('talk');let i=0;iv=setInterval(()=>{tx.textContent=s.slice(0,++i);if(i>=s.length){clearInterval(iv);tp.classList.remove('talk')}},32)}
+$('#tn').onclick=e=>{const b=e.target.closest('button');if(!b)return;$$('#tn button').forEach(x=>x.classList.toggle('on',x===b));say(b.textContent)};
+new IntersectionObserver((en,o)=>{if(en[0].isIntersecting){say('Hangat');o.disconnect()}},{threshold:.4}).observe(tp);
+
+/* Penghitung angka */
+new IntersectionObserver((en,o)=>{if(!en[0].isIntersecting)return;o.disconnect();
+ $$('#st b').forEach(b=>{const to=+b.dataset.to;if(rm){b.textContent=to;return}const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1500);b.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)})},{threshold:.5}).observe($('#st'));
+
+/* Konfeti dan tepuk tangan */
+const cf=$('#cf'),cc=cf.getContext('2d');let ps=[];
+const size=()=>{cf.width=innerWidth;cf.height=innerHeight};size();
+function burst(x,y,n){if(rm)return;const cols=['#ffd23f','#5ec8ff','#ffffff','#b8a8ff','#ffb27a'];
+ for(let i=0;i<n;i++){const a=-Math.PI/2+(Math.random()-.5)*2.4,v=6+Math.random()*9;ps.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,w:5+Math.random()*6,h:8+Math.random()*8,r:Math.random()*6,vr:(Math.random()-.5)*.4,c:cols[i%5],l:1})}}
+let claps=0;const cl=$('#cl');
+cl.onclick=()=>{claps++;$('span',cl).textContent=claps;cl.setAttribute('aria-label',`Beri tepuk tangan, ${claps} tepuk tangan sejauh ini`);const r=cl.getBoundingClientRect();burst(r.left+r.width/2,r.top,18)};
+
+/* Form ke WhatsApp (ganti nomor) */
+$('#fm').onsubmit=e=>{e.preventDefault();
+ const m=`Halo Kak Raka, saya ${$('#fn').value}. Saya butuh MC untuk acara ${$('#ft').value}${$('#fd').value?' pada '+$('#fd').value:''}. ${$('#fx').value}`;
+ const r=$('#fb').getBoundingClientRect();burst(r.left+r.width/2,r.top,70);
+ window.open('https://wa.me/6281234567890?text='+encodeURIComponent(m),'_blank','noopener')};
+
+/* Loop: parallax gambar, gelombang suara, galeri bereaksi pada kursor */
+const hero=$('#hero'),hd=$('#hd'),wf=$('#wf'),wc=wf.getContext('2d'),bgs=$$('.bgimg');
+let W=0,HH=0,tx0=0,ty0=0,mx=0,my=0,sx=0,vel=0,lx=0,ly0=0,amp=.4,ly=0,acc='#ffd23f',n=0,moved=false;
+function rs(){W=wf.width=hero.offsetWidth;wf.height=130;HH=hero.offsetHeight;size()}
+rs();addEventListener('resize',()=>{rs();if(rm)frame(0)});
+addEventListener('pointermove',e=>{tx0=e.clientX/innerWidth*2-1;ty0=e.clientY/innerHeight*2-1;vel=Math.min(60,vel+Math.hypot(e.clientX-lx,e.clientY-ly0)*.5);lx=e.clientX;ly0=e.clientY;moved=true;if(rm)frame(0)});
+function frame(t){
+ const y=scrollY,sv=Math.abs(y-ly);ly=y;vel*=.92;
+ mx+=(tx0-mx)*.08;my+=(ty0-my)*.08;
+ hero.style.setProperty('--y',Math.min(y,innerHeight*1.3));
+ gal.style.setProperty('--gx',mx.toFixed(3));gal.style.setProperty('--gy',my.toFixed(3));
+ hd.classList.toggle('s',y>40);
+ if(!rm)bgs.forEach(b=>{const r=b.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>innerHeight+200)return;b.style.transform=`translate3d(0,${(-(r.top+r.height/2-innerHeight/2)*b.dataset.s).toFixed(1)}px,0)`});
+ if(y<HH){
+  if(n++%20===0)acc=getComputedStyle(root).getPropertyValue('--acc').trim();
+  amp+=((.3+Math.min(1,vel/45+sv/30))-amp)*.08;
+  sx=moved?(mx+1)/2*W:W*(.5+.3*Math.sin(t*.0006));
+  wc.clearRect(0,0,W,130);wc.fillStyle=acc;wc.globalAlpha=.9;
+  const c=Math.floor(W/11);
+  for(let i=0;i<c;i++){const x=i*11,b=1+1.3*Math.exp(-Math.pow((x-sx)/200,2)),h=Math.min(128,130*amp*b*(.2+.8*Math.abs(Math.sin(i*.31+t*.003)*Math.cos(i*.057+t*.0017)))+3);wc.fillRect(x,130-h,6,h)}
+ }
+ if(ps.length||cc.__d){cc.clearRect(0,0,cf.width,cf.height);cc.__d=ps.length>0;
+  ps=ps.filter(p=>p.l>0&&p.y<cf.height+30);
+  ps.forEach(p=>{p.vy+=.28;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.l-=.006;cc.save();cc.globalAlpha=Math.max(0,Math.min(1,p.l*1.6));cc.translate(p.x,p.y);cc.rotate(p.r);cc.fillStyle=p.c;cc.fillRect(-p.w/2,-p.h/2,p.w,p.h);cc.restore()})}
+}
+addEventListener('scroll',()=>{if(rm)frame(0)},{passive:true});
+const loop=t=>{frame(t);requestAnimationFrame(loop)};
+if(rm)frame(0);else requestAnimationFrame(loop);
+})();
+</script>
+<!-- Floating Template Hub Switcher Pill -->
+<div style="position:fixed; bottom:20px; left:20px; z-index:90;">
+  <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; background:rgba(10,19,112,.95); color:#f5f7ff; border:2px solid var(--pop); backdrop-filter:blur(10px); border-radius:99px; font-size:0.85rem; font-weight:800; text-decoration:none; box-shadow:4px 4px 0 #ffd23f; transition:transform .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+    <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--pop); box-shadow:0 0 8px var(--pop);"></span>
+    ← Hub Template Sekarsiti
+  </a>
+</div>
+</body>
+</html>

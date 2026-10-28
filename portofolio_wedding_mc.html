@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian Pratama | Professional Wedding & Event MC</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#152232',
+                            900: '#0F1A26',
+                        },
+                        mc: {
+                            50: '#F5F8FA',
+                            100: '#E7EFF4',
+                            200: '#CFDFEA',
+                            300: '#A7C4D7',
+                            400: '#75A1BF',
+                            500: '#4A6B82', // Primary dusty blue
+                            600: '#3D586B',
+                            700: '#2F4453',
+                            800: '#22323D',
+                            900: '#17222A',
+                        },
+                        gold: {
+                            300: '#E8D39E',
+                            400: '#C5A059', // Muted champagne gold
+                            500: '#AB873D',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        display: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Ambient Canvas Layer - subtle glowing stardust */
+        #ambientCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.55;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(207, 223, 234, 0.6);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(231, 239, 244, 0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(117, 161, 191, 0.5);
+            box-shadow: 0 16px 32px -10px rgba(47, 68, 83, 0.08);
+        }
+
+        /* Subtle smooth accordion animation */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .faq-content.open {
+            max-height: 240px;
+            opacity: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F8FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CFDFEA;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A7C4D7;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFBFD] text-slate-800 font-sans antialiased selection:bg-mc-200 selection:text-mc-900 relative min-h-screen">
+
+    <!-- Interactive Subtle Ambient Particle Canvas -->
+    <canvas id="ambientCanvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 transition-all duration-300 glass-panel border-b border-mc-100/80 shadow-xs" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo MC Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border border-mc-300/80 bg-white shadow-xs flex items-center justify-center text-mc-600 transition duration-300 group-hover:border-gold-400 group-hover:text-gold-500">
+                        <i data-lucide="mic" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-slate-800 block leading-tight">JULIAN PRATAMA</span>
+                        <span class="text-[9px] uppercase tracking-[0.3em] text-mc-500 font-semibold block">Wedding & Event MC</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="text-mc-700 hover:text-mc-900 font-bold flex items-center gap-1">✦ Hub Sekarsiti</a>
+                    <a href="#about" class="hover:text-mc-500 transition">Tentang</a>
+                    <a href="#signature" class="hover:text-mc-500 transition">Karakter MC</a>
+                    <a href="#gallery" class="hover:text-mc-500 transition">Momen Pilihan</a>
+                    <a href="#packages" class="hover:text-mc-500 transition">Paket Layanan</a>
+                    <a href="#sekarsiti-partner" class="hover:text-mc-500 transition">Partner Undangan</a>
+                    <a href="#faq" class="hover:text-mc-500 transition">FAQ</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-mc-700 hover:bg-mc-800 text-white text-xs font-semibold transition shadow-sm hover:shadow-md flex items-center gap-2">
+                        <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                        <span>Diskusi Konsep</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileToggle" aria-label="Buka Menu" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-mc-500 focus:outline-none">
+                    <i data-lucide="menu" id="hamburgerIcon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileDrawer" class="hidden lg:hidden bg-white/95 border-b border-mc-200 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#about" class="block font-medium text-slate-700 hover:text-mc-500 mobile-nav-link">Tentang</a>
+            <a href="#signature" class="block font-medium text-slate-700 hover:text-mc-500 mobile-nav-link">Karakter MC</a>
+            <a href="#gallery" class="block font-medium text-slate-700 hover:text-mc-500 mobile-nav-link">Momen Pilihan</a>
+            <a href="#journey" class="block font-medium text-slate-700 hover:text-mc-500 mobile-nav-link">Alur Kerja Sama</a>
+            <a href="#packages" class="block font-medium text-slate-700 hover:text-mc-500 mobile-nav-link">Paket Layanan</a>
+            <a href="#faq" class="block font-medium text-slate-700 hover:text-mc-500 mobile-nav-link">FAQ</a>
+            <div class="pt-3">
+                <a href="#contact" class="mobile-nav-link block w-full py-2.5 text-center rounded-xl bg-mc-700 text-white text-xs font-semibold">Konsultasi via WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Clean, High-Impact & Professional) -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-mc-200 shadow-xs text-xs font-semibold text-mc-700">
+                        <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+                        <span>Bilingual Host (ID / EN)</span>
+                        <span class="text-mc-300">|</span>
+                        <span class="text-slate-500">Jakarta • Bali • Destination Wedding</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-800 leading-[1.16] tracking-tight">
+                        Mengalirkan Setiap Momen dengan <span class="text-mc-500 font-normal italic">Kehangatan Nyata</span> &amp; <span class="text-slate-700 underline decoration-gold-400 decoration-1 underline-offset-8">Keanggunan yang Hidup</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Bukan sekadar membaca susunan acara di atas panggung. Saya merajut emosi hadirin, menjaga ritme waktu tanpa kaku, dan membawakan kisah cinta Anda secara santun, berkelas, dan tak terlupakan.
+                    </p>
+
+                    <!-- Direct CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-mc-700 hover:bg-mc-800 text-white text-sm font-semibold transition duration-200 shadow-md shadow-mc-700/20 flex items-center justify-center gap-2 group">
+                            <span>Konsultasi Konsep Acara</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#gallery" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white hover:bg-mc-50 text-mc-800 border border-mc-200 text-sm font-semibold transition duration-200 text-center">
+                            Lihat Momen Acara
+                        </a>
+                    </div>
+
+                    <!-- Credibility Badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-mc-200/60 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-mc-700">8+</div>
+                            <p class="text-xs text-slate-500 mt-0.5">Tahun di Panggung</p>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-mc-700">350+</div>
+                            <p class="text-xs text-slate-500 mt-0.5">Pernikahan Terselenggara</p>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-mc-700">100%</div>
+                            <p class="text-xs text-slate-500 mt-0.5">Personalized Script</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Hero Presentation -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative max-w-sm sm:max-w-md mx-auto">
+                        <!-- Frame Ambient -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-mc-200 to-amber-100 rounded-3xl transform rotate-2 scale-95 opacity-70 blur-sm"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative bg-white p-3.5 rounded-3xl shadow-xl border border-mc-100 overflow-hidden">
+                            <div class="relative h-[480px] rounded-2xl overflow-hidden bg-slate-800">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
+                                    alt="Julian Pratama Wedding MC" 
+                                    class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                                    onerror="this.src='https://placehold.co/800x1000/22323D/FAFBFD?text=Julian+Pratama+MC'"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-black/10 to-transparent"></div>
+                                
+                                <!-- Floating Quote Badge on Image -->
+                                <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-xl border border-white/60 text-slate-800">
+                                    <p class="font-serif italic text-sm text-slate-800 leading-snug">
+                                        "Kunci MC yang baik bukan mendominasi panggung, melainkan membuat kedua mempelai dan keluarga menjadi pusat kebahagiaan sejati."
+                                    </p>
+                                    <span class="text-[10px] text-mc-600 font-bold uppercase tracking-wider block mt-1.5">— Julian Pratama</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pill Badge -->
+                        <div class="absolute -top-3 -right-3 bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-mc-100 flex items-center gap-2">
+                            <i data-lucide="award" class="w-4 h-4 text-gold-500"></i>
+                            <span class="text-xs font-semibold text-slate-800">Master of Ceremonies</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Alasan Memilih Saya / Signature Hosting Style -->
+    <section id="signature" class="py-20 bg-white border-y border-mc-100 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Karakter &amp; Kualitas</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                    Karakter Pemandu Acara yang Saya Hadirkan
+                </h2>
+                <div class="w-16 h-0.5 bg-mc-300 mx-auto my-4"></div>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Setiap pernikahan memiliki ritme unik. Saya menggabungkan empat pilar penting agar atmosfer perayaan Anda berkesan bagi seluruh generasi tamu.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1 -->
+                <div class="glass-card p-7 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-mc-100 text-mc-600 flex items-center justify-center mb-5">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Emotional Pacing</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Tahu persis kapan saatnya membawa hadirin terharu dalam sakralnya akad atau ikrar janji, serta kapan waktu mengangkat kembali energi pesta.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-card p-7 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-mc-100 text-mc-600 flex items-center justify-center mb-5">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Natural Crowd Control</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Humor cerdas tanpa lelucon klise atau canggung. Memastikan suasana hangat dan mencair secara alami untuk tamu tua maupun muda.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-card p-7 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-mc-100 text-mc-600 flex items-center justify-center mb-5">
+                        <i data-lucide="git-merge" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Sinergi Solid Bersama WO</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Koordinasi proaktif di balik layar dengan Wedding Organizer, tim audio-visual, fotografer, dan katering agar jadwal berjalan rapi tanpa jeda kosong.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="glass-card p-7 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-mc-100 text-mc-600 flex items-center justify-center mb-5">
+                        <i data-lucide="globe" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Artikulasi &amp; Bilingual Polish</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Diksi bahasa Indonesia yang tertata dan bahasa Inggris yang lancar dan natural untuk menyambut tamu keluarga multikultural atau ekspatriat.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Visual Experience / Momen Terbaik (Curated Photo Narrative Gallery) -->
+    <section id="gallery" class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+                <div>
+                    <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Dokumentasi Momen</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                        Narasi Visual dari Berbagai Panggung
+                    </h2>
+                </div>
+                <p class="text-slate-500 text-xs sm:text-sm max-w-md mt-4 md:mt-0 leading-relaxed">
+                    Setiap konsep pernikahan memiliki ceritanya sendiri. Berikut potret berbagai suasana yang telah dipercayakan kepada saya.
+                </p>
+            </div>
+
+            <!-- Narrative Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Akad & Khidmat -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white border border-mc-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" 
+                            alt="Prosesi Akad Nikah dan Adat" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-mc-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Akad &amp; Prosesi Adat
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-lg text-slate-800">Keheningan &amp; Doa Sakral</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Membimbing jalannya ijab kabul dan kirab keluarga dengan nada hormat dan artikulasi yang menenangkan kedua pihak orang tua.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Intimate Wedding / Holy Matrimony -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white border border-mc-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+                            alt="Intimate Wedding Reception" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-mc-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Intimate Toast
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-lg text-slate-800">Wedding Vow &amp; Intimate Toast</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Menciptakan ruang hangat di mana sahabat terdekat dan keluarga dapat menyampaikan pidato cinta tanpa canggung.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Grand Ballroom -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white border border-mc-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" 
+                            alt="Grand Ballroom Reception" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-mc-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Grand Ballroom
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-lg text-slate-800">The Grand Entrance</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Membangkitkan sorak antusiasme ratusan tamu menyambut langkah pertama pasangan memasuki pelaminan megah.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Destination Wedding Bali -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white border border-mc-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" 
+                            alt="Destination Wedding" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-mc-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Destination Wedding
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-lg text-slate-800">Sunset Beach &amp; Garden Vow</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Pembawaan santai namun anggun di tepi pantai atau tebing terbuka, selaras dengan desir ombak dan angin senja.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Interactive Games & After Party -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white border border-mc-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" 
+                            alt="After Party Celebration" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-mc-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Joyful Celebration
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-lg text-slate-800">Shoe Game &amp; Bouquet Toss</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Momen seru penuh tawa bersama para sahabat melalui interaksi ceria yang tetap santun dan menjaga martabat mempelai.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Bilingual Ceremony -->
+                <div class="group relative rounded-2xl overflow-hidden bg-white border border-mc-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" 
+                            alt="Bilingual International Wedding" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-mc-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Bilingual Protocol
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-lg text-slate-800">Bridging Cultures</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Menghubungkan dua keluarga lintas bangsa dengan narasi dwibahasa yang fasih, sehingga tak ada tamu yang merasa terasing.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Alur Kerja Sama 4 Langkah (The 4-Step Journey) -->
+    <section id="journey" class="py-20 bg-mc-50/60 border-y border-mc-100 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Proses Kerja Sama</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                    4 Langkah Mewujudkan Pesta yang Lancar
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-3">
+                    Setiap detail dipersiapkan secara matang jauh sebelum hari-H, memberi Anda ketenangan pikiran penuh.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="bg-white p-7 rounded-2xl border border-mc-100 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mc-700 text-white font-serif font-bold text-sm flex items-center justify-center mb-5">
+                        01
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Chemistry &amp; Story Session</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Sesi bincang santai (online atau temu langsung) untuk mendengar kisah cinta Anda, preferensi suasana yang diinginkan, serta hal-hal yang ingin dihindari.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-7 rounded-2xl border border-mc-100 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mc-700 text-white font-serif font-bold text-sm flex items-center justify-center mb-5">
+                        02
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Rundown Synchronization</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Penyelarasan alur waktu bersama Wedding Organizer (WO), tim musik/band, dan dokumentasi untuk memastikan seluruh cue panggung saling mengunci.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-7 rounded-2xl border border-mc-100 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mc-700 text-white font-serif font-bold text-sm flex items-center justify-center mb-5">
+                        03
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Personalized Cue Cards</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Penyusunan naskah khusus yang memuat nama keluarga besar, gelar kehormatan tamu VIP, serta narasi pembuka yang ditulis spesifik untuk Anda.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-7 rounded-2xl border border-mc-100 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mc-700 text-white font-serif font-bold text-sm flex items-center justify-center mb-5">
+                        04
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-800 mb-2">Flawless Day-of Hosting</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Hadir di lokasi 90 menit sebelum acara, melakukan soundcheck mikrofon, gladi resik singkat, dan memandu acara hingga tuntas dengan sempurna.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 bg-white relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Paket Layanan</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">Pilihan Sesi Pemandu Acara</h2>
+                <p class="text-slate-600 text-sm mt-3">
+                    Transparansi layanan profesional yang dapat disesuaikan dengan skala dan konsep acara Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Package 1 -->
+                <div class="bg-[#FCFDFE] rounded-3xl p-8 border border-mc-100 shadow-xs flex flex-col justify-between hover:border-mc-300 transition">
+                    <div>
+                        <div class="text-xs font-bold text-mc-500 uppercase tracking-wider mb-2">Intimate Session</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-800">Ceremony Only</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-6">Khusus Akad Nikah, Pemberkatan, atau Lamaran Resmi (Maks. 3 Jam)</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-xs text-slate-400">Tarif Investasi</span>
+                            <div class="font-serif text-3xl font-bold text-slate-800">Rp 4.500.000</div>
+                            <span class="text-[11px] text-mc-500">Jakarta &amp; Sekitarnya</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Pemandu 1 sesi acara sakral</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>1x Konsultasi Rundown &amp; Doa khusus</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Naskah sambutan keluarga yang dipersonalisasi</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Standby di lokasi 90 menit sebelum mulai</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="pilihPaket('Ceremony Only (Rp 4.500.000)')" class="w-full py-3 rounded-xl border border-mc-400 text-mc-800 hover:bg-mc-700 hover:text-white text-xs font-bold transition">
+                        Pilih Sesi Ceremony
+                    </button>
+                </div>
+
+                <!-- Package 2 (Featured) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-mc-500 shadow-xl flex flex-col justify-between relative transform lg:-translate-y-2">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-mc-700 text-white px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase shadow">
+                        Paling Banyak Dipilih
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-gold-500 uppercase tracking-wider mb-2 mt-2">Full Wedding Day</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-800">The Signature Full Day</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-6">Akad / Holy Matrimony Pagi + Resepsi Malam (Hingga 7 Jam)</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-xs text-slate-400">Tarif Investasi</span>
+                            <div class="font-serif text-3xl font-bold text-mc-700">Rp 7.500.000</div>
+                            <span class="text-[11px] text-emerald-600 font-semibold">Termasuk Layanan Bilingual (ID / EN)</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-mc-600 shrink-0"></i>
+                                <span>Pemandu lengkap 2 sesi (Pagi &amp; Malam)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-mc-600 shrink-0"></i>
+                                <span>Bilingual penuh (Bahasa Indonesia &amp; English)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-mc-600 shrink-0"></i>
+                                <span>Hadir langsung saat Technical Meeting bersama WO</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-mc-600 shrink-0"></i>
+                                <span>Penyusunan naskah cerita cinta pasangan</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-mc-600 shrink-0"></i>
+                                <span>Gladi resik panggung &amp; koordinasi toast keluarga</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="pilihPaket('The Signature Full Day (Rp 7.500.000)')" class="w-full py-3.5 rounded-xl bg-mc-700 hover:bg-mc-800 text-white text-xs font-bold transition shadow-md">
+                        Pilih Signature Full Day
+                    </button>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-[#FCFDFE] rounded-3xl p-8 border border-mc-100 shadow-xs flex flex-col justify-between hover:border-mc-300 transition">
+                    <div>
+                        <div class="text-xs font-bold text-mc-500 uppercase tracking-wider mb-2">Grand &amp; Destination</div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-800">Royal Destination</h3>
+                        <p class="text-xs text-slate-500 mt-1 mb-6">Pernikahan Luar Kota / Bali &amp; Rangkaian Acara Multi-Day</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-xs text-slate-400">Tarif Investasi</span>
+                            <div class="font-serif text-3xl font-bold text-slate-800">Rp 12.000.000</div>
+                            <span class="text-[11px] text-mc-500">Destination / Bali / Multi-Event</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Welcome Dinner + Wedding Reception + After Party</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Opsi Tandem Duo MC (dengan partner female MC)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Konsultasi tatap muka intensif tanpa batas</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                                <span>Personal Stage &amp; Audio Assistant standby</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="pilihPaket('Royal Destination (Rp 12.000.000)')" class="w-full py-3 rounded-xl border border-mc-400 text-mc-800 hover:bg-mc-700 hover:text-white text-xs font-bold transition">
+                        Pilih Royal Destination
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Testimonial Klien -->
+    <section class="py-20 bg-mc-50/50 border-t border-mc-100 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Kesan Nyata</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">Apa Kata Mereka</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                            "Mas Julian sangat peka membaca situasi panggung. Saat ada keterlambatan persiapan di kamar pengantin, beliau dengan lihai mencairkan suasana tanpa sedikit pun terkesan panik. Keluarga kami sangat terkesan!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 mt-4 border-t border-mc-100">
+                        <div class="w-9 h-9 rounded-full bg-mc-200 text-mc-800 flex items-center justify-center font-bold text-xs">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800">Andini &amp; Satria</h4>
+                            <span class="text-[10px] text-slate-400">Ayana Resort, Bali</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                            "Bilingual MC yang paling natural yang pernah kami temui. Bahasa Inggrisnya berkelas dan tata bahasa Indonesianya tetap sopan untuk adat Jawa. Tamu-tamu dari Melbourne memuji pembawaannya!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 mt-4 border-t border-mc-100">
+                        <div class="w-9 h-9 rounded-full bg-mc-200 text-mc-800 flex items-center justify-center font-bold text-xs">
+                            RL
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800">Rachel &amp; Liam</h4>
+                            <span class="text-[10px] text-slate-400">The Dharmawangsa Jakarta</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-3">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
+                            "Sebagai Wedding Organizer, kami selalu merekomendasikan Julian kepada pasangan kami. Sangat kooperatif, tepat waktu, dan sangat paham sinyal komunikasi panggung."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 mt-4 border-t border-mc-100">
+                        <div class="w-9 h-9 rounded-full bg-mc-200 text-mc-800 flex items-center justify-center font-bold text-xs">
+                            EW
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800">Elvira Wardhana</h4>
+                            <span class="text-[10px] text-slate-400">Lead WO - Serenata Wedding</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: FAQ Accordion -->
+    <section id="faq" class="py-20 bg-white border-t border-mc-100 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Pertanyaan Umum</span>
+                <h2 class="text-3xl font-serif font-bold text-slate-800 mt-2">Hal yang Sering Ditanyakan</h2>
+            </div>
+
+            <div class="space-y-3">
+                
+                <div class="border border-mc-100 rounded-2xl overflow-hidden bg-[#FAFBFD]">
+                    <button onclick="toggleFaq(1)" class="w-full p-5 text-left flex items-center justify-between font-serif font-bold text-slate-800 text-sm sm:text-base focus:outline-none">
+                        <span>Apakah Julian bersedia melayani acara di luar kota Jakarta atau luar negeri?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-1" class="w-4 h-4 text-mc-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-1" class="faq-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Tentu. Saya sering memandu acara pernikahan di Bali, Bandung, Surabaya, Yogyakarta, hingga Singapura. Untuk acara di luar Jabodetabek, biaya akomodasi (transportasi PP dan penginapan hotel yang layak) akan disesuaikan dengan lokasi.
+                    </div>
+                </div>
+
+                <div class="border border-mc-100 rounded-2xl overflow-hidden bg-[#FAFBFD]">
+                    <button onclick="toggleFaq(2)" class="w-full p-5 text-left flex items-center justify-between font-serif font-bold text-slate-800 text-sm sm:text-base focus:outline-none">
+                        <span>Bagaimana penyesuaian busana (dresscode) MC saat hari pernikahan?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-2" class="w-4 h-4 text-mc-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-2" class="faq-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Busana selalu diselaraskan dengan palet warna dan konsep pernikahan Anda. Baik itu tuxedo hitam formal, jas bernuansa earth-tone/navy, beskap adat nasional, maupun setelan kasual linen untuk acara pantai di Bali.
+                    </div>
+                </div>
+
+                <div class="border border-mc-100 rounded-2xl overflow-hidden bg-[#FAFBFD]">
+                    <button onclick="toggleFaq(3)" class="w-full p-5 text-left flex items-center justify-between font-serif font-bold text-slate-800 text-sm sm:text-base focus:outline-none">
+                        <span>Apakah ada sesi gladi resik (Technical Meeting) sebelum acara?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-3" class="w-4 h-4 text-mc-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-3" class="faq-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Ya. Untuk paket Full Day dan Destination, saya menghadiri Technical Meeting bersama seluruh vendor inti dan Wedding Organizer secara langsung atau via Zoom untuk memastikan kesiapan seluruh alur.
+                    </div>
+                </div>
+
+                <div class="border border-mc-100 rounded-2xl overflow-hidden bg-[#FAFBFD]">
+                    <button onclick="toggleFaq(4)" class="w-full p-5 text-left flex items-center justify-between font-serif font-bold text-slate-800 text-sm sm:text-base focus:outline-none">
+                        <span>Berapa lama sebelum hari-H sebaiknya kami mengunci jadwal?</span>
+                        <i data-lucide="chevron-down" id="faq-icon-4" class="w-4 h-4 text-mc-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-4" class="faq-content px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Disarankan untuk memesan jadwal 4 hingga 8 bulan sebelum acara, terutama untuk tanggal-tanggal akhir pekan atau tanggal cantik di musim pernikahan.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekarsiti Wedding Studio Collaboration Section -->
+    <section id="sekarsiti-partner" class="py-20 bg-gradient-to-br from-mc-950 via-slate-900 to-mc-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,6,0.15),transparent_60%)]"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 backdrop-blur-md shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-400/20 text-gold-300 border border-gold-400/30 text-xs font-semibold tracking-wider uppercase">
+                            ✦ Official Wedding Partner
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
+                            Sekarsiti Wedding Studio <br>
+                            <span class="text-xl sm:text-2xl font-normal text-gold-300 font-sans italic">Atelier Undangan Pernikahan Digital</span>
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Sebagai Master of Ceremony yang mendampingi momen sakral Anda, Julian Pratama merekomendasikan <strong>Sekarsiti Wedding Studio</strong> untuk menghadirkan undangan pernikahan digital yang eksklusif, hangat, dan berkesan mendalam bagi seluruh keluarga serta tamu undangan kehormatan.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-200 pt-2">
+                            <div class="flex items-center gap-2.5">
+                                <span class="text-gold-400 font-bold">🤍</span>
+                                <span>Desain Eksklusif, Minimalis & Elegan</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <span class="text-gold-400 font-bold">🤍</span>
+                                <span>Konfirmasi Kehadiran (RSVP) Real-Time</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <span class="text-gold-400 font-bold">🤍</span>
+                                <span>Musik Pilihan & Galeri Kisah Cinta</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <span class="text-gold-400 font-bold">🤍</span>
+                                <span>Integrasi Amplop Digital & Petunjuk Arah</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="https://ssiti.tech" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-gold-400 hover:bg-gold-500 text-slate-900 text-sm font-bold transition shadow-lg flex items-center gap-2">
+                                <span>Kunjungi Website Sekarsiti (ssiti.tech) 🤍</span>
+                            </a>
+                            <a href="index.html" class="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white text-sm font-semibold transition">
+                                Lihat Hub Kolaborasi
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="bg-white/10 p-4 rounded-2xl border border-white/15 shadow-2xl space-y-3">
+                            <div class="relative h-64 rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=700&q=80" alt="Sekarsiti Wedding Invitation Preview" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3 p-3 bg-slate-900/90 backdrop-blur-md rounded-lg text-xs border border-white/10">
+                                    <div class="font-serif font-bold text-white">Atelier Undangan Pernikahan</div>
+                                    <span class="text-[11px] text-gold-300 font-medium">Elegan • Hangat • Personal</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs px-2 pt-1 text-slate-300">
+                                <span>Program Kolaborasi Vendor</span>
+                                <a href="index.html" class="text-gold-300 font-semibold hover:underline">Info Kemitraan →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Section -->
+    <section id="contact" class="py-20 bg-mc-50/70 border-t border-mc-200 relative z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-mc-200 shadow-xl">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Left Contact Context -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-mc-500 font-semibold text-xs tracking-widest uppercase">Konsultasi Pribadi</span>
+                        <h2 class="text-3xl font-serif font-bold text-slate-800">Mari Wujudkan Acara Impian Anda</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Silakan isi detail singkat di samping untuk mengirim pesan terstruktur langsung ke WhatsApp tim manajemen Julian Pratama.
+                        </p>
+
+                        <div class="space-y-3 pt-2 text-xs text-slate-600">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-mc-100 text-mc-700 flex items-center justify-center">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </div>
+                                <span>WhatsApp: +62 812-9876-5432</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-mc-100 text-mc-700 flex items-center justify-center">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </div>
+                                <span>Email: management@julianmc.id</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-mc-100 text-mc-700 flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                </div>
+                                <span>Basis: Jakarta Selatan &amp; Denpasar, Bali</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Booking Form -->
+                    <div class="lg:col-span-7">
+                        <form id="bookingForm" onsubmit="handleSendWhatsApp(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Calon Pengantin / Klien *</label>
+                                    <input type="text" id="formName" required placeholder="Contoh: Sarah & Danial" class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm focus:outline-none focus:border-mc-600 bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp *</label>
+                                    <input type="tel" id="formPhone" required placeholder="08xxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm focus:outline-none focus:border-mc-600 bg-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Tanggal Acara *</label>
+                                    <input type="date" id="formDate" required class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm focus:outline-none focus:border-mc-600 text-slate-600 bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Kota &amp; Nama Venue</label>
+                                    <input type="text" id="formVenue" placeholder="Contoh: The Dharmawangsa, Jakarta" class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm focus:outline-none focus:border-mc-600 bg-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Format Bahasa</label>
+                                    <select id="formLanguage" class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm bg-white focus:outline-none focus:border-mc-600 text-slate-700">
+                                        <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                                        <option value="Bilingual (ID / EN)">Bilingual (Indonesia &amp; English)</option>
+                                        <option value="Akad / Adat Tradisional">Akad / Adat Tradisional</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Pilihan Paket</label>
+                                    <select id="formPackage" class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm bg-white focus:outline-none focus:border-mc-600 text-slate-700">
+                                        <option value="Ceremony Only (Rp 4.500.000)">Ceremony Only</option>
+                                        <option value="The Signature Full Day (Rp 7.500.000)" selected>The Signature Full Day</option>
+                                        <option value="Royal Destination (Rp 12.000.000)">Royal Destination</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Gambaran Acara &amp; Catatan Khusus</label>
+                                <textarea id="formNotes" rows="2" placeholder="Ceritakan tema pernikahan impian Anda, preferensi suasana, atau permintaan khusus lainnya..." class="w-full px-3.5 py-2.5 rounded-xl border border-mc-200 text-xs sm:text-sm focus:outline-none focus:border-mc-600 bg-white"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 bg-mc-700 hover:bg-mc-800 text-white rounded-xl text-xs sm:text-sm font-semibold transition shadow-md flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Kirim Detail via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 relative z-10 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full border border-gold-400/60 flex items-center justify-center text-gold-400">
+                        <i data-lucide="mic" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-bold text-white block">JULIAN PRATAMA</span>
+                        <span class="text-[9px] uppercase tracking-widest text-slate-500">Master of Ceremonies</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-6">
+                    <a href="#signature" class="hover:text-white transition">Karakter MC</a>
+                    <a href="#gallery" class="hover:text-white transition">Momen</a>
+                    <a href="#journey" class="hover:text-white transition">Alur Kerja</a>
+                    <a href="#packages" class="hover:text-white transition">Paket</a>
+                    <a href="#faq" class="hover:text-white transition">FAQ</a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:text-white hover:bg-mc-700 transition">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:text-white hover:bg-mc-700 transition">
+                        <i data-lucide="video" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-2">
+                <p>&copy; 2026 Julian Pratama. Hak Cipta Dilindungi.</p>
+                <p>Designed with elegance, clarity, and heart.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // 1. Gentle Ambient Particles Canvas (Soft Stardust / Light Shimmer)
+        const canvas = document.getElementById('ambientCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class SubtleStardust {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 2.2 + 0.6;
+                this.speedX = (Math.random() - 0.5) * 0.25;
+                this.speedY = -(Math.random() * 0.35 + 0.12);
+                this.opacity = Math.random() * 0.35 + 0.08;
+                // Soft dusty blue and subtle champagne gold
+                this.color = Math.random() > 0.5 ? 'rgba(74, 107, 130, ' : 'rgba(197, 160, 89, ';
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) {
+                    this.reset();
+                    this.y = canvas.height + 5;
+                }
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color + this.opacity + ')';
+                ctx.fill();
+            }
+        }
+
+        const particleCount = window.innerWidth < 768 ? 18 : 32;
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new SubtleStardust());
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // 2. Mobile Drawer Navigation
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        mobileToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+        });
+
+        // 3. Package Selection helper
+        function pilihPaket(packageName) {
+            const selectEl = document.getElementById('formPackage');
+            if (selectEl) {
+                selectEl.value = packageName;
+            }
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 4. FAQ Accordion Logic
+        function toggleFaq(num) {
+            const content = document.getElementById(`faq-content-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            const isOpen = content.classList.contains('open');
+
+            // Close all
+            for (let i = 1; i <= 4; i++) {
+                const c = document.getElementById(`faq-content-${i}`);
+                const ic = document.getElementById(`faq-icon-${i}`);
+                if (c && ic) {
+                    c.classList.remove('open');
+                    ic.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            if (!isOpen) {
+                content.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // 5. WhatsApp Form Generator
+        function handleSendWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value;
+            const phone = document.getElementById('formPhone').value;
+            const date = document.getElementById('formDate').value;
+            const venue = document.getElementById('formVenue').value || '-';
+            const lang = document.getElementById('formLanguage').value;
+            const pkg = document.getElementById('formPackage').value;
+            const notes = document.getElementById('formNotes').value || '-';
+
+            const message = `Halo Julian Pratama (Wedding MC), saya ingin berdiskusi mengenai jadwal acara:%0A%0A` +
+                `*Nama Pasangan / Klien*: ${name}%0A` +
+                `*WhatsApp*: ${phone}%0A` +
+                `*Tanggal Acara*: ${date}%0A` +
+                `*Kota / Venue*: ${venue}%0A` +
+                `*Format Bahasa*: ${lang}%0A` +
+                `*Paket yang Diminati*: ${pkg}%0A` +
+                `*Catatan Khusus*: ${notes}%0A%0A` +
+                `Apakah tanggal tersebut masih tersedia untuk konsultasi lebih lanjut? Terima kasih!`;
+
+            window.open(`https://wa.me/6281298765432?text=${message}`, '_blank');
+        }
+    </script>
+    <!-- Floating Template Hub Switcher Pill -->
+    <div style="position:fixed; bottom:20px; left:20px; z-index:90;">
+      <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; background:rgba(15,23,42,0.95); color:#F8FAFC; border:1px solid #D97706; backdrop-filter:blur(10px); border-radius:99px; font-size:0.85rem; font-weight:700; text-decoration:none; box-shadow:0 8px 24px rgba(15,23,42,0.4); transition:transform .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#F59E0B; box-shadow:0 0 8px #F59E0B;"></span>
+        ← Hub Template Sekarsiti
+      </a>
+    </div>
+</body>
+</html>

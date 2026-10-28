@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larana Wedding Organizer | Mewujudkan Pernikahan Impian</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        larana: {
+                            50: '#F4F8FA',
+                            100: '#E6EFF4',
+                            200: '#C9DEE8',
+                            300: '#A3C6D8',
+                            400: '#75A5C1',
+                            500: '#5F8EAA', // Primary dusty blue
+                            600: '#49738D',
+                            700: '#38586E',
+                            800: '#2A4253',
+                            900: '#1D2D39',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Great Vibes"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .watercolor-bg {
+            background-color: #f7fafc;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(163, 198, 216, 0.22) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(117, 165, 193, 0.18) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(230, 239, 244, 0.3) 0%, transparent 60%);
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(95, 142, 170, 0.15);
+        }
+        .soft-shadow-hover:hover {
+            box-shadow: 0 20px 40px -15px rgba(95, 142, 170, 0.25);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F8FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #A3C6D8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #75A5C1;
+        }
+    </style>
+</head>
+<body class="bg-[#FCFDFE] text-slate-700 font-sans antialiased selection:bg-larana-200 selection:text-larana-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-larana-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+        <span>✨ Dapatkan Konsultasi Perencanaan Pernikahan Gratis & Free Moodboard Eksklusif</span>
+        <a href="#kontak" class="underline hover:text-larana-100 font-semibold transition">Daftar Sekarang</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-larana-100/80 transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo (PDF Inspired: larana with heart outline) -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <svg class="w-9 h-9 text-larana-500 transition-transform group-hover:scale-105 duration-300" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <!-- Dual Outline Hearts based on PDF -->
+                            <path d="M26 18 C26 10, 16 10, 12 16 C8 24, 18 34, 26 40 C34 34, 44 24, 40 16 C36 10, 26 10, 26 18 Z" class="stroke-larana-400" fill="none" transform="rotate(-12 26 26)"/>
+                            <path d="M38 16 C38 9, 30 9, 27 14 C24 20, 32 29, 38 34 C44 29, 52 20, 49 14 C46 9, 38 9, 38 16 Z" class="stroke-larana-500 opacity-80" fill="none" transform="rotate(10 38 22)"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-script text-3xl leading-none text-larana-700 tracking-wide font-normal -mb-1">larana</span>
+                        <span class="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-semibold">Wedding Organizer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="text-larana-600 hover:text-larana-700 font-semibold flex items-center gap-1">✦ Hub Sekarsiti</a>
+                    <a href="#beranda" class="hover:text-larana-600 transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-larana-600 transition">Tentang Kami</a>
+                    <a href="#layanan" class="hover:text-larana-600 transition">Layanan</a>
+                    <a href="#paket" class="hover:text-larana-600 transition">Paket & Harga</a>
+                    <a href="#galeri" class="hover:text-larana-600 transition">Galeri</a>
+                    <a href="#sekarsiti-partner" class="hover:text-larana-600 transition">Undangan</a>
+                    <a href="#testimoni" class="hover:text-larana-600 transition">Testimoni</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#kontak" class="bg-larana-500 hover:bg-larana-600 text-white px-5 py-2.5 rounded-full text-sm font-medium transition shadow-md shadow-larana-500/20 hover:shadow-larana-500/30 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>Konsultasi Gratis</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu toggle -->
+                <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2 text-slate-600 hover:text-larana-600">
+                    <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-larana-100 px-6 py-5 space-y-3 shadow-xl transition-all">
+            <a href="#beranda" class="mobile-link block text-base font-medium text-slate-700 hover:text-larana-600 py-1">Beranda</a>
+            <a href="#tentang" class="mobile-link block text-base font-medium text-slate-700 hover:text-larana-600 py-1">Tentang Kami</a>
+            <a href="#layanan" class="mobile-link block text-base font-medium text-slate-700 hover:text-larana-600 py-1">Layanan</a>
+            <a href="#paket" class="mobile-link block text-base font-medium text-slate-700 hover:text-larana-600 py-1">Paket & Harga</a>
+            <a href="#kalkulator" class="mobile-link block text-base font-medium text-slate-700 hover:text-larana-600 py-1">Estimasi Biaya</a>
+            <a href="#testimoni" class="mobile-link block text-base font-medium text-slate-700 hover:text-larana-600 py-1">Testimoni</a>
+            <a href="#kontak" class="mobile-link block text-center bg-larana-500 text-white py-2.5 rounded-xl font-medium mt-4">Jadwalkan Konsultasi</a>
+        </div>
+    </header>
+
+    <main id="beranda">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 watercolor-bg">
+            <!-- Decorative Vector Rose Petals & Ornaments (from presentation aesthetic) -->
+            <div class="absolute -top-12 -left-16 w-72 h-72 opacity-30 pointer-events-none rounded-full bg-larana-200 blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 opacity-40 pointer-events-none rounded-full bg-larana-300 blur-3xl"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-larana-100/80 border border-larana-200 text-larana-700 text-xs font-semibold tracking-wider uppercase">
+                            <span class="w-2 h-2 rounded-full bg-larana-500 animate-pulse"></span>
+                            Official Wedding Organizer Partner
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-slate-800 leading-[1.18] font-bold">
+                            Mewujudkan <span class="text-larana-600 font-normal italic">Pernikahan Impian</span> Menjadi Kenyataan
+                        </h1>
+                        
+                        <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            Pendekatan perencanaan berpusat pada personalisasi cerita cinta Anda. Nikmati setiap detik momen sakral tanpa beban stres logistik.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+                            <a href="#kontak" class="w-full sm:w-auto text-center px-8 py-3.5 bg-larana-600 hover:bg-larana-700 text-white rounded-full font-medium transition duration-200 shadow-lg shadow-larana-600/25 flex items-center justify-center gap-2 group">
+                                <span>Mulai Konsultasi Gratis</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <a href="#paket" class="w-full sm:w-auto text-center px-8 py-3.5 bg-white hover:bg-larana-50 text-larana-700 border border-larana-200 rounded-full font-medium transition duration-200">
+                                Eksplorasi Paket
+                            </a>
+                        </div>
+
+                        <!-- Highlights Banner -->
+                        <div class="pt-8 grid grid-cols-3 gap-4 border-t border-larana-200/60 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-larana-700">150+</h3>
+                                <p class="text-xs text-slate-500 mt-1">Pernikahan Sukses</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-larana-700">50+</h3>
+                                <p class="text-xs text-slate-500 mt-1">Vendor Terverifikasi</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-larana-700">100%</h3>
+                                <p class="text-xs text-slate-500 mt-1">Transparansi Biaya</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual Composition (Matching PDF's Gazebo & Blue Rose Aesthetic) -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-sm sm:max-w-md">
+                            <!-- Background Artistic Frame -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-larana-300 to-white rounded-3xl transform rotate-3 shadow-xl opacity-70"></div>
+                            
+                            <!-- Main Gazebo / Bride Groom Image Card -->
+                            <div class="relative bg-white p-3 rounded-3xl shadow-xl overflow-hidden border border-larana-100">
+                                <div class="relative h-[420px] rounded-2xl overflow-hidden bg-slate-100">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+                                        alt="Pasangan Bahagia di Altar Pernikahan" 
+                                        class="w-full h-full object-cover object-center"
+                                        onerror="this.src='https://placehold.co/800x1000/E6EFF4/49738D?text=Larana+Wedding'"
+                                    >
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4 right-4 p-4 bg-white/90 backdrop-blur-md rounded-xl text-xs text-slate-700">
+                                        <p class="font-serif italic font-semibold text-larana-800 text-sm">"Setiap pernikahan adalah karya seni yang unik."</p>
+                                        <span class="text-[10px] text-slate-500">Larana Philosophy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Decorative Blue Flower Badge (Page 3 & 9 PDF Tribute) -->
+                            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-larana-100 flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-larana-100 flex items-center justify-center text-larana-600">
+                                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-800">Estetika Lembut & Elegan</div>
+                                    <div class="text-[11px] text-slate-500">Sentuhan Pastel & Detail Rapi</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+
+<section id="tentang" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Tentang Larana</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                        Pendekatan Kami dalam Perencanaan Pernikahan
+                    </h2>
+                    <div class="w-16 h-0.5 bg-larana-400 mx-auto my-4"></div>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Kami percaya bahwa setiap pernikahan harus menjadi pengalaman unik dan tak terlupakan. Pendekatan kami berpusat pada personalisasi dan menciptakan pernikahan yang disesuaikan dengan gaya dan visi pasangan.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-larana-50/60 hover:bg-larana-50 p-8 rounded-2xl border border-larana-100 transition-all duration-300 soft-shadow soft-shadow-hover group">
+                        <div class="w-12 h-12 rounded-xl bg-larana-200/70 text-larana-700 flex items-center justify-center mb-6 group-hover:bg-larana-500 group-hover:text-white transition">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-800 mb-3">Personalisasi Penuh</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Kami mengerti bahwa hari bahagia Anda mencerminkan kisah cinta Anda berdua. Kami merancang konsep dekorasi, alur prosesi, hingga musik yang otentik.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-larana-50/60 hover:bg-larana-50 p-8 rounded-2xl border border-larana-100 transition-all duration-300 soft-shadow soft-shadow-hover group">
+                        <div class="w-12 h-12 rounded-xl bg-larana-200/70 text-larana-700 flex items-center justify-center mb-6 group-hover:bg-larana-500 group-hover:text-white transition">
+                            <i data-lucide="calculator" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-800 mb-3">Pengelolaan Anggaran Akurat</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Rencana anggaran yang terperinci dan transparan. Kami mengoptimalkan alokasi biaya tanpa mengorbankan estetika dan mutu vendor pilihan Anda.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-larana-50/60 hover:bg-larana-50 p-8 rounded-2xl border border-larana-100 transition-all duration-300 soft-shadow soft-shadow-hover group">
+                        <div class="w-12 h-12 rounded-xl bg-larana-200/70 text-larana-700 flex items-center justify-center mb-6 group-hover:bg-larana-500 group-hover:text-white transition">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-slate-800 mb-3">Eksekusi Acara yang Tenang</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Pada hari-H, kami mengurus seluruh logistik dan alur waktu agar Anda dan keluarga bisa larut sepenuhnya dalam kebahagiaan tanpa kepanikan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="layanan" class="py-20 watercolor-bg border-y border-larana-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Solusi Menyeluruh</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                        Gambaran Layanan Kami
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base mt-3">
+                        Layanan Wedding Organizer kami mencakup setiap aspek hari istimewa Anda, mulai dari persiapan matang hingga pelaksanaan hari-H.
+                    </p>
+                </div>
+
+                <!-- Interactive Services Tabs -->
+                <div class="max-w-4xl mx-auto mb-10">
+                    <div class="flex flex-wrap justify-center p-1.5 bg-larana-100 rounded-full gap-2">
+                        <button onclick="switchTab('pra')" id="tab-btn-pra" class="tab-button px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-larana-800 shadow-sm">
+                            Layanan Pra-Pernikahan
+                        </button>
+                        <button onclick="switchTab('hari')" id="tab-btn-hari" class="tab-button px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-larana-700">
+                            Layanan Hari Pernikahan (Hari-H)
+                        </button>
+                        <button onclick="switchTab('vendor')" id="tab-btn-vendor" class="tab-button px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-larana-700">
+                            Jaringan Vendor Ahli
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content Area -->
+                <div class="max-w-5xl mx-auto">
+                    <!-- Tab 1: Pra-Pernikahan -->
+                    <div id="tab-content-pra" class="tab-pane grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Pemilihan Lokasi (Venue Hunting)</h4>
+                                <p class="text-slate-600 text-sm">Menemukan dan merekomendasikan ballroom, kebun, villa, atau pantai yang selaras dengan tema dan kapasitas tamu Anda.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="palette" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Pengembangan Tema & Moodboard</h4>
+                                <p class="text-slate-600 text-sm">Penyusunan palet warna, desain visual, rancangan undangan, dan busana pengantin yang kohesif dan berkelas.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="wallet" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Pengelolaan Anggaran Terperinci</h4>
+                                <p class="text-slate-600 text-sm">Perincian pos biaya transparan, negosiasi penawaran terbaik, dan pengawasan termin pembayaran secara rapi.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Koordinasi Vendor & Kontrak</h4>
+                                <p class="text-slate-600 text-sm">Memilih, menghubungi, dan menyelaraskan jadwal kerja seluruh mitra vendor dari awal hingga gladi resik.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Hari Pernikahan -->
+                    <div id="tab-content-hari" class="tab-pane hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Eksekusi Rundown Menit ke Menit</h4>
+                                <p class="text-slate-600 text-sm">Memandu seluruh prosesi akad, pemberkatan, dan resepsi tepat waktu sesuai rencana tanpa rasa terburu-buru.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="user-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Pendamping Pribadi Pengantin & VIP</h4>
+                                <p class="text-slate-600 text-sm">Liaison officer khusus yang memastikan kebutuhan mempelai, orang tua, dan tamu VVIP terlayani sempurna.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="utensils" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Pengawasan Katering & Logistik</h4>
+                                <p class="text-slate-600 text-sm">Kontrol flow makanan, refill hidangan buffet, dan ketersediaan piring serta staf banquet di lapangan.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="gift" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Meja Penerima Tamu & Souvenir</h4>
+                                <p class="text-slate-600 text-sm">Pengelolaan buku tamu digital, penerimaan angpao aman, dan pembagian souvenir secara teratur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Jaringan Vendor Ahli -->
+                    <div id="tab-content-vendor" class="tab-pane hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Dekorasi & Florist Ternama</h4>
+                                <p class="text-slate-600 text-sm">Kolaborasi dengan desainer dekorasi terbaik untuk mewujudkan konsep botanical, modern luxury, atau adat tradisi.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="camera" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Fotografer & Videografer Sinematik</h4>
+                                <p class="text-slate-600 text-sm">Dokumentasi visual abadi dengan sentuhan tone warna alami, candid storytelling, dan teaser same-day-edit.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="mic" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">MC Profesional & Musik Akustik</h4>
+                                <p class="text-slate-600 text-sm">Master of Ceremony karismatik dan ensemble akustik/chamber orchestra yang menghidupkan suasana syahdu.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-larana-100 shadow-sm flex gap-5">
+                            <div class="w-12 h-12 shrink-0 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-slate-800 mb-1">Undangan Digital Premium (Sekarsiti)</h4>
+                                <p class="text-slate-600 text-sm">Undangan digital mewah eksklusif dari partner resmi kami, lengkap dengan RSVP instan dan musik personal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="paket" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Investasi Kebahagiaan</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                        Paket Pernikahan & Harga
+                    </h2>
+                    <p class="text-slate-600 text-base mt-3">
+                        Setiap paket dirancang dengan cermat untuk menyediakan beragam layanan yang disesuaikan dengan preferensi dan skala resepsi Anda.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                    <!-- Paket 1: Intimate -->
+                    <div class="border border-larana-100 bg-[#FCFDFE] rounded-3xl p-8 flex flex-col justify-between soft-shadow transition-transform hover:-translate-y-1">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-larana-100 text-larana-700 mb-4">
+                                Intimate Celebration
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-slate-800">Serenade Silver</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-6">Cocok untuk pernikahan intim (100 - 250 Tamu)</p>
+
+                            <div class="mb-6">
+                                <span class="text-xs text-slate-400">Mulai dari</span>
+                                <div class="text-3xl font-serif font-bold text-slate-800">Rp 16.500.000</div>
+                                <span class="text-xs text-larana-600">Wedding Day Organizer Only</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-6">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Tim 5 orang profesional di hari-H</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Penyusunan rundown detail acara</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>1x Pertemuan teknis & gladi resik</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Pengawasan katering & tamu keluarga</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#kontak" onclick="pilihPaket('Serenade Silver')" class="w-full py-3 text-center border border-larana-400 text-larana-700 hover:bg-larana-500 hover:text-white rounded-xl text-sm font-semibold transition">
+                            Pilih Paket Ini
+                        </a>
+                    </div>
+
+                    <!-- Paket 2: Popular (Elegance) -->
+                    <div class="border-2 border-larana-500 bg-white rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative transition-transform hover:-translate-y-2">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-larana-600 text-white px-4 py-1 rounded-full text-xs font-semibold tracking-wider uppercase shadow-md">
+                            Paling Populer
+                        </div>
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-larana-100 text-larana-700 mb-4 mt-2">
+                                Full Planning & Coordination
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-slate-800">Harmony Gold</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-6">Ideal untuk resepsi medium (300 - 600 Tamu)</p>
+
+                            <div class="mb-6">
+                                <span class="text-xs text-slate-400">Mulai dari</span>
+                                <div class="text-3xl font-serif font-bold text-larana-700">Rp 28.000.000</div>
+                                <span class="text-xs text-larana-600">Perencanaan Komprehensif (3 Bulan)</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-6">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Tim 8 orang terkoordinasi rapi</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Penyusunan konsep tema & moodboard visual</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Kurasi & negosiasi seluruh vendor mitra</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Pendamping belanja gaun & test food</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Gratis Undangan Digital Sekarsiti Basic</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#kontak" onclick="pilihPaket('Harmony Gold')" class="w-full py-3 text-center bg-larana-500 hover:bg-larana-600 text-white rounded-xl text-sm font-semibold transition shadow-md">
+                            Pilih Paket Ini
+                        </a>
+                    </div>
+
+                    <!-- Paket 3: Luxury -->
+                    <div class="border border-larana-100 bg-[#FCFDFE] rounded-3xl p-8 flex flex-col justify-between soft-shadow transition-transform hover:-translate-y-1">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-larana-100 text-larana-700 mb-4">
+                                Grand Luxury Gala
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-slate-800">Eternity Platinum</h3>
+                            <p class="text-xs text-slate-500 mt-1 mb-6">Pernikahan akbar (> 600 Tamu / Ballroom)</p>
+
+                            <div class="mb-6">
+                                <span class="text-xs text-slate-400">Mulai dari</span>
+                                <div class="text-3xl font-serif font-bold text-slate-800">Rp 45.000.000</div>
+                                <span class="text-xs text-larana-600">End-to-End Concierge (6 Bulan)</span>
+                            </div>
+
+                            <ul class="space-y-3.5 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-6">
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Tim lengkap 12 orang berpengalaman</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>VIP Liaison Officer khusus pejabat / keluarga besar</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Unlimited meeting & technical inspection</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Manajemen katering & emergency response protocol</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-larana-500 shrink-0"></i>
+                                    <span>Undangan Digital Sekarsiti Custom Premium Suite</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#kontak" onclick="pilihPaket('Eternity Platinum')" class="w-full py-3 text-center border border-larana-400 text-larana-700 hover:bg-larana-500 hover:text-white rounded-xl text-sm font-semibold transition">
+                            Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="kalkulator" class="py-16 watercolor-bg border-t border-larana-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Simulasi Transparan</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-800 mt-1">
+                        Kalkulator Estimasi Anggaran Pernikahan
+                    </h2>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-2">
+                        Geser jumlah undangan dan tentukan kebutuhan tambahan untuk mendapatkan perkiraan paket perencanaan Anda.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 sm:p-10 border border-larana-100 shadow-xl">
+                    <!-- Slider Tamu -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-slate-700">Estimasi Jumlah Tamu:</label>
+                            <span id="guestCountDisplay" class="font-serif text-lg font-bold text-larana-700">350 Tamu</span>
+                        </div>
+                        <input type="range" id="guestSlider" min="100" max="1000" step="25" value="350" oninput="updateCalculator()" class="w-full accent-larana-500 h-2 bg-slate-200 rounded-lg cursor-pointer">
+                        <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                            <span>100 Tamu (Intimate)</span>
+                            <span>500 Tamu (Medium)</span>
+                            <span>1000+ Tamu (Grand)</span>
+                        </div>
+                    </div>
+
+                    <!-- Checklist Fitur Tambahan -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-700">
+                        <label class="flex items-center gap-3 cursor-pointer p-3 rounded-xl hover:bg-larana-50/50 transition border border-transparent hover:border-larana-100">
+                            <input type="checkbox" id="addVenue" onchange="updateCalculator()" class="w-4 h-4 accent-larana-500 rounded">
+                            <span>Bantuan Hunting & Negosiasi Venue (+Rp 2,5 jt)</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer p-3 rounded-xl hover:bg-larana-50/50 transition border border-transparent hover:border-larana-100">
+                            <input type="checkbox" id="addRsvp" onchange="updateCalculator()" class="w-4 h-4 accent-larana-500 rounded" checked>
+                            <span>Undangan Digital Sekarsiti & RSVP System (+Rp 1,5 jt)</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer p-3 rounded-xl hover:bg-larana-50/50 transition border border-transparent hover:border-larana-100">
+                            <input type="checkbox" id="addMorning" onchange="updateCalculator()" class="w-4 h-4 accent-larana-500 rounded" checked>
+                            <span>Koordinasi Prosesi Pagi (Akad/Holy Matrimony) (+Rp 3 jt)</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer p-3 rounded-xl hover:bg-larana-50/50 transition border border-transparent hover:border-larana-100">
+                            <input type="checkbox" id="addAfterParty" onchange="updateCalculator()" class="w-4 h-4 accent-larana-500 rounded">
+                            <span>Manajemen After Party & Bar Concierge (+Rp 2 jt)</span>
+                        </label>
+                    </div>
+
+                    <!-- Estimasi Hasil & Action -->
+                    <div class="bg-larana-50 p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Perkiraan Investasi WO:</span>
+                            <div id="totalEstimateDisplay" class="font-serif text-3xl font-bold text-larana-800">Rp 22.800.000</div>
+                            <span class="text-[11px] text-larana-600">*Harga indikatif, dapat disesuaikan pada saat konsultasi</span>
+                        </div>
+                        <button onclick="applyEstimateToForm()" class="whitespace-nowrap px-6 py-3 bg-larana-600 hover:bg-larana-700 text-white rounded-xl text-xs sm:text-sm font-semibold transition shadow-md">
+                            Bawa Estimasi ke Form Konsultasi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="galeri" class="py-20 watercolor-bg border-t border-larana-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Dokumentasi Nyata</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                        Momen Pernikahan Pilihan
+                    </h2>
+                    <div class="w-16 h-0.5 bg-larana-400 mx-auto my-4"></div>
+                    <p class="text-slate-600 text-sm">
+                        Setiap detail dekorasi, senyuman mempelai, dan kehangatan keluarga dirancang dengan ketulusan hati.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-larana-100 h-80">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Altar Pernikahan Elegan" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[10px] uppercase tracking-wider text-larana-200">Outdoor Ceremony</span>
+                            <h4 class="font-serif font-bold text-base">Altar Janji Suci</h4>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-larana-100 h-80">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Resepsi Romantis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[10px] uppercase tracking-wider text-larana-200">Garden Reception</span>
+                            <h4 class="font-serif font-bold text-base">Resepsi Bawah Lentera</h4>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-larana-100 h-80">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Detail Meja Tamu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[10px] uppercase tracking-wider text-larana-200">Table Styling</span>
+                            <h4 class="font-serif font-bold text-base">Estetika Floral Pastel</h4>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-larana-100 h-80">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Senyum Bahagia Mempelai" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-[10px] uppercase tracking-wider text-larana-200">Happy Couple</span>
+                            <h4 class="font-serif font-bold text-base">Senyuman Hari Bahagia</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="sekarsiti-partner" class="py-20 bg-white border-t border-larana-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-br from-larana-50/70 via-white to-amber-50/40 rounded-3xl p-8 sm:p-12 border border-larana-200/80 shadow-xl relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                        <div class="lg:col-span-7 space-y-5">
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-larana-100 text-larana-700 text-xs font-semibold tracking-wide uppercase">
+                                ✦ Rekomendasi Partner Resmi
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 leading-tight">
+                                Sekarsiti Wedding Studio <br>
+                                <span class="text-xl sm:text-2xl font-normal text-larana-600 font-script italic">Atelier Undangan Pernikahan</span>
+                            </h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                Pernikahan sempurna berawal dari undangan yang memikat hati. Sebagai wujud sinergi menghadirkan pengalaman terbaik bagi calon pengantin, <strong>Larana Wedding Organizer</strong> merekomendasikan <strong>Sekarsiti Wedding Studio</strong> untuk pembuatan undangan pernikahan digital yang elegan, bernuansa hangat, dan berkesan mendalam.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700 pt-2">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center text-xs">🤍</div>
+                                    <span>Desain Elegan, Minimalis & Personal</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center text-xs">🤍</div>
+                                    <span>RSVP Real-Time & Buku Tamu Digital</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center text-xs">🤍</div>
+                                    <span>Musik Pilihan & Galeri Cerita Cinta</span>
+                                </div>
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center text-xs">🤍</div>
+                                    <span>Integrasi Amplop Digital & Petunjuk Arah</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 flex flex-wrap gap-4">
+                                <a href="https://ssiti.tech" target="_blank" rel="noopener" class="px-6 py-3 bg-larana-600 hover:bg-larana-700 text-white rounded-full text-sm font-semibold transition shadow-md shadow-larana-600/20 flex items-center gap-2"><span>Kunjungi Website Utama (ssiti.tech) 🤍</span></a>
+                                <a href="index.html" class="px-6 py-3 border border-larana-300 hover:bg-larana-100 text-larana-800 rounded-full text-sm font-semibold transition">
+                                    Lihat Hub Kolaborasi
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <div class="bg-white p-4 rounded-2xl shadow-lg border border-larana-100 space-y-3">
+                                <div class="relative h-64 rounded-xl overflow-hidden bg-slate-100">
+                                    <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&w=700&q=80" alt="Sekarsiti Wedding Invitation Preview" class="w-full h-full object-cover">
+                                    <div class="absolute bottom-3 left-3 right-3 p-3 bg-white/90 backdrop-blur-md rounded-lg text-xs">
+                                        <div class="font-serif font-bold text-slate-800">Atelier Undangan Pernikahan</div>
+                                        <span class="text-[11px] text-larana-600 font-medium">Elegan • Hangat • Personal</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between text-xs px-2 pt-1">
+                                    <span class="text-slate-500">Program Kemitraan Sekarsiti</span>
+                                    <a href="index.html" class="text-larana-600 font-semibold hover:underline">Info Kolaborasi →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="testimoni" class="py-20 bg-white border-t border-larana-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Kisah Nyata</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                        Testimoni & Kisah Sukses
+                    </h2>
+                    <p class="text-slate-500 text-sm mt-3">
+                        Jangan hanya percaya kata-kata kami. Simak kebahagiaan pasangan yang telah mempercayakan hari sakral mereka kepada tim Larana.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-larana-50/60 p-8 rounded-3xl border border-larana-100 flex flex-col justify-between soft-shadow">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-4">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="text-slate-700 italic text-sm leading-relaxed mb-6">
+                                "Larana mewujudkan pernikahan impian kami di tepi pantai tanpa cela sedikitpun. Mulai dari moodboard bunga hingga vendor musik dan undangan digital, semuanya begitu teratur dan tenang!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-larana-200/50 pt-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-larana-200 ring-2 ring-larana-300">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Sarah & Danial" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-slate-800">Sarah & Danial</h4>
+                                <p class="text-xs text-slate-500">Pernikahan di Glass House Villa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-larana-50/60 p-8 rounded-3xl border border-larana-100 flex flex-col justify-between soft-shadow">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-4">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="text-slate-700 italic text-sm leading-relaxed mb-6">
+                                "Sangat mengagumkan cara tim Larana mengelola 500 tamu tanpa ada satupun antrean atau kepanikan katering. Keluarga besar kami merasa sangat dimuliakan dan terkesan!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-larana-200/50 pt-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-larana-200 ring-2 ring-larana-300">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Sebastian Bennett" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-slate-800">Sebastian Bennett & Arina</h4>
+                                <p class="text-xs text-slate-500">Pernikahan di Seaside Pavilion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="kontak" class="py-20 watercolor-bg border-t border-larana-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: Contact Details (From PDF: 123-456-7890, @reallygreatsite, etc.) -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <span class="text-larana-600 font-semibold text-xs tracking-widest uppercase">Hubungi Kami</span>
+                            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800 mt-2">
+                                Terima Kasih Telah Mempertimbangkan Larana
+                            </h2>
+                            <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                                Kami sangat bersemangat untuk menjadi bagian dari hari istimewa Anda. Bagikan impian pernikahan Anda bersama tim ahli kami.
+                            </p>
+                        </div>
+
+                        <!-- Direct Contacts -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-larana-100 shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Telepon / WhatsApp</span>
+                                    <a href="tel:1234567890" class="text-sm font-semibold text-slate-700 hover:text-larana-600">123-456-7890</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-larana-100 shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Email Resmi</span>
+                                    <a href="mailto:hello@reallygreatsite.com" class="text-sm font-semibold text-slate-700 hover:text-larana-600">hello@reallygreatsite.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-larana-100 shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Instagram Portofolio</span>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-larana-600">@reallygreatsite</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-larana-100 shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-larana-100 text-larana-600 flex items-center justify-center shrink-0">
+                                    <i data-lucide="globe" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Situs Web</span>
+                                    <a href="#" class="text-sm font-semibold text-slate-700 hover:text-larana-600">www.reallygreatsite.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Consultation Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-larana-200/90 shadow-xl relative">
+                            
+                            <!-- Success Notification (Hidden initially) -->
+                            <div id="successNotice" class="hidden mb-6 p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <span class="font-bold block">Pesan Terkirim dengan Sukses!</span>
+                                    Terima kasih telah menghubungi Larana. Konsultan wedding kami akan segera menghubungi Anda via WhatsApp dalam waktu maksimal 2 jam.
+                                </div>
+                            </div>
+
+                            <h3 class="text-2xl font-serif font-bold text-slate-800 mb-2">Jadwalkan Konsultasi Eksklusif</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm mb-6">Konsultasi awal bersifat 100% gratis tanpa ikatan.</p>
+
+                            <form id="consultForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Pasangan *</label>
+                                        <input type="text" required placeholder="Contoh: Sarah & Danial" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-larana-500 focus:ring-1 focus:ring-larana-500 text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp *</label>
+                                        <input type="tel" required placeholder="0812-xxxx-xxxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-larana-500 focus:ring-1 focus:ring-larana-500 text-sm">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Rencana Tanggal Acara</label>
+                                        <input type="date" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-larana-500 focus:ring-1 focus:ring-larana-500 text-sm text-slate-600">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Estimasi Tamu</label>
+                                        <input type="number" id="formGuestCount" placeholder="Contoh: 300" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-larana-500 focus:ring-1 focus:ring-larana-500 text-sm">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Pilihan Paket yang Diminati</label>
+                                    <select id="formPackageSelect" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-larana-500 focus:ring-1 focus:ring-larana-500 text-sm bg-white text-slate-700">
+                                        <option value="Belum Tahu / Butuh Rekomendasi">Belum Tahu / Butuh Rekomendasi</option>
+                                        <option value="Serenade Silver">Serenade Silver (Hari-H Intimate)</option>
+                                        <option value="Harmony Gold" selected>Harmony Gold (Full Planning Terfavorit)</option>
+                                        <option value="Royal Platinum">Royal Platinum (Luxury End-to-End)</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Ceritakan Gambaran Pernikahan Impian Anda</label>
+                                    <textarea rows="3" placeholder="Sebutkan lokasi yang Anda impikan, tema nuansa warna, atau hal-hal penting lainnya..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-larana-500 focus:ring-1 focus:ring-larana-500 text-sm"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-3.5 bg-larana-600 hover:bg-larana-700 text-white font-medium rounded-xl text-sm transition shadow-lg shadow-larana-600/20 flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Kirim Permintaan Konsultasi</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<footer class="bg-white border-t border-larana-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100">
+                <!-- Footer Brand -->
+                <div class="flex items-center gap-3">
+                    <svg class="w-8 h-8 text-larana-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M26 18 C26 10, 16 10, 12 16 C8 24, 18 34, 26 40 C34 34, 44 24, 40 16 C36 10, 26 10, 26 18 Z" stroke="#75A5C1" fill="none" transform="rotate(-12 26 26)"/>
+                        <path d="M38 16 C38 9, 30 9, 27 14 C24 20, 32 29, 38 34 C44 29, 52 20, 49 14 C46 9, 38 9, 38 16 Z" stroke="#5F8EAA" fill="none" transform="rotate(10 38 22)"/>
+                    </svg>
+                    <div>
+                        <span class="font-script text-2xl text-larana-700 leading-none block">larana</span>
+                        <span class="text-[9px] uppercase tracking-widest text-slate-400 font-bold">Wedding Organizer</span>
+                    </div>
+                </div>
+
+                <!-- Footer Nav Links -->
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-600 font-medium">
+                    <a href="#beranda" class="hover:text-larana-600 transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-larana-600 transition">Tentang Kami</a>
+                    <a href="#layanan" class="hover:text-larana-600 transition">Layanan</a>
+                    <a href="#paket" class="hover:text-larana-600 transition">Paket</a>
+                    <a href="#kalkulator" class="hover:text-larana-600 transition">Kalkulator Biaya</a>
+                    <a href="#kontak" class="hover:text-larana-600 transition">Hubungi Kami</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="w-8 h-8 rounded-full bg-larana-50 text-larana-600 flex items-center justify-center hover:bg-larana-500 hover:text-white transition">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-larana-50 text-larana-600 flex items-center justify-center hover:bg-larana-500 hover:text-white transition">
+                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-larana-50 text-larana-600 flex items-center justify-center hover:bg-larana-500 hover:text-white transition">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-2">
+                <p>&copy; 2026 Larana Wedding Organizer. Hak Cipta Dilindungi.</p>
+                <p class="font-light">Designed with elegance & simplicity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Tabs Logic
+        function switchTab(tabId) {
+            const tabs = ['pra', 'hari', 'vendor'];
+            tabs.forEach(id => {
+                const content = document.getElementById(`tab-content-${id}`);
+                const btn = document.getElementById(`tab-btn-${id}`);
+                if (id === tabId) {
+                    content.classList.remove('hidden');
+                    btn.className = "tab-button px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-larana-800 shadow-sm";
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = "tab-button px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all text-slate-600 hover:text-larana-700";
+                }
+            });
+            // Re-render lucide inside tab
+            lucide.createIcons();
+        }
+
+        // Budget Calculator Logic
+        function updateCalculator() {
+            const guestSlider = document.getElementById('guestSlider');
+            const guestCount = parseInt(guestSlider.value);
+            document.getElementById('guestCountDisplay').textContent = `${guestCount} Tamu`;
+
+            // Base calculation based on guest count scale
+            let basePrice = 14000000;
+            if (guestCount > 250) {
+                basePrice += (guestCount - 250) * 18000;
+            }
+
+            // Additional features
+            const addVenue = document.getElementById('addVenue').checked ? 2500000 : 0;
+            const addRsvp = document.getElementById('addRsvp').checked ? 1500000 : 0;
+            const addMorning = document.getElementById('addMorning').checked ? 3000000 : 0;
+            const addAfterParty = document.getElementById('addAfterParty').checked ? 2000000 : 0;
+
+            const total = basePrice + addVenue + addRsvp + addMorning + addAfterParty;
+            
+            // Format to Rupiah
+            document.getElementById('totalEstimateDisplay').textContent = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                maximumFractionDigits: 0
+            }).format(total);
+        }
+
+        function applyEstimateToForm() {
+            const guestCount = document.getElementById('guestSlider').value;
+            document.getElementById('formGuestCount').value = guestCount;
+            
+            // Scroll to Form
+            document.getElementById('kontak').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function pilihPaket(packageName) {
+            const selectEl = document.getElementById('formPackageSelect');
+            if (selectEl) {
+                selectEl.value = packageName;
+            }
+        }
+
+        // Handle Consultation Form
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successNotice = document.getElementById('successNotice');
+            successNotice.classList.remove('hidden');
+            
+            // Re-render icons for newly displayed element
+            lucide.createIcons();
+
+            // Reset form inputs after brief delay
+            e.target.reset();
+
+            // Scroll notice into view
+            successNotice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+
+    <!-- Floating Template Hub Switcher Pill -->
+    <div style="position:fixed; bottom:20px; left:20px; z-index:90;">
+      <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; background:rgba(255,255,255,0.95); color:#2A4253; border:1px solid #75A5C1; backdrop-filter:blur(10px); border-radius:99px; font-size:0.85rem; font-weight:700; text-decoration:none; box-shadow:0 8px 24px rgba(73,115,141,0.25); transition:transform .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#49738D; box-shadow:0 0 8px #49738D;"></span>
+        ← Hub Template Sekarsiti
+      </a>
+    </div>
+
+</body>
+</html>
