@@ -52,7 +52,7 @@ Landing page akan dibuat menggunakan:
 - HTML
 - CSS
 - JavaScript biasa, tanpa keharusan memakai framework
-- Vercel untuk deployment
+- Website siap pakai berkecepatan tinggi dan aman
 
 Konsep implementasi:
 
