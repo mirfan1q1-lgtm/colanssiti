@@ -64,3 +64,12 @@ Konsep implementasi:
 - Kebutuhan domain khusus, pemeliharaan, revisi tambahan, dan biaya pihak ketiga harus dijelaskan secara transparan jika relevan.
 
 Jangan menjanjikan domain khusus, hosting berbayar, fitur CMS, atau pemeliharaan gratis selamanya. Jelaskan cakupan teknis sesuai fasilitas yang benar-benar tersedia.
+
+## 5. Masa Aktif & Evaluasi Kemitraan
+
+- **Periode awal:** Masa aktif landing page ditetapkan selama 1 (satu) tahun penuh untuk tahap kolaborasi perdana.
+- **Opsi perpanjangan:** Terbuka opsi perpanjangan berkelanjutan jika kerja sama berjalan positif, harmonis, dan kedua pihak sepakat untuk melanjutkan.
+- **Prinsip copywriting:**
+  - Jangan langsung menjanjikan website berlaku selamanya tanpa batas waktu.
+  - Jangan terlalu kaku atau menakut-nakuti mitra dengan batas 1 tahun (hindari kesan "website akan hangus/mati").
+  - Tekankan bahwa periode 1 tahun memberikan ruang evaluasi bersama yang sehat, sekaligus memberikan mitra kehadiran portofolio digital yang stabil untuk mendampingi perkembangan bisnis jangka panjang.
