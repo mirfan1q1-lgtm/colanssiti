@@ -25,6 +25,7 @@ body{background:var(--ivory);color:var(--ink);font-family:var(--sans);line-heigh
 img,video{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+@media(max-width:480px){.wrap{padding:0 16px}}
 ::selection{background:var(--gold);color:var(--navy)}
 .gold-text{background:linear-gradient(100deg,var(--gold-d) 0%,var(--gold-2) 30%,var(--gold) 50%,var(--gold-2) 70%,var(--gold-d) 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
 @keyframes shine{to{background-position:220% center}}
@@ -34,6 +35,7 @@ a{color:inherit;text-decoration:none}
 /* Top Announcement Bar */
 .top-bar{background:linear-gradient(90deg,var(--navy-2),#172F60);color:rgba(255,255,255,.9);font-size:.78rem;padding:9px 0;text-align:center;position:relative;z-index:60;border-bottom:1px solid var(--line-d)}
 .top-bar .wrap{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+@media(max-width:640px){.top-bar{font-size:.72rem;padding:7px 0}.top-bar .wrap{gap:4px;flex-direction:column}}
 .tb-link{color:var(--gold-2);font-weight:700;text-decoration:underline;text-underline-offset:3px;transition:color .2s}
 .tb-link:hover{color:#fff}
 
@@ -105,7 +107,7 @@ h1 em{font-style:italic}
 .cert .ic svg{width:18px;height:18px}
 .cert small{display:block;color:var(--mute);font-weight:600;font-size:.7rem}
 @keyframes bob{50%{transform:translateY(-10px)}}
-@media(max-width:520px){.cert{left:-4px}}
+@media(max-width:520px){.cert{left:12px;bottom:16px;top:auto;padding:8px 12px;font-size:.74rem}.cert .ic{width:28px;height:28px}.cert .ic svg{width:15px;height:15px}}
 
 /* Section base */
 section{padding:110px 0;position:relative}
@@ -129,6 +131,7 @@ h2 em{font-style:italic;color:var(--gold-d)}
 .strip b{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--navy)}
 .strip span{font-size:.8rem;color:var(--mute);font-weight:600}
 @media(max-width:760px){.strip .wrap{grid-template-columns:repeat(2,1fr)}.strip div.s:nth-child(2){border-right:0}.strip div.s:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:480px){.strip div.s{padding:18px 8px}.strip b{font-size:1.65rem}.strip span{font-size:.72rem}}
 
 /* About */
 .about{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
@@ -168,6 +171,7 @@ h2 em{font-style:italic;color:var(--gold-d)}
 /* Pricing */
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
 @media(max-width:900px){.price-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
+@media(max-width:480px){.price{padding:26px 16px}.price .amt{font-size:2.8rem}}
 .price{position:relative;background:var(--white);border:1px solid var(--line);border-radius:26px;padding:34px 28px;display:flex;flex-direction:column;text-align:center;transition:.35s}
 .price:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
 .price.feat{background:linear-gradient(170deg,var(--navy-2),var(--navy));color:#fff;border:1px solid rgba(200,164,93,.5)}
@@ -208,6 +212,7 @@ h2 em{font-style:italic;color:var(--gold-d)}
 .g:hover::after{border-color:rgba(230,207,156,.9);inset:10px;border-radius:12px}
 .g1{grid-row:span 2}.g4{grid-column:span 2}.g5{grid-row:span 2}
 @media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}.g4{grid-column:span 2}}
+@media(max-width:480px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:8px}}
 .lb{position:fixed;inset:0;z-index:200;background:rgba(6,12,26,.94);display:none;align-items:center;justify-content:center;padding:24px}
 .lb.open{display:flex;animation:fade .3s}
 .lb img{max-width:100%;max-height:88vh;border-radius:14px}
@@ -253,6 +258,13 @@ footer a:hover{color:var(--gold-2)}
 .fab:hover{transform:scale(1.08)}
 .fab svg{width:28px;height:28px}
 .fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:pulse 2.2s infinite}
+
+/* Collaboration */
+.collab-card{background:var(--white);border:1px solid rgba(200,164,93,.4);border-radius:32px;padding:clamp(20px,4vw,56px);box-shadow:0 30px 60px -25px rgba(11,23,48,.18);position:relative;overflow:hidden}
+.collab-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,56px);align-items:center;position:relative;z-index:2}
+@media(max-width:860px){.collab-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:520px){.collab-btn{width:100%!important;justify-content:center!important;text-align:center!important}}
+@media(max-width:640px){footer .wrap{flex-direction:column;text-align:center;justify-content:center;gap:16px}}
 
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
@@ -443,13 +455,13 @@ footer a:hover{color:var(--gold-2)}
 </section>
 
 <!-- REKOMENDASI RESMI: SEKARSITI WEDDING STUDIO -->
-<section id="sekarsiti" style="background: linear-gradient(180deg, var(--ivory) 0%, #EDE7D8 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 90px 0;">
+<section id="sekarsiti" style="background: linear-gradient(180deg, var(--ivory) 0%, #EDE7D8 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: clamp(60px, 8vw, 90px) 0;">
   <div class="wrap">
-    <div class="reveal" style="background: var(--white); border: 1px solid rgba(200,164,93,.4); border-radius: 32px; padding: clamp(28px, 5vw, 56px); box-shadow: 0 30px 60px -25px rgba(11,23,48,.18); position: relative; overflow: hidden;">
+    <div class="reveal collab-card">
       
       <div style="position: absolute; -top: 120px; -right: 120px; width: 340px; height: 340px; background: rgba(230,207,156,.35); border-radius: 50%; filter: blur(60px); pointer-events: none;"></div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 56px); align-items: center; position: relative; z-index: 2;">
+      <div class="collab-grid">
         
         <!-- Left: Image Showcase / Invitation Mockup -->
         <div>
@@ -458,11 +470,11 @@ footer a:hover{color:var(--gold-2)}
             <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,23,48,0.9) 0%, rgba(11,23,48,0.25) 40%, transparent 70%);"></div>
             <div style="position: absolute; bottom: 18px; left: 18px; right: 18px; color: #fff;">
               <span style="font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-2); font-weight: 800; display: block; margin-bottom: 4px;">✦ Rekomendasi Partner Resmi</span>
-              <b style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600;">Sekarsiti Wedding Studio</b>
+              <b style="font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 600;">Sekarsiti Wedding Studio</b>
             </div>
           </div>
           
-          <div style="margin-top: 14px; display: flex; align-items: center; justify-content: space-between; background: var(--navy); border: 1px solid rgba(200,164,93,.35); border-radius: 14px; padding: 10px 16px; font-size: 0.78rem; font-weight: 700; color: var(--gold-2);">
+          <div style="margin-top: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; background: var(--navy); border: 1px solid rgba(200,164,93,.35); border-radius: 14px; padding: 10px 16px; font-size: 0.78rem; font-weight: 700; color: var(--gold-2);">
             <span style="display: flex; align-items: center; gap: 6px;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;color:var(--gold-2);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               100% Bebas Iklan Pop-up
@@ -474,7 +486,7 @@ footer a:hover{color:var(--gold-2)}
         <!-- Right: Description & Selling Points -->
         <div>
           <span class="eyebrow">Kolaborasi & Rekomendasi Resmi</span>
-          <h2 style="font-size: clamp(2rem, 3.6vw, 2.7rem); line-height: 1.1; margin-bottom: 16px;">
+          <h2 style="font-size: clamp(1.8rem, 3.6vw, 2.7rem); line-height: 1.15; margin-bottom: 16px;">
             Sempurnakan Pernikahan dengan <br><em>Undangan Digital Berkelas</em>
           </h2>
           <p style="color: var(--ink-2); font-size: 0.94rem; line-height: 1.7; margin-bottom: 22px;">
@@ -497,7 +509,7 @@ footer a:hover{color:var(--gold-2)}
           </div>
 
           <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
-            <a href="https://ssiti.tech" target="_blank" rel="noopener" class="btn btn-gold" style="box-shadow: 0 16px 36px -12px rgba(200,164,93,.85);">
+            <a href="https://ssiti.tech" target="_blank" rel="noopener" class="btn btn-gold collab-btn" style="box-shadow: 0 16px 36px -12px rgba(200,164,93,.85);">
               <span>Kunjungi Website Sekarsiti (ssiti.tech)</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
