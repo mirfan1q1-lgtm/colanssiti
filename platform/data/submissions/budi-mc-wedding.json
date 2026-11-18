@@ -1,0 +1,35 @@
+{
+  "slug": "budi-mc-wedding",
+  "subdomain": "budi-mc-wedding",
+  "name": "Budi Santoso",
+  "brandName": "Budi MC Wedding",
+  "category": "MC / Pembawa Acara",
+  "cityCoverage": "Bandung Raya",
+  "tagline": "Hangat, Elegan, dan Berkesan",
+  "bio": "",
+  "yearStarted": "",
+  "phoneWhatsapp": "081234567890",
+  "instagram": "",
+  "tiktok": "",
+  "youtubeVideoId": "",
+  "designMode": "custom_admin",
+  "templateType": "custom_curated",
+  "maxPhotos": 1,
+  "themePalette": "navy-gold",
+  "status": "pending",
+  "packages": [
+    {
+      "name": "Paket Wedding",
+      "price": "800000",
+      "description": "Akad dan Resepsi"
+    }
+  ],
+  "photos": [
+    {
+      "slot": "foto_1",
+      "name": "budi-1.webp",
+      "sizeWebp": 182300
+    }
+  ],
+  "submittedAt": "2026-11-01T22:16:17.590Z"
+}

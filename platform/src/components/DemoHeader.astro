@@ -1,0 +1,55 @@
+---
+interface Props {
+  currentCategory: 'fotografer' | 'dekorasi' | 'wo' | 'mc';
+  title: string;
+}
+
+const { currentCategory, title } = Astro.props;
+const adminWaUrl = "https://wa.me/6281294891838?text=" + encodeURIComponent(`Halo Sekarsiti Wedding Studio, saya tertarik menggunakan template portofolio "${title}" untuk bisnis saya.`);
+---
+
+<aside id="demo-top-bar" class="fixed top-0 left-0 right-0 z-[99999] bg-stone-950/95 text-white backdrop-blur-md border-b border-stone-800 px-3 py-2 text-xs shadow-2xl font-sans">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 flex-wrap">
+    <!-- Brand & Hub Backlink -->
+    <div class="flex items-center gap-2.5">
+      <a href="/#katalog-demo" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200 text-[11px] font-semibold transition border border-stone-700">
+        <span>← Hub Utama</span>
+      </a>
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-400/10 text-amber-400 font-bold text-[10px] uppercase tracking-wider border border-amber-400/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+        Demo Template
+      </span>
+      <span class="hidden md:inline text-stone-300 text-[11px]">
+        Contoh: <strong class="text-white font-semibold">{title}</strong>
+      </span>
+    </div>
+
+    <!-- Category Quick Switcher -->
+    <div class="flex items-center gap-1 overflow-x-auto py-0.5 text-[11px]">
+      <a href="/demo/fotografer" class={`px-2.5 py-1 rounded-full transition ${currentCategory === 'fotografer' ? 'bg-amber-400 text-stone-950 font-bold shadow-xs' : 'bg-stone-800 text-stone-300 hover:text-white'}`}>
+        Fotografer
+      </a>
+      <a href="/demo/dekorasi" class={`px-2.5 py-1 rounded-full transition ${currentCategory === 'dekorasi' ? 'bg-amber-400 text-stone-950 font-bold shadow-xs' : 'bg-stone-800 text-stone-300 hover:text-white'}`}>
+        Dekorasi
+      </a>
+      <a href="/demo/wo" class={`px-2.5 py-1 rounded-full transition ${currentCategory === 'wo' ? 'bg-amber-400 text-stone-950 font-bold shadow-xs' : 'bg-stone-800 text-stone-300 hover:text-white'}`}>
+        Wedding Organizer
+      </a>
+      <a href="/demo/mc" class={`px-2.5 py-1 rounded-full transition ${currentCategory === 'mc' ? 'bg-amber-400 text-stone-950 font-bold shadow-xs' : 'bg-stone-800 text-stone-300 hover:text-white'}`}>
+        MC Modern
+      </a>
+    </div>
+
+    <!-- CTAs -->
+    <div class="flex items-center gap-2">
+      <a href={adminWaUrl} target="_blank" rel="noopener" class="px-3 py-1 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-[11px] transition shadow-xs flex items-center gap-1">
+        <span>Tanya Template via WA</span>
+      </a>
+      <a href="/gabung" class="hidden sm:inline-flex px-3 py-1 rounded-full bg-white hover:bg-stone-100 text-stone-950 font-bold text-[11px] transition shadow-xs">
+        <span>Daftar Jadi Mitra Gratis →</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<div class="h-10 w-full" aria-hidden="true"></div>

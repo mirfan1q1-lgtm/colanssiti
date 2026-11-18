@@ -1,0 +1,75 @@
+---
+import andiRawHtml from '../../templates/andi.html?raw';
+import revolRawHtml from '../../templates/revol.html?raw';
+import asyaRawHtml from '../../templates/asya.html?raw';
+import MCLandingTemplate from '../../components/templates/MCLandingTemplate.astro';
+import { getPartnerBySlug } from '../../lib/partners';
+import { getCfEnv } from '../../lib/cfEnv';
+
+export const prerender = false;
+
+const { slug } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect('/mitra');
+}
+
+// 100% Raw Byte-for-Byte identical HTML rendering for verified bespoke templates
+if (slug === 'asya') {
+  return new Response(asyaRawHtml, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'public, max-age=0, must-revalidate'
+    },
+  });
+}
+
+if (slug === 'revol') {
+  const html = revolRawHtml.replaceAll('assets/revol/', '/assets/revol/');
+  return new Response(html, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'public, max-age=0, must-revalidate'
+    },
+  });
+}
+
+if (slug === 'andi') {
+  const html = andiRawHtml.replaceAll('assets/andi/', '/assets/andi/');
+  return new Response(html, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'public, max-age=0, must-revalidate'
+    },
+  });
+}
+
+let partner = null;
+let errorMsg = null;
+
+try {
+  const env = getCfEnv();
+  partner = await getPartnerBySlug(slug, env);
+} catch (err: any) {
+  errorMsg = err?.stack || err?.message || String(err);
+}
+
+if (errorMsg) {
+  return new Response(`Debug Error in /mitra/${slug}: ${errorMsg}`, {
+    status: 500,
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+  });
+}
+
+if (!partner) {
+  return new Response('Mitra tidak ditemukan. Periksa kembali URL Anda atau kunjungi direktori mitra di https://mltr.my.id/mitra.', {
+    status: 404,
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+  });
+}
+---
+
+<MCLandingTemplate partner={partner} />

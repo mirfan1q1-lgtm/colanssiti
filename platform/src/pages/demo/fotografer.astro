@@ -1,0 +1,13 @@
+---
+import html from '../../templates/demo/fotografer.html?raw';
+
+export const prerender = false;
+
+return new Response(html, {
+  status: 200,
+  headers: {
+    'Content-Type': 'text/html; charset=utf-8',
+    'Cache-Control': 'public, max-age=0, must-revalidate',
+  },
+});
+---

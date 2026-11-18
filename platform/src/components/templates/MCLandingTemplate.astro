@@ -1,0 +1,472 @@
+---
+import type { EnrichedPartner } from '../../lib/partners';
+
+interface Props {
+  partner: EnrichedPartner;
+}
+
+const { partner } = Astro.props;
+
+// Determine palette colors
+const isMaroon = partner.themePalette === 'maroon-rose';
+const theme = isMaroon
+  ? {
+      primary: '#7A1F2B',
+      primary2: '#5E1622',
+      accent: '#D98A93',
+      accent2: '#F3B8BF',
+      accentD: '#5E1622',
+      bg: '#FAF6F5',
+      paper: '#FFFFFF',
+      text: '#1F191B',
+      muted: '#7A6E70',
+      heroGrad: 'radial-gradient(ellipse 900px 500px at 50% -10%, #5E1622 0%, #3A0D15 75%)',
+    }
+  : {
+      primary: '#0B1730',
+      primary2: '#162850',
+      accent: '#C8A45D',
+      accent2: '#E6CF9C',
+      accentD: '#9A7836',
+      bg: '#FAF8F5',
+      paper: '#FFFFFF',
+      text: '#0E1726',
+      muted: '#626D82',
+      heroGrad: 'radial-gradient(ellipse 900px 500px at 50% -10%, #162850 0%, #0B1730 75%)',
+    };
+
+// Clean phone number for WhatsApp URL
+const cleanPhone = partner.phoneWhatsapp.replace(/[^0-9]/g, '').replace(/^0/, '62');
+
+// Map media photos (ensuring 5 slots for MC)
+const heroPhoto = partner.media[0]?.secureUrl || '/assets/andi/andi-1.jpg';
+const aboutPhoto = partner.media[1]?.secureUrl || '/assets/andi/andi-2.jpg';
+const galleryPhotos = partner.media.slice(2, partner.maxPhotos || 5);
+
+// Formatted packages
+const packagesList = partner.packages && partner.packages.length > 0
+  ? partner.packages
+  : [
+      { name: 'Paket Lamaran', price: '300000', description: 'Memandu prosesi lamaran hangat & akrab' },
+      { name: 'Paket Akad', price: '400000', description: 'Memandu prosesi akad nikah khidmat & tertib' },
+      { name: 'Paket Wedding (Akad + Resepsi)', price: '700000', description: 'Memandu seluruh rangkaian lebih hemat', isFeatured: true },
+    ];
+---
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{partner.brandName} — {partner.name} | Portofolio Resmi MC</title>
+    <meta name="description" content={`${partner.name} (${partner.brandName}): ${partner.tagline}. Layanan MC pernikahan untuk ${partner.cityCoverage}.`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style define:vars={{
+      pColor: theme.primary,
+      pColor2: theme.primary2,
+      aColor: theme.accent,
+      aColor2: theme.accent2,
+      aColorD: theme.accentD,
+      bgColor: theme.bg,
+      paperColor: theme.paper,
+      textColor: theme.text,
+      mutedColor: theme.muted,
+      heroGradient: theme.heroGrad,
+    }}>
+      :root {
+        --primary: var(--pColor);
+        --primary-2: var(--pColor2);
+        --accent: var(--aColor);
+        --accent-2: var(--aColor2);
+        --accent-d: var(--aColorD);
+        --bg: var(--bgColor);
+        --paper: var(--paperColor);
+        --text: var(--textColor);
+        --muted: var(--mutedColor);
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        overflow-x: hidden;
+      }
+      .font-serif {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+      }
+      .hero-bg {
+        background: var(--heroGradient);
+      }
+    </style>
+  </head>
+  <body class="selection:bg-amber-200 selection:text-stone-900">
+
+    <!-- Top Announcement Bar (Sekarsiti Collaboration Recommendation) -->
+    <div class="bg-stone-950 text-stone-200 text-xs py-2 px-4 text-center font-medium border-b border-stone-800">
+      <div class="max-w-6xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+        <span>✦ <b>Partner Kolaborasi Resmi:</b> Rekomendasi Undangan Digital Pernikahan Eksklusif & Bebas Iklan</span>
+        <a href="#sekarsiti" class="text-amber-300 font-bold underline hover:text-white transition">Lihat Undangan Digital →</a>
+      </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-40 bg-stone-950/90 backdrop-blur-md text-white border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full border border-amber-300/60 text-amber-200 flex items-center justify-center font-serif font-bold text-lg">
+            {partner.name.charAt(0)}
+          </div>
+          <div>
+            <span class="font-serif font-bold text-xl tracking-tight leading-none block">{partner.brandName}</span>
+            <span class="text-[9px] uppercase tracking-[0.2em] text-amber-200/80 font-semibold block">{partner.cityCoverage}</span>
+          </div>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-6 text-xs font-semibold text-stone-300">
+          <a href="#tentang" class="hover:text-amber-200 transition">Tentang</a>
+          <a href="#paket" class="hover:text-amber-200 transition">Paket Harga</a>
+          {partner.youtubeVideoId && <a href="#showreel" class="hover:text-amber-200 transition">Showreel Video</a>}
+          <a href="#galeri" class="hover:text-amber-200 transition">Galeri</a>
+          <a href="#sekarsiti" class="text-amber-200 font-bold hover:underline">✦ Undangan Digital</a>
+        </div>
+
+        <a
+          href={`https://wa.me/${cleanPhone}?text=Halo%20${encodeURIComponent(partner.name)}%2C%20saya%20ingin%20tanya%20jadwal%20MC.`}
+          target="_blank"
+          rel="noopener"
+          class="px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 text-xs font-bold hover:shadow-md transition"
+        >
+          Chat WhatsApp
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-14 pb-20 sm:pt-20 sm:pb-28 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-amber-200 text-xs font-semibold">
+            <span>🎤</span>
+            <span>{partner.category} • {partner.cityCoverage}</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+            Membawa Momen Sakral <br />
+            <span class="italic text-amber-200 font-normal">Lebih Hangat & Berkesan</span>
+          </h1>
+
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+            {partner.bio || `${partner.name} siap memandu prosesi akad nikah, resepsi, dan lamaran Anda dengan pembawaan yang khidmat, santun, dan cair.`}
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a
+              href={`https://wa.me/${cleanPhone}?text=Halo%20${encodeURIComponent(partner.name)}%2C%20saya%20ingin%20booking%20jadwal%20MC.`}
+              target="_blank"
+              rel="noopener"
+              class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 font-bold text-xs uppercase tracking-wider hover:shadow-lg transition flex items-center justify-center gap-2"
+            >
+              <span>Booking via WhatsApp</span>
+              <span>→</span>
+            </a>
+            <a
+              href="#paket"
+              class="w-full sm:w-auto px-6 py-4 rounded-full border border-white/20 hover:bg-white/10 text-white text-xs font-semibold transition"
+            >
+              Lihat Rincian Paket
+            </a>
+          </div>
+
+          <!-- Hero Meta Highlights -->
+          <div class="pt-8 border-t border-white/10 flex items-center justify-center lg:justify-start gap-8 text-left">
+            <div>
+              <span class="font-serif text-2xl font-bold text-amber-200 block">5.0 ★</span>
+              <span class="text-[11px] text-stone-400">Kepuasan Pengantin</span>
+            </div>
+            <div class="w-px h-8 bg-white/15"></div>
+            <div>
+              <span class="font-serif text-2xl font-bold text-amber-200 block">100%</span>
+              <span class="text-[11px] text-stone-400">Dedikasi & Tepat Waktu</span>
+            </div>
+            <div class="w-px h-8 bg-white/15"></div>
+            <div>
+              <span class="font-serif text-2xl font-bold text-amber-200 block">Respon Cepat</span>
+              <span class="text-[11px] text-stone-400">Konsultasi Ramah</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Photo Frame -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <div class="aspect-[3/4] rounded-t-[180px] rounded-b-3xl overflow-hidden border-2 border-amber-300/40 shadow-2xl bg-stone-900">
+              <img
+                src={heroPhoto}
+                alt={`Potret ${partner.name}`}
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-4 -left-4 sm:left-4 bg-white text-stone-900 px-4 py-3 rounded-2xl shadow-xl border border-stone-200 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-400 text-stone-950 flex items-center justify-center font-bold text-sm">
+                ✦
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold">{partner.brandName}</div>
+                <div class="text-[10px] text-stone-500">MC Profesional Terverifikasi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang / Story Section -->
+    <section id="tentang" class="py-20 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-stone-200 aspect-[4/5] bg-stone-100">
+            <img
+              src={aboutPhoto}
+              alt={`${partner.name} memandu acara`}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-5">
+          <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-amber-800">
+            Tentang & Pendekatan Acara
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 leading-tight">
+            Menghidupkan Suasana, <br />
+            <span class="italic text-amber-800 font-normal">Menjaga Keheningan Khidmat</span>
+          </h2>
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+            Pernikahan adalah momen sekali seumur hidup yang mempertemukan dua keluarga besar. {partner.name} memadukan keanggunan tata krama adat/formal dengan sentuhan humor hangat yang terukur, membuat tamu undangan merasa nyaman dan terhubung sepanjang acara.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-2xl bg-white border border-stone-200/80 shadow-xs">
+              <div class="text-amber-800 font-bold text-sm mb-1">✦ Komunikasi Cair & Hangat</div>
+              <p class="text-xs text-stone-500 leading-relaxed">Mencairkan ketegangan tanpa mengurangi kesakralan prosesi pernikahan.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-stone-200/80 shadow-xs">
+              <div class="text-amber-800 font-bold text-sm mb-1">✦ Koordinasi Tim WO Rapi</div>
+              <p class="text-xs text-stone-500 leading-relaxed">Selaras dengan rundown wedding organizer, fotografer, dan pengisi musik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paket Harga Section -->
+    <section id="paket" class="py-20 bg-stone-100/60 border-t border-b border-stone-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-xl mx-auto mb-14 space-y-3">
+          <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-amber-800">Pilihan Paket</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900">Transparansi Paket Layanan</h2>
+          <p class="text-xs sm:text-sm text-stone-500">Pilih paket yang paling sesuai dengan kebutuhan acara Anda</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {packagesList.map((pkg, idx) => (
+            <div class={`rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 border ${
+              pkg.isFeatured
+                ? 'bg-stone-900 text-white border-amber-400/50 shadow-xl scale-[1.02]'
+                : 'bg-white text-stone-900 border-stone-200 shadow-sm hover:shadow-md'
+            }`}>
+              <div>
+                {pkg.isFeatured && (
+                  <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-stone-950 mb-4">
+                    Paket Rekomendasi
+                  </span>
+                )}
+                <h3 class="font-serif text-2xl font-bold mb-2">{pkg.name}</h3>
+                <div class="text-3xl font-bold font-serif mb-4 flex items-baseline gap-1">
+                  <span class="text-sm font-sans font-normal opacity-70">Rp</span>
+                  <span>{Number(pkg.price).toLocaleString('id-ID')}</span>
+                  <span class="text-xs font-sans font-normal opacity-60">/ acara</span>
+                </div>
+                <p class={`text-xs leading-relaxed mb-6 ${pkg.isFeatured ? 'text-stone-300' : 'text-stone-600'}`}>
+                  {pkg.description}
+                </p>
+              </div>
+
+              <a
+                href={`https://wa.me/${cleanPhone}?text=Halo%20${encodeURIComponent(partner.name)}%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(pkg.name)}.`}
+                target="_blank"
+                rel="noopener"
+                class={`w-full py-3.5 rounded-full text-xs font-bold text-center transition ${
+                  pkg.isFeatured
+                    ? 'bg-amber-400 hover:bg-amber-500 text-stone-950'
+                    : 'bg-stone-900 hover:bg-stone-800 text-white'
+                }`}
+              >
+                Pilih Paket Ini
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Showreel Video Section (Jika ada video YouTube) -->
+    {partner.youtubeVideoId && (
+      <section id="showreel" class="py-20 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-5 text-center lg:text-left">
+            <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-amber-800">Showreel Video</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900 leading-tight">
+              Lihat Langsung <br /><span class="italic text-amber-800 font-normal">Cara Saya Memandu Acara</span>
+            </h2>
+            <p class="text-stone-600 text-sm leading-relaxed max-w-lg mx-auto lg:mx-0">
+              Suasana panggung, intonasi suara, dan keakraban dengan tamu lebih mudah dirasakan lewat rekaman langsung cuplikan acara.
+            </p>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-3">
+              <a
+                href={`https://youtube.com/shorts/${partner.youtubeVideoId}`}
+                target="_blank"
+                rel="noopener"
+                class="px-6 py-3 rounded-full bg-stone-900 text-white text-xs font-bold hover:bg-stone-800 transition flex items-center gap-2"
+              >
+                <span>Buka di YouTube</span>
+                <span>↗</span>
+              </a>
+              {partner.instagram && (
+                <a
+                  href={partner.instagram}
+                  target="_blank"
+                  rel="noopener"
+                  class="px-6 py-3 rounded-full border border-stone-300 text-stone-800 text-xs font-semibold hover:bg-stone-100 transition"
+                >
+                  Instagram Profil
+                </a>
+              )}
+            </div>
+          </div>
+
+          <!-- Video Facade 9:16 Responsif -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="w-full max-w-[340px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl bg-stone-950 relative border-2 border-stone-800">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${partner.youtubeVideoId}?rel=0&modestbranding=1`}
+                title={`Showreel ${partner.name}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="w-full h-full border-0"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Galeri Portofolio Section (Sesuai Slot Foto) -->
+    <section id="galeri" class="py-20 bg-stone-50 border-t border-stone-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+          <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-amber-800">Galeri Dokumentasi</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-900">Momen yang Pernah Dipandu</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {galleryPhotos.map((photo, i) => (
+            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-stone-200 border border-stone-300/80 shadow-xs hover:shadow-md transition group">
+              <img
+                src={photo.secureUrl}
+                alt={`Momen acara ${partner.name} #${i + 1}`}
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekarsiti Official Collaboration Recommendation Section -->
+    <section id="sekarsiti" class="py-20 bg-gradient-to-b from-stone-50 to-amber-50/50 border-t border-b border-stone-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="bg-white rounded-3xl border border-amber-300/60 p-8 sm:p-12 shadow-sm flex flex-col md:flex-row items-center gap-8 justify-between">
+          <div class="space-y-3 text-center md:text-left max-w-xl">
+            <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-amber-800 block">
+              ✦ Rekomendasi Partner Resmi
+            </span>
+            <h3 class="font-serif text-2xl sm:text-4xl font-bold text-stone-900 leading-tight">
+              Sempurnakan Pernikahan dengan <br /><span class="italic text-amber-800 font-normal">Undangan Digital Sekarsiti</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Sebagai MC, saya melihat betapa pentingnya kehormatan saat mengundang keluarga dan sahabat. Sekarsiti Wedding Studio menghadirkan undangan digital elegan tanpa iklan pihak ketiga yang mengganggu.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 justify-center md:justify-start text-xs font-semibold text-stone-700">
+              <span class="bg-amber-100 text-amber-900 px-3 py-1 rounded-full">✓ 100% Bebas Iklan</span>
+              <span class="bg-amber-100 text-amber-900 px-3 py-1 rounded-full">✓ RSVP & Maps</span>
+              <span class="bg-amber-100 text-amber-900 px-3 py-1 rounded-full">✓ Musik Romantis</span>
+            </div>
+          </div>
+
+          <a
+            href="https://ssiti.tech"
+            target="_blank"
+            rel="noopener"
+            class="px-8 py-4 rounded-full bg-stone-900 hover:bg-stone-800 text-amber-200 font-bold text-xs uppercase tracking-wider transition shadow-md whitespace-nowrap"
+          >
+            Kunjungi ssiti.tech →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800 text-xs">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div>
+          <p class="font-bold text-white mb-1">© 2026 {partner.brandName} • {partner.name}</p>
+          <p class="text-stone-500 text-[11px]">Layanan MC Wedding & Acara Formal {partner.cityCoverage}</p>
+          <p class="text-stone-500 text-[11px] mt-1">
+            Website Kemitraan resmi oleh <a href="https://ssiti.tech" target="_blank" rel="noopener" class="text-amber-300 font-semibold hover:underline">Sekarsiti Wedding Studio</a>
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          {partner.instagram && (
+            <a href={partner.instagram} target="_blank" rel="noopener" class="px-3 py-1.5 rounded-full border border-stone-800 hover:border-amber-300 text-stone-300 text-xs transition">
+              Instagram
+            </a>
+          )}
+          {partner.tiktok && (
+            <a href={`https://tiktok.com/@${partner.tiktok.replace('@','')}`} target="_blank" rel="noopener" class="px-3 py-1.5 rounded-full border border-stone-800 hover:border-amber-300 text-stone-300 text-xs transition">
+              TikTok
+            </a>
+          )}
+          <a href={`https://wa.me/${cleanPhone}`} target="_blank" rel="noopener" class="px-3 py-1.5 rounded-full bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-600 transition">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href={`https://wa.me/${cleanPhone}?text=Halo%20${encodeURIComponent(partner.name)}%2C%20saya%20ingin%20tanya%20jadwal%20MC.`}
+      target="_blank"
+      rel="noopener"
+      class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-105 transition"
+      aria-label="Chat WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 12.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z" />
+      </svg>
+    </a>
+
+  </body>
+</html>
+

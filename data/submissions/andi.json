@@ -1,0 +1,69 @@
+{
+  "slug": "andi",
+  "subdomain": "andi",
+  "name": "Andi Irawan",
+  "brandName": "ANDI_MC",
+  "category": "MC / Pembawa Acara",
+  "cityCoverage": "Jabodetabek",
+  "bio": "Saya Andi Irawan seorang MC yang sering memandu acara Akad, Wedding, dan Engagement dengan pembawaan lebih hidup, hangat, dan berkesan.",
+  "tagline": "MC Pernikahan Profesional & Berkarakter — Jabodetabek",
+  "phoneWhatsapp": "081294891838",
+  "instagram": "https://www.instagram.com/andiirwan.mc/",
+  "tiktok": "https://www.tiktok.com/@andi_mc",
+  "youtubeVideoId": "nUrASTJRyXM",
+  "designMode": "preset_template",
+  "templateType": "mc_5",
+  "maxPhotos": 5,
+  "themePalette": "navy-gold",
+  "status": "active",
+  "packages": [
+    {
+      "name": "Paket Lamaran",
+      "price": "300000",
+      "description": "Memandu prosesi lamaran dengan pembawaan hangat & akrab.",
+      "isFeatured": false
+    },
+    {
+      "name": "Paket Akad",
+      "price": "400000",
+      "description": "Memandu prosesi akad nikah dengan suasana khidmat & tertib.",
+      "isFeatured": false
+    },
+    {
+      "name": "Paket Wedding (Akad + Resepsi)",
+      "price": "700000",
+      "description": "Memandu seluruh rangkaian akad dan resepsi lebih hemat.",
+      "isFeatured": true
+    }
+  ],
+  "media": [
+    {
+      "slotName": "hero",
+      "secureUrl": "/assets/andi/andi-1.jpg",
+      "isPrimary": true
+    },
+    {
+      "slotName": "about",
+      "secureUrl": "/assets/andi/andi-2.jpg",
+      "isPrimary": false
+    },
+    {
+      "slotName": "gallery_1",
+      "secureUrl": "/assets/andi/andi-3.jpg",
+      "isPrimary": false
+    },
+    {
+      "slotName": "gallery_2",
+      "secureUrl": "/assets/andi/andi-4.jpg",
+      "isPrimary": false
+    },
+    {
+      "slotName": "gallery_3",
+      "secureUrl": "/assets/andi/andi-5.jpg",
+      "isPrimary": false
+    }
+  ],
+  "passwordHash": "e136a43118760e73d14f82acd1f99a4e6709f530fbfb17d6a1e0de9590479e67e56d86c0cdbe6806ddca14c67110a98238c0b5d547d6cb0b0f0fc066c760d503",
+  "authSalt": "7db284fe4efdbd24f0d9fba3a3ab9b7a",
+  "updatedAt": "2026-11-01T22:44:20.988Z"
+}

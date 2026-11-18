@@ -1,0 +1,82 @@
+{
+  "f1": {
+    "key": "f1",
+    "publicId": "sekarsiti/mitra/asya/asya_f1",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998174/sekarsiti/mitra/asya/asya_f1.jpg",
+    "label": "Wisuda Hijab Cokelat",
+    "width": 1086,
+    "height": 1448
+  },
+  "f2": {
+    "key": "f2",
+    "publicId": "sekarsiti/mitra/asya/asya_f2",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998176/sekarsiti/mitra/asya/asya_f2.jpg",
+    "label": "Gaun Putih di Balkon",
+    "width": 960,
+    "height": 1280
+  },
+  "f3": {
+    "key": "f3",
+    "publicId": "sekarsiti/mitra/asya/asya_f3",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998177/sekarsiti/mitra/asya/asya_f3.jpg",
+    "label": "Close-up Riasan Mata & Wajah",
+    "width": 628,
+    "height": 1360
+  },
+  "f4": {
+    "key": "f4",
+    "publicId": "sekarsiti/mitra/asya/asya_f4",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998179/sekarsiti/mitra/asya/asya_f4.jpg",
+    "label": "Lamaran Hijab Navy Mahkota",
+    "width": 960,
+    "height": 1280
+  },
+  "f5": {
+    "key": "f5",
+    "publicId": "sekarsiti/mitra/asya/asya_f5",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998180/sekarsiti/mitra/asya/asya_f5.jpg",
+    "label": "Hijab Plum Mahkota",
+    "width": 720,
+    "height": 1280
+  },
+  "f6": {
+    "key": "f6",
+    "publicId": "sekarsiti/mitra/asya/asya_f6",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998181/sekarsiti/mitra/asya/asya_f6.jpg",
+    "label": "Kebaya Biru Siger Melati",
+    "width": 960,
+    "height": 1280
+  },
+  "f7": {
+    "key": "f7",
+    "publicId": "sekarsiti/mitra/asya/asya_f7",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998183/sekarsiti/mitra/asya/asya_f7.jpg",
+    "label": "Hero Pengantin Siger Putih",
+    "width": 960,
+    "height": 1280
+  },
+  "c1": {
+    "key": "c1",
+    "publicId": "sekarsiti/mitra/asya/asya_c1",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998184/sekarsiti/mitra/asya/asya_c1.jpg",
+    "label": "Sertifikat Seminar Nana Makeup",
+    "width": 1600,
+    "height": 1052
+  },
+  "c2": {
+    "key": "c2",
+    "publicId": "sekarsiti/mitra/asya/asya_c2",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998185/sekarsiti/mitra/asya/asya_c2.jpg",
+    "label": "Sertifikat Private Class Wedding",
+    "width": 1600,
+    "height": 1067
+  },
+  "c3": {
+    "key": "c3",
+    "publicId": "sekarsiti/mitra/asya/asya_c3",
+    "secureUrl": "https://res.cloudinary.com/pdskboqt/image/upload/v1794998186/sekarsiti/mitra/asya/asya_c3.jpg",
+    "label": "Sertifikat Online Makeup Class",
+    "width": 1600,
+    "height": 1052
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sekarsiti-platform",
+  "compatibility_date": "2026-11-17",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "mltr.my.id/*", "zone_name": "mltr.my.id" },
+    { "pattern": "*.mltr.my.id/*", "zone_name": "mltr.my.id" }
+  ],
+  "vars": {
+    "CLOUDINARY_CLOUD_NAME": "pdskboqt",
+    "PUBLIC_CLOUDINARY_CLOUD_NAME": "pdskboqt",
+    "PUBLIC_CLOUDINARY_PRESET": "sekarsiti_mitra_preset",
+    "SESSION_SECRET": "a9a4b6250d08a2082f282245f78fb0b0ccc6de702b98128da4f8c18e7ee0eb5b"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sekarsiti_db",
+      "database_id": "4586b72a-beaa-4b7e-a543-7ebdf57030ab"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "b3412fb0d1874c86bda6615e356e2890"
+    }
+  ]
+}

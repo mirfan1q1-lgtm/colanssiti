@@ -1,0 +1,37 @@
+{
+  "name": "platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --port 4321",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "d1:push:remote": "wrangler d1 execute sekarsiti_db --remote --file=./drizzle/schema.sql --yes && wrangler d1 execute sekarsiti_db --remote --file=./drizzle/seed.sql --yes",
+    "d1:push:local": "wrangler d1 execute sekarsiti_db --file=./drizzle/schema.sql --yes && wrangler d1 execute sekarsiti_db --file=./drizzle/seed.sql --yes"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.4.8",
+    "@astrojs/node": "^11.1.9",
+    "@astrojs/react": "^7.1.2",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^7.4.4",
+    "drizzle-kit": "^0.31.11",
+    "drizzle-orm": "^0.45.4",
+    "lucide-react": "^1.66.0",
+    "mysql2": "^3.24.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
